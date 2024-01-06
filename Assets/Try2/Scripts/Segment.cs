@@ -10,6 +10,14 @@ public class Segment : MonoBehaviour
     [HideInInspector] public bool isOverlapping;
 
     private void Start() {
+        if (Random.value > 0.7)
+        {
+            if (transform.Find("Light") != null)
+            {
+                transform.Find("Light").gameObject.SetActive(false);
+            }
+        }
+
         GenerateSegment();
     }
 
