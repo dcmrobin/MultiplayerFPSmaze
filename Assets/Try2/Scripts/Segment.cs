@@ -15,8 +15,6 @@ public class Segment : MonoBehaviour
             if (exits[j].childCount == 0)
             {
                 GameObject newSegment = Instantiate(segmentPrefabList[randomSegmentNum], exits[j]);
-    
-                //newSegment.transform.rotation = Quaternion.Euler(0, exits[j].rotation.y, 0);
             }
         }
     }
