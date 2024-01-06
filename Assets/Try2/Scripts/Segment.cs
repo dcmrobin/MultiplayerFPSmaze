@@ -8,13 +8,17 @@ public class Segment : MonoBehaviour
     public Transform[] exits;
 
     private void Start() {
-        int randomSegmentNum = Random.Range(0, segmentPrefabList.Length);
+        GenerateSegment();
+    }
+
+    void GenerateSegment() {
+        int randomNum = Random.Range(0, segmentPrefabList.Length);
 
         for (int j = 0; j < exits.Length; j++)
         {
             if (exits[j].childCount == 0)
             {
-                GameObject newSegment = Instantiate(segmentPrefabList[randomSegmentNum], exits[j]);
+                GameObject newSegment = Instantiate(segmentPrefabList[randomNum], exits[j]);
             }
         }
     }
