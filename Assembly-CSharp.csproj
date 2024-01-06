@@ -42,7 +42,8 @@
   <ItemGroup>
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\Common\BasicRigidBodyPush.cs" />
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\ThirdPersonController\Scripts\ThirdPersonController.cs" />
-     <Compile Include="Assets\Game\Scripts\LevelGenerator.cs" />
+     <Compile Include="Assets\Try1\Scripts\LevelGenerator.cs" />
+     <Compile Include="Assets\Try2\Scripts\Segment.cs" />
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\FirstPersonController\FirstPersonController.cs" />
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\Common\InputSystem\StarterAssetsInputs.cs" />
     <Reference Include="UnityEngine">

@@ -468,9 +468,9 @@ MonoBehaviour:
   - {fileID: 5755648635834313607, guid: fcfd95bfcb6b3f848baae5112fcb5cfc, type: 3}
   - {fileID: 5755648635834313607, guid: 09feb37231d88ef43a705cd9e04def14, type: 3}
   - {fileID: 5755648635834313607, guid: 79c766fbbe317a847bd21eca4c8209c9, type: 3}
-  dungeonWidth: 10
-  dungeonHeight: 10
-  scale: 20
+  dungeonWidth: 30
+  dungeonHeight: 30
+  scale: 10
   roomScale: 20
 --- !u!4 &1505791142
 Transform:
