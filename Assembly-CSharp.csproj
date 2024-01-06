@@ -47,6 +47,7 @@
      <Compile Include="Assets\Try2\Scripts\Segment.cs" />
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\FirstPersonController\FirstPersonController.cs" />
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\Common\InputSystem\StarterAssetsInputs.cs" />
+     <Compile Include="Assets\Try2\Scripts\PlayerController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
