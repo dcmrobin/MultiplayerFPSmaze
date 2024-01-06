@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class Segment : MonoBehaviour
 {
+    public GameObject wallPrefab;
     public GameObject[] segmentPrefabList;
     public Transform[] exits;
+    [HideInInspector] public bool isOverlapping;
 
     private void Start() {
         GenerateSegment();
+    }
+
+    private void Update() {
+        if (isOverlapping)
+        {
+            Destroy(gameObject);
+        }
+
+        for (int i = 0; i < exits.Length; i++)//This bit might be slowing down the game...
+        {
+            if (exits[i].childCount == 0)
+            {
+                Instantiate(wallPrefab, exits[i]);
+                enabled = false;
+            }
+        }
     }
 
     void GenerateSegment() {

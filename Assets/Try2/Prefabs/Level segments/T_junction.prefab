@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &199532863127956446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4630430057590086358}
+  - component: {fileID: 761413844958521957}
+  - component: {fileID: 191913809473703205}
+  m_Layer: 7
+  m_Name: collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4630430057590086358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199532863127956446}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: 10, y: 10, z: 0}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2386120109933165284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &761413844958521957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199532863127956446}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 36.999756, y: 18.968746, z: 19.499878}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &191913809473703205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199532863127956446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a1a10e74b222a4bb953d8d4d06856f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overlapLayermask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &943363243577221922
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +914,7 @@ Transform:
   - {fileID: 5813923101824986869}
   - {fileID: 6683392878036038936}
   - {fileID: 7428348486820743724}
+  - {fileID: 4630430057590086358}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &832594479925707500
@@ -859,6 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb283eb004feb324f9d1db1a2753b7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallPrefab: {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   segmentPrefabList:
   - {fileID: 5755648635834313607}
   - {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
@@ -867,6 +938,7 @@ MonoBehaviour:
   exits:
   - {fileID: 6683392878036038936}
   - {fileID: 7428348486820743724}
+  isOverlapping: 0
 --- !u!1 &5972109483127925068
 GameObject:
   m_ObjectHideFlags: 0
