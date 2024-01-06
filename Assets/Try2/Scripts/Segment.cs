@@ -38,12 +38,11 @@ public class Segment : MonoBehaviour
     }
 
     void GenerateSegment() {
-        int randomNum = Random.Range(0, segmentPrefabList.Length);
-
         for (int j = 0; j < exits.Length; j++)
         {
             if (exits[j].childCount == 0)
             {
+                int randomNum = Random.Range(0, segmentPrefabList.Length);
                 GameObject newSegment = Instantiate(segmentPrefabList[randomNum], exits[j]);
             }
         }
