@@ -526,6 +526,10 @@ MonoBehaviour:
   mouseSensitivity: 2
   moveSpeed: 17
   jumpForce: 20
+  interactionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  maxDistance: 10
 --- !u!54 &6515290620338221976
 Rigidbody:
   m_ObjectHideFlags: 0

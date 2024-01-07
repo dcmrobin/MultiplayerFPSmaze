@@ -12,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Interactable
   - OverlapCheckCollider
   - PostProcessing
   - Not in Reflection
