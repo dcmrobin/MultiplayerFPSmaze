@@ -42,12 +42,11 @@
   <ItemGroup>
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\Common\BasicRigidBodyPush.cs" />
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\ThirdPersonController\Scripts\ThirdPersonController.cs" />
-     <Compile Include="Assets\Try1\Scripts\LevelGenerator.cs" />
-     <Compile Include="Assets\Try2\Scripts\SegmentOverlapCheck.cs" />
-     <Compile Include="Assets\Try2\Scripts\Segment.cs" />
+     <Compile Include="Assets\Game\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Game\Scripts\Segment.cs" />
+     <Compile Include="Assets\Game\Scripts\SegmentOverlapCheck.cs" />
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\FirstPersonController\FirstPersonController.cs" />
      <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\Common\InputSystem\StarterAssetsInputs.cs" />
-     <Compile Include="Assets\Try2\Scripts\PlayerController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
