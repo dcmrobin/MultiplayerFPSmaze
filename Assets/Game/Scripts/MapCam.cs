@@ -14,7 +14,7 @@ public class MapCam : MonoBehaviour
 
         if (GetComponent<Camera>().orthographicSize > 0)
         {
-            GetComponent<Camera>().orthographicSize -= Mouse.current.scroll.ReadValue().normalized.y * 100;
+            GetComponent<Camera>().orthographicSize -= Mouse.current.scroll.ReadValue().normalized.y * 50;
         }
         else
         {
@@ -41,6 +41,8 @@ public class MapCam : MonoBehaviour
                 transform.parent.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
+
+        transform.parent.position = Camera.main.transform.parent.position;
 
         Vector3 targetScreenPosition = GetComponent<Camera>().WorldToScreenPoint(Camera.main.transform.parent.position);
         float padding = 10f;
