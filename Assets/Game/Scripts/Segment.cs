@@ -73,7 +73,7 @@ public class Segment : MonoBehaviour
             }
         }
 
-        if (flickerNum > 8)
+        if (transform.Find("Light") != null && flickerNum > 8)
         {
             timer += Time.deltaTime;
             if (timer > interval)
