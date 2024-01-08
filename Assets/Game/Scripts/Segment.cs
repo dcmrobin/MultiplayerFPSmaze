@@ -5,14 +5,24 @@ using UnityEngine;
 
 public class Segment : MonoBehaviour
 {
+    [Header("Segment variables")]
     public int rarity;
     public GameObject wallPrefab;
     public GameObject[] segmentPrefabList;
     public Transform[] exits;
+
+    [Header("Light-flicker variables")]
+    public float maxWait = 2;
+    public float maxFlicker = 0.2f;
+    float timer;
+    float interval;
+
     [HideInInspector] public bool isOverlapping;
     bool giveUp;
+    int flickerNum;
 
     private void Start() {
+        flickerNum = Random.Range(0, 10);
         /*if (Random.value > 0.6)
         {
             if (transform.Find("Light") != null)
@@ -40,6 +50,15 @@ public class Segment : MonoBehaviour
             {
                 transform.Find("Light").gameObject.SetActive(true);
             }
+
+            if (!transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled)
+            {
+                transform.Find("Light").Find("Bulb").gameObject.SetActive(false);
+            }
+            else if (transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled)
+            {
+                transform.Find("Light").Find("Bulb").gameObject.SetActive(true);
+            }
         }
 
         if (giveUp)
@@ -51,6 +70,15 @@ public class Segment : MonoBehaviour
                     Instantiate(wallPrefab, exits[i]);
                     giveUp = false;
                 }
+            }
+        }
+
+        if (flickerNum > 8)
+        {
+            timer += Time.deltaTime;
+            if (timer > interval)
+            {
+                ToggleLight();
             }
         }
     }
@@ -76,5 +104,20 @@ public class Segment : MonoBehaviour
         }
 
         giveUp = true;
+    }
+
+    void ToggleLight()
+    {
+        transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled = !transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled;
+        if (transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled)
+        {
+            interval = Random.Range(0, maxWait);
+        }
+        else 
+        {
+            interval = Random.Range(0, maxFlicker);
+        }
+        
+        timer = 0;
     }
 }
