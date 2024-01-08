@@ -153,7 +153,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.8879524, b: 0.6745283, a: 1}
   m_Intensity: 2097152
-  m_Range: 200
+  m_Range: 30
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -870,6 +870,8 @@ MonoBehaviour:
   - {fileID: 5755648635834313607, guid: da0442ce92e6fdc49a5ff4afbbbdebf9, type: 3}
   exits:
   - {fileID: 6683392878036038936}
+  maxWait: 2
+  maxFlicker: 0.2
   isOverlapping: 0
 --- !u!1 &6487088049023008424
 GameObject:

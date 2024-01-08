@@ -373,7 +373,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.8879524, b: 0.6745283, a: 1}
   m_Intensity: 2097152
-  m_Range: 200
+  m_Range: 30
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1114,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb283eb004feb324f9d1db1a2753b7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rarity: 0
   wallPrefab: {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   segmentPrefabList:
   - {fileID: 5755648635834313607, guid: 1b093448b3dc3c4499a3297991de4289, type: 3}
@@ -1124,6 +1125,8 @@ MonoBehaviour:
   - {fileID: 438222811814353065}
   - {fileID: 1662483818437511114}
   - {fileID: 2159540721122540851}
+  maxWait: 2
+  maxFlicker: 0.2
   isOverlapping: 0
 --- !u!1 &6684881355647198846
 GameObject:
