@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b6606ef2548734bb6d11b9d160bc7e, type: 3}
   m_Name: HDRISky
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   rotation:
     m_OverrideState: 0
     m_Value: 0
@@ -138,16 +138,16 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 11
+    m_Value: 10
   multiplier:
     m_OverrideState: 0
     m_Value: 1
   upperHemisphereLuxValue:
     m_OverrideState: 1
-    m_Value: 0.4660715
+    m_Value: 0.46607345
   upperHemisphereLuxColor:
     m_OverrideState: 1
-    m_Value: {x: 0.18750614, y: 0.29181972, z: 0.5}
+    m_Value: {x: 0.18750395, y: 0.2918189, z: 0.5}
   desiredLuxValue:
     m_OverrideState: 0
     m_Value: 20000
@@ -299,12 +299,12 @@ MonoBehaviour:
   active: 1
   skyType:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   cloudType:
     m_OverrideState: 0
     m_Value: 0
   skyAmbientMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   windOrientation:
     m_OverrideState: 0
@@ -338,8 +338,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   fixedExposure:
-    m_OverrideState: 0
-    m_Value: 1.5
+    m_OverrideState: 1
+    m_Value: 10
   compensation:
     m_OverrideState: 0
     m_Value: 0
@@ -632,7 +632,7 @@ MonoBehaviour:
   active: 1
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 150
+    m_Value: 250
   directionalTransmissionMultiplier:
     m_OverrideState: 0
     m_Value: 1
