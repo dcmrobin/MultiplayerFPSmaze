@@ -15,7 +15,7 @@ D:/unity projects/DungeonExplore
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52875
+59063
 Successfully changed project path to: D:/unity projects/DungeonExplore
 D:/unity projects/DungeonExplore
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ D:/unity projects/DungeonExplore
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [12560] Host "[IP] 192.168.1.102 [Port] 0 [Flags] 2 [Guid] 739756787 [EditorId] 739756787 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-I7HCLI5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [5020] Host "[IP] 192.168.1.102 [Port] 0 [Flags] 2 [Guid] 62881659 [EditorId] 62881659 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-I7HCLI5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [12560] Host "[IP] 192.168.1.102 [Port] 0 [Flags] 2 [Guid] 739756787 [EditorId] 739756787 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-I7HCLI5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5020] Host "[IP] 192.168.1.102 [Port] 0 [Flags] 2 [Guid] 62881659 [EditorId] 62881659 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-I7HCLI5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
-Refreshing native plugins compatible for Editor in 32.34 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 34.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.10f1 (ff3792e53c62)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -75,48 +75,48 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56572
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56540
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.050379 seconds.
-- Loaded All Assemblies, in  1.748 seconds
+Registered in 0.039962 seconds.
+- Loaded All Assemblies, in  1.367 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.467 seconds
-Domain Reload Profiling: 3207ms
-	BeginReloadAssembly (296ms)
+- Finished resetting the current domain, in  0.741 seconds
+Domain Reload Profiling: 2105ms
+	BeginReloadAssembly (528ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (111ms)
-	RebuildNativeTypeToScriptingClass (174ms)
-	initialDomainReloadingComplete (320ms)
-	LoadAllAssembliesAndSetupDomain (836ms)
-		LoadAssemblies (293ms)
+	RebuildCommonClasses (119ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (196ms)
+	LoadAllAssembliesAndSetupDomain (490ms)
+		LoadAssemblies (524ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (827ms)
-			TypeCache.Refresh (823ms)
-				TypeCache.ScanAssembly (778ms)
+		AnalyzeDomain (482ms)
+			TypeCache.Refresh (477ms)
+				TypeCache.ScanAssembly (436ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (1470ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (742ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1251ms)
+		SetupLoadedEditorAssemblies (565ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (44ms)
-			SetLoadedEditorAssemblies (15ms)
+			InitializePlatformSupportModulesInManaged (47ms)
+			SetLoadedEditorAssemblies (20ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (6ms)
-			ProcessInitializeOnLoadAttributes (816ms)
-			ProcessInitializeOnLoadMethodAttributes (370ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (361ms)
+			ProcessInitializeOnLoadMethodAttributes (130ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -124,8 +124,8 @@ Domain Reload Profiling: 3207ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.841 seconds
-Refreshing native plugins compatible for Editor in 9.19 ms, found 3 plugins.
+- Loaded All Assemblies, in  5.467 seconds
+Refreshing native plugins compatible for Editor in 6.51 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
@@ -133,308 +133,51 @@ Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-d3d12: upload buffer was full! Waited for COPY queue for 2.158 ms.
+d3d12: upload buffer was full! Waited for COPY queue for 0.002 ms.
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.614 seconds
-Domain Reload Profiling: 5450ms
-	BeginReloadAssembly (321ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (47ms)
-	RebuildCommonClasses (73ms)
-	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (83ms)
-	LoadAllAssembliesAndSetupDomain (1332ms)
-		LoadAssemblies (805ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (711ms)
-			TypeCache.Refresh (553ms)
-				TypeCache.ScanAssembly (516ms)
-			ScanForSourceGeneratedMonoScriptInfo (121ms)
-			ResolveRequiredComponents (33ms)
-	FinalizeReload (3615ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (3065ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (26ms)
-			SetLoadedEditorAssemblies (10ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (308ms)
-			ProcessInitializeOnLoadAttributes (2074ms)
-			ProcessInitializeOnLoadMethodAttributes (603ms)
-			AfterProcessingInitializeOnLoad (42ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (21ms)
-Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
-Refreshing native plugins compatible for Editor in 8.67 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6912 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 118 unused Assets / (3.6 MB). Loaded Objects now: 7386.
-Memory consumption went from 307.3 MB to 303.6 MB.
-Total: 25.994000 ms (FindLiveObjects: 1.550000 ms CreateObjectMapping: 1.201700 ms MarkObjects: 18.053200 ms  DeleteObjects: 5.180400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 23695.210434 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Start.prefab
-  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) d3d12: upload buffer was full! Waited for COPY queue for 5.609 ms.
- -> (artifact id: '398d9d7db3bcb86a1aec6117d25b7ff5') in 19.350359 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 260
-========================================================================
-Received Import Request.
-  Time since last request: 0.000112 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Start.prefab
-  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f19498728ac3f078653c4885e8aef83') in 0.254632 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 230
-========================================================================
-Received Import Request.
-  Time since last request: 0.000075 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a31e3e5e2a7d3f9c6919c7613615b133') in 0.070753 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 5.030547 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0fb8df6ba0f10f1f4c91c4bb8562ec6') in 0.059062 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 18.558280 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35dd8ff6be254da3ebff588c7dc63285') in 0.119314 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 6.019812 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f3d206274daff2eeb087843bd15804') in 0.146007 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 6.648897 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0b3553a142da920c3ce93a74eeccc22') in 0.165527 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 5.341516 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beac47a2d374cff42796afbd9fe028c3') in 0.111303 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 12.973494 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8a0864a3dbcdc26ed0902baafe5cd85') in 0.070174 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 5.696254 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51fc3497f19864f39e158f34494f2f80') in 0.070565 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 162
-========================================================================
-Received Import Request.
-  Time since last request: 2.774170 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8110e3c1722c4b3de4216942a4e7494e') in 0.053244 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 162
-========================================================================
-Received Import Request.
-  Time since last request: 4.332521 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd24d68b46651c3cd70c90479ab0f5fbd') in 0.140885 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 162
-========================================================================
-Received Import Request.
-  Time since last request: 6.848965 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0629d4e17cf15626d861a61ecd937034') in 0.072221 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 162
-========================================================================
-Received Import Request.
-  Time since last request: 14.369443 seconds.
-  path: Assets/Try2/Prefabs/Level segments/Door.prefab
-  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d80442b289adfadcb9acb89cb30b920') in 0.101101 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 162
-========================================================================
-Received Import Request.
-  Time since last request: 6.537899 seconds.
-  path: ProjectSettings/TagManager.asset
-  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd749899b336a1556fcaf44947e726fd3') in 0.003892 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.462 seconds
-Refreshing native plugins compatible for Editor in 7.91 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  7.757 seconds
-Domain Reload Profiling: 9212ms
-	BeginReloadAssembly (489ms)
-		ExecutionOrderSort (1ms)
-		DisableScriptedObjects (68ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (134ms)
-	RebuildCommonClasses (78ms)
-	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (75ms)
-	LoadAllAssembliesAndSetupDomain (787ms)
-		LoadAssemblies (828ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (150ms)
-			TypeCache.Refresh (24ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (95ms)
-			ResolveRequiredComponents (28ms)
-	FinalizeReload (7758ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (3948ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (35ms)
-			SetLoadedEditorAssemblies (18ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (790ms)
-			ProcessInitializeOnLoadAttributes (2991ms)
-			ProcessInitializeOnLoadMethodAttributes (77ms)
-			AfterProcessingInitializeOnLoad (36ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (247ms)
-Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 17.78 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6572 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 73 unused Assets / (3.6 MB). Loaded Objects now: 7531.
-Memory consumption went from 277.2 MB to 273.6 MB.
-Total: 17.149300 ms (FindLiveObjects: 1.161600 ms CreateObjectMapping: 2.313500 ms MarkObjects: 10.877600 ms  DeleteObjects: 2.794300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.451 seconds
-Refreshing native plugins compatible for Editor in 10.87 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  5.426 seconds
-Domain Reload Profiling: 6869ms
-	BeginReloadAssembly (415ms)
+- Finished resetting the current domain, in  4.021 seconds
+Domain Reload Profiling: 8996ms
+	BeginReloadAssembly (449ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (18ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (107ms)
-	RebuildCommonClasses (76ms)
-	RebuildNativeTypeToScriptingClass (27ms)
-	initialDomainReloadingComplete (67ms)
-	LoadAllAssembliesAndSetupDomain (857ms)
-		LoadAssemblies (879ms)
+		CreateAndSetChildDomain (65ms)
+	RebuildCommonClasses (105ms)
+	RebuildNativeTypeToScriptingClass (374ms)
+	initialDomainReloadingComplete (696ms)
+	LoadAllAssembliesAndSetupDomain (3347ms)
+		LoadAssemblies (2151ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (175ms)
-			TypeCache.Refresh (26ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (108ms)
-			ResolveRequiredComponents (35ms)
-	FinalizeReload (5427ms)
+		AnalyzeDomain (1456ms)
+			TypeCache.Refresh (1290ms)
+				TypeCache.ScanAssembly (1231ms)
+			ScanForSourceGeneratedMonoScriptInfo (122ms)
+			ResolveRequiredComponents (38ms)
+	FinalizeReload (4025ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2275ms)
+		SetupLoadedEditorAssemblies (3330ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (51ms)
-			SetLoadedEditorAssemblies (31ms)
+			InitializePlatformSupportModulesInManaged (35ms)
+			SetLoadedEditorAssemblies (14ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (387ms)
-			ProcessInitializeOnLoadAttributes (1705ms)
-			ProcessInitializeOnLoadMethodAttributes (80ms)
-			AfterProcessingInitializeOnLoad (21ms)
-			EditorAssembliesLoaded (1ms)
+			BeforeProcessingInitializeOnLoad (362ms)
+			ProcessInitializeOnLoadAttributes (2104ms)
+			ProcessInitializeOnLoadMethodAttributes (785ms)
+			AfterProcessingInitializeOnLoad (27ms)
+			EditorAssembliesLoaded (4ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (127ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
 Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 7.05 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 11.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6578 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7576.
-Memory consumption went from 273.8 MB to 272.5 MB.
-Total: 13.444300 ms (FindLiveObjects: 1.929700 ms CreateObjectMapping: 0.849500 ms MarkObjects: 10.100800 ms  DeleteObjects: 0.560700 ms)
+Unloading 6912 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 118 unused Assets / (3.6 MB). Loaded Objects now: 7386.
+Memory consumption went from 307.2 MB to 303.6 MB.
+Total: 23.053800 ms (FindLiveObjects: 0.890100 ms CreateObjectMapping: 1.402000 ms MarkObjects: 17.273300 ms  DeleteObjects: 3.486000 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -450,26 +193,90 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 815.184439 seconds.
-  path: Assets/Try2/Prefabs/Player.prefab
-  artifactKey: Guid(b87bb80844848f14f80f58596dc4fd37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Player.prefab using Guid(b87bb80844848f14f80f58596dc4fd37) Importer(815301076,1909f56bfc062723c751e8b465ee728b) d3d12: upload buffer was full! Waited for COPY queue for 3.685 ms.
- -> (artifact id: 'bb9ddb0dda6bf921de9ef1a8138da4de') in 2.081908 seconds
+  Time since last request: 1922.188598 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) d3d12: upload buffer was full! Waited for COPY queue for 5.290 ms.
+ -> (artifact id: '7066afa287a2c8e26dca72a454a017b6') in 33.003454 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 78
+Number of asset objects unloaded after import = 310
 ========================================================================
 Received Import Request.
-  Time since last request: 1.907563 seconds.
-  path: Assets/Try2/Prefabs/Player.prefab
-  artifactKey: Guid(b87bb80844848f14f80f58596dc4fd37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Player.prefab using Guid(b87bb80844848f14f80f58596dc4fd37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26f131d322c5bb7a079c7763897700c1') in 0.059560 seconds
+  Time since last request: 1.264065 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c2e67ea9e73cfc9a8e9438317bc03e7') in 0.149752 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 29
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 4.901516 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '014fa412956382a5a5bd107f2494b985') in 0.094752 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 15.013935 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '260d2e63bc7a9d8b61f03f4001d3df12') in 0.084503 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 40.738322 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e23d3fa2b7927b2f0cca50012d8c151b') in 0.110091 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 15.529194 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd50f3a8f1fa650729c75e741310b0a4b') in 0.054168 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 8.513031 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1966868903aa8cf05b5572a19b1506ab') in 0.094138 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 11.237680 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '091cbf9f42275e979806be75ba8e26a1') in 0.082087 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 18.604282 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '024ea6418550dadb8a9def465c6c3756') in 0.104916 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 4.011665 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a63a94217ae0f6c295b2ee735eaf2f48') in 0.110058 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 285
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.358 seconds
-Refreshing native plugins compatible for Editor in 6.58 ms, found 3 plugins.
+- Loaded All Assemblies, in  2.251 seconds
+Refreshing native plugins compatible for Editor in 6.99 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
@@ -477,47 +284,516 @@ Native extension for OSXStandalone target not found
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  5.213 seconds
-Domain Reload Profiling: 6562ms
-	BeginReloadAssembly (453ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (61ms)
+- Finished resetting the current domain, in  7.357 seconds
+Domain Reload Profiling: 9599ms
+	BeginReloadAssembly (748ms)
+		ExecutionOrderSort (2ms)
+		DisableScriptedObjects (88ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (125ms)
-	RebuildCommonClasses (80ms)
+		CreateAndSetChildDomain (228ms)
+	RebuildCommonClasses (127ms)
 	RebuildNativeTypeToScriptingClass (36ms)
-	initialDomainReloadingComplete (113ms)
-	LoadAllAssembliesAndSetupDomain (665ms)
-		LoadAssemblies (800ms)
+	initialDomainReloadingComplete (83ms)
+	LoadAllAssembliesAndSetupDomain (1246ms)
+		LoadAssemblies (1329ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (46ms)
-			TypeCache.Refresh (15ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (28ms)
-	FinalizeReload (5214ms)
+		AnalyzeDomain (187ms)
+			TypeCache.Refresh (37ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (116ms)
+			ResolveRequiredComponents (30ms)
+	FinalizeReload (7358ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2786ms)
+		SetupLoadedEditorAssemblies (2600ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (36ms)
-			SetLoadedEditorAssemblies (11ms)
+			InitializePlatformSupportModulesInManaged (38ms)
+			SetLoadedEditorAssemblies (15ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (453ms)
-			ProcessInitializeOnLoadAttributes (2170ms)
-			ProcessInitializeOnLoadMethodAttributes (88ms)
-			AfterProcessingInitializeOnLoad (27ms)
+			BeforeProcessingInitializeOnLoad (458ms)
+			ProcessInitializeOnLoadAttributes (1986ms)
+			ProcessInitializeOnLoadMethodAttributes (78ms)
+			AfterProcessingInitializeOnLoad (24ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (224ms)
+		AwakeInstancesAfterBackupRestoration (157ms)
 Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 14.73 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 14.42 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 7701.
-Memory consumption went from 271.7 MB to 270.4 MB.
-Total: 17.589000 ms (FindLiveObjects: 2.780900 ms CreateObjectMapping: 1.260300 ms MarkObjects: 12.517000 ms  DeleteObjects: 1.028300 ms)
+Unloading 6572 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (3.6 MB). Loaded Objects now: 7531.
+Memory consumption went from 272.7 MB to 269.1 MB.
+Total: 19.864800 ms (FindLiveObjects: 3.056700 ms CreateObjectMapping: 3.728200 ms MarkObjects: 11.479900 ms  DeleteObjects: 1.596500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 86.398047 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) d3d12: upload buffer was full! Waited for COPY queue for 3.529 ms.
+ -> (artifact id: '4b238ed48587c07dcababbaa369600ac') in 3.012906 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 290
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea6327b30865682d27cfbaee7fb02170') in 0.091148 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 213
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f9e6840263efda2d9adafb067f57ad') in 0.124456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 290
+========================================================================
+Received Import Request.
+  Time since last request: 8.169303 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84c5f53fde2fe25655bcafab272b8042') in 0.087084 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 290
+========================================================================
+Received Import Request.
+  Time since last request: 18.556616 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7f50fb2017fa5030f0b36a9b5606fb0') in 0.138067 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 290
+========================================================================
+Received Import Request.
+  Time since last request: 51.372972 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0660f95b3455d69fd19ab0f4e2da4bd4') in 0.129997 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 290
+========================================================================
+Received Import Request.
+  Time since last request: 8.493954 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a64a342f28bf7d26580e0a09bebd90a') in 0.066343 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 10.541401 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '919c63187690a23d1f007bb91460b75b') in 0.124402 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 10.555252 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10362147435a0c698c88d9f4c0ae56c2') in 0.062539 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 10.383584 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa5a76f810736dee73b067dab3244d6') in 0.094675 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 9.201818 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12c747f07101c34d4a319cfd31eff102') in 0.095655 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 34.623662 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3599afc603e5ee5a23bc786547c6f6a') in 0.106138 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 35.278757 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0e8a776321aed94382814e374725694') in 0.114665 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 5.935118 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b777d15c97af5629cc79ecdc13e383') in 0.102030 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 27.803745 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f47a991db8addb9208023d2ab88a54e3') in 0.199337 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 12.628395 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db4376228b3d240435fc394e66692245') in 0.079392 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 290
+========================================================================
+Received Import Request.
+  Time since last request: 1.764169 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cbd7e3a9579b015a1614b17867268eb') in 0.068841 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 12.790450 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8732b6b736e6b61c72bde7ae211d53e9') in 0.098612 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 25.462629 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd3d676abaa7095d6de1f895a9b28a95') in 0.175999 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 2.264459 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88e4baf80c64ce3a6d304f72e429284') in 0.075671 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 342
+========================================================================
+Received Import Request.
+  Time since last request: 8.118784 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c08c8a39cbcf3c58db87555edee9e0c') in 0.079868 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 290
+========================================================================
+Received Import Request.
+  Time since last request: 11.471511 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18b89aefd707fa31bbd20dd69bc03576') in 1.219631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 3.286104 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ada11b35304b3df83b92eecd2bca6c09') in 0.071871 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 4.170982 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76f422f9b98a72570189e81bc550ef8b') in 0.061456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 2.222770 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd858ecc3b90747572ea5f0b8398967e') in 0.066138 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 8.979558 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13e2d279c61165dea6336cc74381aa6e') in 0.093578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 8.097626 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cd6aff1f0c84eba8d53466e6dee1e8f') in 0.083511 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 11.867010 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1f51718b984f41df0e2edcce541f1d5') in 0.077668 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 2.109510 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5499e50de894b73ed4ac17e87361d342') in 0.064149 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 5.712423 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acb68ac6250dd0ab919b0ac00d4395eb') in 0.102431 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 25.083620 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1ec372b26a762b6a3ccc86e7c7d4ba2') in 0.108977 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 2.286826 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca2949ce16cf463aa32d2c40e4c341f9') in 0.076324 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 11.863872 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db087ba93628b350c3f36b4a5f269d4e') in 0.094870 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 11.812366 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a8376d5495847826f5d17ebec3ddedd') in 0.058799 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 1.891100 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88a31f24e236f694d5ea3c781d8ecdd') in 0.121461 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 35.337132 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '463cfbc0486cbb7f7555aec1eafbbfc7') in 0.163954 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 2.880610 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fdd75fed7e9fcbb50c4f0c323c01789') in 0.072938 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 7.658096 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c8af9cc2d2a14b193b619768a641378') in 0.596410 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 37.231435 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02b64178da1c584a829462dbbc963ea9') in 0.081245 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 5.336287 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bee311791080130a7621708ab3964b91') in 0.070106 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 36.281046 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf71894391561997fd244898404564e') in 0.073018 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 371
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f0dd70c56b42b54832c54c3f8bdc6e7') in 0.168340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 371
+========================================================================
+Received Import Request.
+  Time since last request: 28.456954 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f06a8cfe19df06e4c45216c313f3d3b') in 0.108290 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 371
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fcb9d847210ac87f16ab9ce9187e610') in 0.064836 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 371
+========================================================================
+Received Import Request.
+  Time since last request: 3.192920 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '997bbd0fdc79098f580b7778cb975b3a') in 0.131685 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 371
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83beb5d0bd60925bc49951074fe91cd6') in 0.066994 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 371
+========================================================================
+Received Import Request.
+  Time since last request: 19.456692 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8efde8ea065722c6c493429e54b13800') in 0.163840 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 8.636973 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8e5beea0923fa870a18626cbec87a69') in 0.078856 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 6.021791 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48fc76ddb82d96420b51894afc65afb6') in 0.072868 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 371
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac8de878a590a3b9852d7c34971f40fd') in 0.157585 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 371
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.424 seconds
+Refreshing native plugins compatible for Editor in 6.31 ms, found 3 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  6.714 seconds
+Domain Reload Profiling: 8132ms
+	BeginReloadAssembly (551ms)
+		ExecutionOrderSort (3ms)
+		DisableScriptedObjects (112ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (133ms)
+	RebuildCommonClasses (91ms)
+	RebuildNativeTypeToScriptingClass (28ms)
+	initialDomainReloadingComplete (78ms)
+	LoadAllAssembliesAndSetupDomain (668ms)
+		LoadAssemblies (830ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (50ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (33ms)
+	FinalizeReload (6716ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3864ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (44ms)
+			SetLoadedEditorAssemblies (14ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (658ms)
+			ProcessInitializeOnLoadAttributes (2981ms)
+			ProcessInitializeOnLoadMethodAttributes (120ms)
+			AfterProcessingInitializeOnLoad (45ms)
+			EditorAssembliesLoaded (2ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (358ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 13.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6578 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 57 unused Assets / (1.3 MB). Loaded Objects now: 7685.
+Memory consumption went from 274.4 MB to 273.1 MB.
+Total: 16.995000 ms (FindLiveObjects: 1.301400 ms CreateObjectMapping: 0.929400 ms MarkObjects: 13.900700 ms  DeleteObjects: 0.860900 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -536,8 +812,8 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.351 seconds
-Refreshing native plugins compatible for Editor in 8.65 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.324 seconds
+Refreshing native plugins compatible for Editor in 7.33 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
@@ -545,115 +821,47 @@ Native extension for OSXStandalone target not found
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  4.151 seconds
-Domain Reload Profiling: 5494ms
-	BeginReloadAssembly (390ms)
+- Finished resetting the current domain, in  5.815 seconds
+Domain Reload Profiling: 7132ms
+	BeginReloadAssembly (378ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (14ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (106ms)
-	RebuildCommonClasses (77ms)
-	RebuildNativeTypeToScriptingClass (29ms)
-	initialDomainReloadingComplete (64ms)
-	LoadAllAssembliesAndSetupDomain (782ms)
-		LoadAssemblies (813ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (146ms)
-			TypeCache.Refresh (21ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (95ms)
-			ResolveRequiredComponents (27ms)
-	FinalizeReload (4152ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1915ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (35ms)
-			SetLoadedEditorAssemblies (12ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (339ms)
-			ProcessInitializeOnLoadAttributes (1459ms)
-			ProcessInitializeOnLoadMethodAttributes (53ms)
-			AfterProcessingInitializeOnLoad (18ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (120ms)
-Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 8.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7716.
-Memory consumption went from 271.5 MB to 270.2 MB.
-Total: 9.559300 ms (FindLiveObjects: 0.877400 ms CreateObjectMapping: 0.638700 ms MarkObjects: 7.481800 ms  DeleteObjects: 0.559300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.278 seconds
-Refreshing native plugins compatible for Editor in 7.04 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  4.749 seconds
-Domain Reload Profiling: 6021ms
-	BeginReloadAssembly (382ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (17ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (94ms)
+		CreateAndSetChildDomain (98ms)
 	RebuildCommonClasses (86ms)
-	RebuildNativeTypeToScriptingClass (26ms)
-	initialDomainReloadingComplete (103ms)
-	LoadAllAssembliesAndSetupDomain (673ms)
-		LoadAssemblies (803ms)
+	RebuildNativeTypeToScriptingClass (33ms)
+	initialDomainReloadingComplete (90ms)
+	LoadAllAssembliesAndSetupDomain (728ms)
+		LoadAssemblies (846ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (48ms)
-			TypeCache.Refresh (15ms)
+		AnalyzeDomain (57ms)
+			TypeCache.Refresh (18ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (30ms)
-	FinalizeReload (4751ms)
+			ResolveRequiredComponents (35ms)
+	FinalizeReload (5816ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2219ms)
+		SetupLoadedEditorAssemblies (2996ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (38ms)
-			SetLoadedEditorAssemblies (12ms)
+			InitializePlatformSupportModulesInManaged (47ms)
+			SetLoadedEditorAssemblies (17ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (406ms)
-			ProcessInitializeOnLoadAttributes (1670ms)
-			ProcessInitializeOnLoadMethodAttributes (69ms)
-			AfterProcessingInitializeOnLoad (23ms)
+			BeforeProcessingInitializeOnLoad (499ms)
+			ProcessInitializeOnLoadAttributes (2281ms)
+			ProcessInitializeOnLoadMethodAttributes (119ms)
+			AfterProcessingInitializeOnLoad (32ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (163ms)
+		AwakeInstancesAfterBackupRestoration (217ms)
 Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 9.18 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 11.70 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7731.
+Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7700.
 Memory consumption went from 271.5 MB to 270.2 MB.
-Total: 16.555400 ms (FindLiveObjects: 2.193800 ms CreateObjectMapping: 2.312200 ms MarkObjects: 10.904700 ms  DeleteObjects: 1.141600 ms)
+Total: 16.931200 ms (FindLiveObjects: 1.301300 ms CreateObjectMapping: 1.037500 ms MarkObjects: 13.068500 ms  DeleteObjects: 1.521900 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -671,18 +879,914 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 184.255685 seconds.
-  path: Assets/Try2/Prefabs/Player.prefab
-  artifactKey: Guid(b87bb80844848f14f80f58596dc4fd37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Try2/Prefabs/Player.prefab using Guid(b87bb80844848f14f80f58596dc4fd37) Importer(815301076,1909f56bfc062723c751e8b465ee728b) d3d12: upload buffer was full! Waited for COPY queue for 2.780 ms.
- -> (artifact id: 'efa860f00f91b2a85d9b8d493157bca3') in 2.361448 seconds
+  Time since last request: 101.450866 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b) d3d12: upload buffer was full! Waited for COPY queue for 2.841 ms.
+ -> (artifact id: '0e016d6dce23e4e776c41d391a8bdcd4') in 2.359844 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 78
+Number of asset objects unloaded after import = 261
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4de5582d08ebe39bbc4ff7c3e07b6fb9') in 0.081630 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.751371 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2da3b40c6ea88596ddf3e9f01be481e0') in 0.078605 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000982 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '197f539e1809aedf3f4e28f4efb7a80c') in 0.064677 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 7.441292 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ba149217c157e4ac8dad1a7efe60cc') in 0.082448 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5efbd527944542e1e3ff78ae1ebf5ae') in 0.075374 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed16d2fd4e7bdc22da7e9444df893707') in 0.072569 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 2.114571 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e503af0f4af2ef68e62320f292559823') in 0.077525 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '250634541d8f6903b01fe9899b6b4afa') in 0.060823 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bc740b5d0242a115ea817d2a8fdc255') in 0.083013 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 7.041470 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ac12ea633d8d8f5da20b65e447188e6') in 0.070337 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 362
+========================================================================
+Received Import Request.
+  Time since last request: 1.793799 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce217eeb587d35cc500b6024995f115f') in 0.662002 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 362
+========================================================================
+Received Import Request.
+  Time since last request: 2.352359 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '691676fb24b81812ef4328d1005f4dc6') in 0.065387 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca52e0c89411f870ad04f297a2c40c8b') in 0.065583 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '484e227a071adcf1b71f9a43eadfc763') in 0.062243 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 362
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d1349684ffbfce764f9949de95a3e2a') in 0.054081 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f43fe533d8231d53e2cc17845de22bc2') in 0.059811 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 2.133504 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fa0d195e1af7b2f816efe7aa9fca7e1') in 0.071115 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ab8cdf388fbe00377b1c9e6618cf29d') in 0.083478 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edb2f7805df581d2b9126e5662914c90') in 0.128862 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 362
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2e07fef98cde7d89c7094ec11b95566') in 0.055104 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdf7de84debd0827c2cb3a5ec01497e5') in 0.057588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 23.835825 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2969003bb3a2ecb9b9aeda4bcd7f5a34') in 0.056631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de467699ed7f08377cfbf853798910c9') in 0.067079 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7902ca41fb2f9ca9a7894387d963281') in 0.052308 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e731ec6bcfb3e0084719590361615c5f') in 0.054639 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 362
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e826136a5cb739d454c368dbb4603f1') in 0.055836 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37aac26795729807d9331a49f9744f38') in 0.133873 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 13.620069 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp 1.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp 1.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70d05ea64f88d51656351a228db5fb7c') in 0.184397 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 4.863923 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52cc33047e7229c8c9581e7470c3bd3e') in 0.054443 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 54.179570 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5456167208d971e954adfbb46d449423') in 0.082273 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 9.470945 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b951641031e143ae4ad141b9106d4c63') in 0.106059 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 12.805101 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd69cd68c8e2b0c6bb4e724d64215aad6') in 0.074316 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 30.645487 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c26342bf0fbc71fd8004fb420dee09d') in 0.080564 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 6.162525 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9d5fe87cdd9f6d2c825e26cac782308') in 0.083047 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 4.852175 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78537093039cf46177aee196a466fc18') in 0.054410 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 7.251864 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38f0cf977f0fa83652e007f7b9eaacc6') in 0.067048 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 7.152530 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5be695ff10888e091e0c6e8ad435df3d') in 0.089310 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 6.720724 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef9638f048c40a8a82a0ec8b850d1c9f') in 0.122071 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 4.421053 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8e57f0c9ef553444c53b75398447d3c') in 0.133559 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 22.551112 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e76badbd9c490dd386603c3c303eda24') in 0.087694 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 9.719064 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39632728ed7adca4b0cd6ec14207da7c') in 0.069173 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c28b574da925ab4a74a70b4add2be8c8') in 0.063641 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b1b19f89c58e21f967a93f773785802') in 0.085648 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd07b8f53f9b5991185b1eff1504b6ecd') in 0.154777 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9621c465a5f8f71c82388732d38b478') in 0.070831 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 466
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d60d6a57ebd85aa67353fa91b5a236d') in 0.059831 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14721f26bfbf6af9bfe45fb61f1e610') in 0.081764 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 15.971599 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da50f9d25fc33c0df472f8b613199c20') in 0.081819 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 12.143522 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd187a7dd38bcdc62bb8c2e39ab725634') in 0.092764 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 164.112900 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a22feb84a3d8a834cee922d259830ba3') in 0.111418 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 7.229338 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '421b3bf0ecfd97bfb500e70ede1f27ee') in 0.060243 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 346
+========================================================================
+Received Import Request.
+  Time since last request: 5.720049 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1471e11565261427d2aafc73482688a0') in 0.062093 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 346
+========================================================================
+Received Import Request.
+  Time since last request: 6.926439 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb31fa2ac29d39998c1facb096b8631e') in 0.066811 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 346
+========================================================================
+Received Import Request.
+  Time since last request: 6.745505 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e27910a848c1d6cb1923cb70476e3fca') in 0.090233 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 346
+========================================================================
+Received Import Request.
+  Time since last request: 3.450705 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad5a40de35dc0964bc8f93248462da5') in 0.078567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 10.983893 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee57d4cae55b9911ebb585418aabb5f2') in 0.094588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6b7defa7e93f1bbc294dee3328ff078') in 0.060711 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adb400b14e45e36dec2bbffb57cb2aa1') in 0.107538 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '193646ddc5f312ae8146104457b40cb1') in 0.087318 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4430249d4c1fc3ba11836677656e95d') in 0.126236 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 466
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '382125c37281d1aa2768f76510bda375') in 0.061845 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97f99f9351cc6e9cd75b3f4177a616ef') in 0.125438 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 17.408095 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11dbdb1b0a187e5738701e265652e1a2') in 0.131435 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6670f9046080231501f6e4c9f023b9') in 0.064825 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96c7adc4c607ca58b738bdfe35a28cfd') in 0.055476 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71faf8f85d08c4eb9f43c0b3b15979c1') in 0.060715 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37599e6fbd5e8095eabb3752094bc500') in 0.069372 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 466
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca7712a5e6221ca0c70c8ef79be33a8a') in 0.055320 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7406dc73c089603935db1c8f5c412e95') in 0.120111 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 11.893654 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b18ebc885685f6010f5e8ffb11550477') in 0.072818 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 16.356604 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78d62b69fe24442b0c604af1e342d068') in 0.064415 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d47243d95d4b980387a80b74f6feb4d') in 0.062273 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c86d865182efcf8dea2119eca074de7') in 0.099052 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2822effa295d523eab9f45278a6f2fc') in 0.133928 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23f889db60c30e00290caccc8a4b662') in 0.066230 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 466
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7054a0a3ac3dbe3a01ebfa0d298c2415') in 0.066626 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5c915068adb8fcae37c4972b9d999c9') in 0.157837 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 396
+========================================================================
+Received Import Request.
+  Time since last request: 18.645590 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c37f7bcf2e8f305f5485de7dbf733c38') in 0.083482 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 455
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e28220b05111e842f373c4eb0bfdd74') in 0.117225 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 455
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e2807c02cec2967eabf33e428128c87') in 0.112240 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 455
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae7e25ba3a19522d2be69f7f3c3b4f70') in 0.124320 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 455
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b472c0633ab1b7a0dea48297aef7a0a0') in 0.078247 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 525
+========================================================================
+Received Import Request.
+  Time since last request: 0.000109 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be03e868d87b607b7b73b4314922732a') in 0.121922 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 455
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4065e629b8be6e8688af57b6403a861') in 0.154368 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 455
+========================================================================
+Received Import Request.
+  Time since last request: 23.917817 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c09a9fc5f5cae5eff4d9d13445dbe96d') in 0.071527 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed0897393c3c56379353c8bf32b9959a') in 0.052584 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db84421d40d0d4a6e7d0a07a52644531') in 0.070004 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb38948ad2ba19405f15d901b9b22c5c') in 0.084024 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '017f8bcfd56e6585645edd4e7eaa38a2') in 0.064009 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 362
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e254eda434dccfce9025a968d00d332') in 0.060145 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ee2e909e7726d82a99bb93afa4a7f1e') in 0.063607 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 292
+========================================================================
+Received Import Request.
+  Time since last request: 1.996016 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36266d5cb34bf046ee0c37f417bfcbdf') in 0.068659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3314590fa4b1f8a71c4d6a784bd68721') in 0.106535 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6c961bd79fb7c97da2aaf508c21e0fb') in 0.064219 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebbebbe7c681e6988e39ca227185eb50') in 0.073643 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '256f8b6d57d5a227902d133e32da1243') in 0.067181 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 414
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69e0da66d47bd734707b936057940daa') in 0.053921 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78c6386f117a017595b117b51bfc0ae2') in 0.067673 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 14.468958 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63be9a144e27e702ba00534daa55afb6') in 0.077903 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be61436c19112cda7ccd4ea518e1741b') in 0.086262 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde5c5b74d435dbd87dd9eb225607453') in 0.059119 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd25296d45990276cc123aa35fff1937c') in 0.062614 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff2582e16eb9a2148cafe47cb10ff524') in 0.061625 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 414
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b478f7fce10736157e7e09f0706b5d6') in 0.055286 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31a23a28fa5a2e689921671b1de1352') in 0.129683 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 2.165947 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Corridor.prefab
+  artifactKey: Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Corridor.prefab using Guid(1b093448b3dc3c4499a3297991de4289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4027d200458e006967693acbc40142d8') in 0.141673 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampUp.prefab
+  artifactKey: Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampUp.prefab using Guid(d05f34f34b43bd848a23b770242c36ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '867ff9eedd60ce640aef533d8feb5cd1') in 0.063834 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampDown.prefab
+  artifactKey: Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampDown.prefab using Guid(3fd092bafd5df084ab0fcd965fe27a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d0d61ee8a72515f02080bb74c416d60') in 0.065170 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Try2/Prefabs/Level segments/T_junction.prefab
+  artifactKey: Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/T_junction.prefab using Guid(5a46c06723ce7be4cbac0feb2af0a3b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '744727c949cf16079b897685f14b0807') in 0.059128 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Start.prefab
+  artifactKey: Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Start.prefab using Guid(622a74a8406a1a74e9ea7372d3708bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de9ae730fab2d2838c2a57422aa3be4a') in 0.060418 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 414
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Try2/Prefabs/Level segments/Door.prefab
+  artifactKey: Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/Door.prefab using Guid(eef08cbf451ab894180d7c01e471007e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9b27277754bb5cb5b5f257de9efff99') in 0.055145 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab
+  artifactKey: Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Try2/Prefabs/Level segments/RampAdvanced.prefab using Guid(da0442ce92e6fdc49a5ff4afbbbdebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20ac9a3047c2125c384fd1ba74c6e775') in 0.064433 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 344
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  6.721 seconds
-Refreshing native plugins compatible for Editor in 21.64 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.448 seconds
+Refreshing native plugins compatible for Editor in 8.70 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
@@ -690,455 +1794,47 @@ Native extension for OSXStandalone target not found
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in 12.340 seconds
-Domain Reload Profiling: 19047ms
-	BeginReloadAssembly (1367ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (179ms)
+- Finished resetting the current domain, in  4.364 seconds
+Domain Reload Profiling: 5804ms
+	BeginReloadAssembly (560ms)
+		ExecutionOrderSort (8ms)
+		DisableScriptedObjects (112ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (442ms)
-	RebuildCommonClasses (215ms)
-	RebuildNativeTypeToScriptingClass (72ms)
-	initialDomainReloadingComplete (259ms)
-	LoadAllAssembliesAndSetupDomain (4793ms)
-		LoadAssemblies (4760ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (564ms)
-			TypeCache.Refresh (78ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (329ms)
-			ResolveRequiredComponents (148ms)
-	FinalizeReload (12341ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (5761ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (82ms)
-			SetLoadedEditorAssemblies (26ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (547ms)
-			ProcessInitializeOnLoadAttributes (4972ms)
-			ProcessInitializeOnLoadMethodAttributes (100ms)
-			AfterProcessingInitializeOnLoad (32ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (363ms)
-Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 99.88 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 57 unused Assets / (1.3 MB). Loaded Objects now: 7855.
-Memory consumption went from 271.8 MB to 270.5 MB.
-Total: 13.113800 ms (FindLiveObjects: 0.929100 ms CreateObjectMapping: 0.646900 ms MarkObjects: 10.924700 ms  DeleteObjects: 0.611100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  4.273 seconds
-Refreshing native plugins compatible for Editor in 48.56 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  5.590 seconds
-Domain Reload Profiling: 9813ms
-	BeginReloadAssembly (1000ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (20ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (255ms)
-	RebuildCommonClasses (335ms)
-	RebuildNativeTypeToScriptingClass (197ms)
-	initialDomainReloadingComplete (554ms)
-	LoadAllAssembliesAndSetupDomain (2136ms)
-		LoadAssemblies (2267ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (366ms)
-			TypeCache.Refresh (50ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (262ms)
-			ResolveRequiredComponents (50ms)
-	FinalizeReload (5591ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1865ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (34ms)
-			SetLoadedEditorAssemblies (10ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (332ms)
-			ProcessInitializeOnLoadAttributes (1415ms)
-			ProcessInitializeOnLoadMethodAttributes (55ms)
-			AfterProcessingInitializeOnLoad (18ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (1ms)
-		AwakeInstancesAfterBackupRestoration (135ms)
-Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 6.21 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7870.
-Memory consumption went from 271.6 MB to 270.3 MB.
-Total: 9.337300 ms (FindLiveObjects: 0.870600 ms CreateObjectMapping: 0.543000 ms MarkObjects: 7.286600 ms  DeleteObjects: 0.635200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.334 seconds
-Refreshing native plugins compatible for Editor in 8.79 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  5.719 seconds
-Domain Reload Profiling: 7047ms
-	BeginReloadAssembly (448ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (103ms)
-	RebuildCommonClasses (90ms)
-	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (63ms)
-	LoadAllAssembliesAndSetupDomain (701ms)
-		LoadAssemblies (830ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (48ms)
-			TypeCache.Refresh (14ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (30ms)
-	FinalizeReload (5720ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (3058ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (39ms)
-			SetLoadedEditorAssemblies (11ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (361ms)
-			ProcessInitializeOnLoadAttributes (2442ms)
-			ProcessInitializeOnLoadMethodAttributes (144ms)
-			AfterProcessingInitializeOnLoad (61ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (1ms)
-		AwakeInstancesAfterBackupRestoration (234ms)
-Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 7.13 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7885.
-Memory consumption went from 271.6 MB to 270.3 MB.
-Total: 10.860000 ms (FindLiveObjects: 1.077000 ms CreateObjectMapping: 0.898900 ms MarkObjects: 8.224100 ms  DeleteObjects: 0.657700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.390 seconds
-Refreshing native plugins compatible for Editor in 7.90 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  4.017 seconds
-Domain Reload Profiling: 5400ms
-	BeginReloadAssembly (399ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (16ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (102ms)
-	RebuildCommonClasses (95ms)
+		CreateAndSetChildDomain (149ms)
+	RebuildCommonClasses (80ms)
 	RebuildNativeTypeToScriptingClass (27ms)
-	initialDomainReloadingComplete (82ms)
-	LoadAllAssembliesAndSetupDomain (779ms)
-		LoadAssemblies (822ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (702ms)
+		LoadAssemblies (837ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (147ms)
-			TypeCache.Refresh (23ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (93ms)
-			ResolveRequiredComponents (27ms)
-	FinalizeReload (4018ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1772ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (30ms)
-			SetLoadedEditorAssemblies (9ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (299ms)
-			ProcessInitializeOnLoadAttributes (1361ms)
-			ProcessInitializeOnLoadMethodAttributes (51ms)
-			AfterProcessingInitializeOnLoad (21ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (120ms)
-Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 7.98 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7900.
-Memory consumption went from 271.6 MB to 270.3 MB.
-Total: 10.281900 ms (FindLiveObjects: 0.952800 ms CreateObjectMapping: 1.037500 ms MarkObjects: 7.147500 ms  DeleteObjects: 1.141200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.246 seconds
-Refreshing native plugins compatible for Editor in 6.03 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  5.083 seconds
-Domain Reload Profiling: 6324ms
-	BeginReloadAssembly (375ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (97ms)
-	RebuildCommonClasses (76ms)
-	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (77ms)
-	LoadAllAssembliesAndSetupDomain (686ms)
-		LoadAssemblies (803ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (57ms)
-			TypeCache.Refresh (23ms)
+		AnalyzeDomain (51ms)
+			TypeCache.Refresh (15ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (31ms)
-	FinalizeReload (5085ms)
+	FinalizeReload (4365ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2508ms)
+		SetupLoadedEditorAssemblies (1961ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (29ms)
-			SetLoadedEditorAssemblies (11ms)
+			InitializePlatformSupportModulesInManaged (44ms)
+			SetLoadedEditorAssemblies (10ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (370ms)
-			ProcessInitializeOnLoadAttributes (1967ms)
-			ProcessInitializeOnLoadMethodAttributes (97ms)
-			AfterProcessingInitializeOnLoad (33ms)
+			BeforeProcessingInitializeOnLoad (320ms)
+			ProcessInitializeOnLoadAttributes (1495ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+			AfterProcessingInitializeOnLoad (20ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (271ms)
+		AwakeInstancesAfterBackupRestoration (134ms)
 Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 15.81 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.82 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7915.
-Memory consumption went from 271.6 MB to 270.3 MB.
-Total: 19.235900 ms (FindLiveObjects: 1.489100 ms CreateObjectMapping: 1.496600 ms MarkObjects: 15.348000 ms  DeleteObjects: 0.898800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  4.281 seconds
-Refreshing native plugins compatible for Editor in 9.48 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  9.839 seconds
-Domain Reload Profiling: 14060ms
-	BeginReloadAssembly (987ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (48ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (270ms)
-	RebuildCommonClasses (215ms)
-	RebuildNativeTypeToScriptingClass (72ms)
-	initialDomainReloadingComplete (232ms)
-	LoadAllAssembliesAndSetupDomain (2714ms)
-		LoadAssemblies (2692ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (438ms)
-			TypeCache.Refresh (36ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (282ms)
-			ResolveRequiredComponents (116ms)
-	FinalizeReload (9841ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (4048ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (51ms)
-			SetLoadedEditorAssemblies (28ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (604ms)
-			ProcessInitializeOnLoadAttributes (3194ms)
-			ProcessInitializeOnLoadMethodAttributes (143ms)
-			AfterProcessingInitializeOnLoad (27ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (231ms)
-Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 6.13 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7930.
-Memory consumption went from 271.6 MB to 270.3 MB.
-Total: 20.347600 ms (FindLiveObjects: 2.685800 ms CreateObjectMapping: 1.041500 ms MarkObjects: 15.845500 ms  DeleteObjects: 0.770000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.536 seconds
-Refreshing native plugins compatible for Editor in 12.36 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  8.678 seconds
-Domain Reload Profiling: 10206ms
-	BeginReloadAssembly (440ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (23ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (104ms)
-	RebuildCommonClasses (96ms)
-	RebuildNativeTypeToScriptingClass (33ms)
-	initialDomainReloadingComplete (81ms)
-	LoadAllAssembliesAndSetupDomain (878ms)
-		LoadAssemblies (1029ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (62ms)
-			TypeCache.Refresh (18ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (39ms)
-	FinalizeReload (8680ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (4518ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (155ms)
-			SetLoadedEditorAssemblies (47ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (859ms)
-			ProcessInitializeOnLoadAttributes (3253ms)
-			ProcessInitializeOnLoadMethodAttributes (138ms)
-			AfterProcessingInitializeOnLoad (62ms)
-			EditorAssembliesLoaded (3ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (426ms)
-Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 11.79 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7945.
-Memory consumption went from 276.1 MB to 274.8 MB.
-Total: 32.779900 ms (FindLiveObjects: 2.055700 ms CreateObjectMapping: 5.278000 ms MarkObjects: 24.591500 ms  DeleteObjects: 0.851000 ms)
+Unloading 6549 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 56 unused Assets / (1.3 MB). Loaded Objects now: 7825.
+Memory consumption went from 272.3 MB to 271.0 MB.
+Total: 12.465500 ms (FindLiveObjects: 0.974100 ms CreateObjectMapping: 0.691000 ms MarkObjects: 9.506900 ms  DeleteObjects: 1.289700 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):

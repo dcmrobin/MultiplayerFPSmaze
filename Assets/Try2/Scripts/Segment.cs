@@ -10,7 +10,7 @@ public class Segment : MonoBehaviour
     [HideInInspector] public bool isOverlapping;
 
     private void Start() {
-        if (Random.value > 0.7)
+        if (Random.value > 0.6)
         {
             if (transform.Find("Light") != null)
             {

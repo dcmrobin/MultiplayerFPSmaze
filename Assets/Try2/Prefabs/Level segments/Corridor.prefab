@@ -865,6 +865,8 @@ MonoBehaviour:
   - {fileID: 5755648635834313607, guid: 5a46c06723ce7be4cbac0feb2af0a3b5, type: 3}
   - {fileID: 4534119535684800561, guid: eef08cbf451ab894180d7c01e471007e, type: 3}
   - {fileID: 5755648635834313607, guid: d05f34f34b43bd848a23b770242c36ca, type: 3}
+  - {fileID: 5755648635834313607, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
+  - {fileID: 5755648635834313607, guid: da0442ce92e6fdc49a5ff4afbbbdebf9, type: 3}
   exits:
   - {fileID: 6683392878036038936}
   isOverlapping: 0
