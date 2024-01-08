@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 8.0f;
     [Tooltip("The player's flashlight")]
     public GameObject flashlight;
+    [Tooltip("The map camera")]
+    public GameObject mapCamera;
 
     [Header("Interaction variables")]
     [Tooltip("What layers can the player interact with?")]
@@ -23,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     private float verticalRotation = 0f;
     private Rigidbody rb;
+    private bool isLookingAtMap;
 
     RaycastHit hit;
 
@@ -36,14 +40,20 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        HandleMouseLook();
-        HandleJump();
+        if (!isLookingAtMap)
+        {
+            HandleMouseLook();
+            HandleJump();
+        }
         HandleInteractions();
     }
 
     void FixedUpdate()
     {
-        HandlePlayerMovement();
+        if (!isLookingAtMap)
+        {
+            HandlePlayerMovement();
+        }
     }
 
     void HandleMouseLook()
@@ -95,6 +105,22 @@ public class PlayerController : MonoBehaviour
                 flashlight.SetActive(false);
             }
         }*/
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (!isLookingAtMap)
+            {
+                isLookingAtMap = true;
+                mapCamera.SetActive(true);
+                transform.Find("Canvas").gameObject.SetActive(false);
+            }
+            else
+            {
+                isLookingAtMap = false;
+                mapCamera.SetActive(false);
+                transform.Find("Canvas").gameObject.SetActive(true);
+            }
+        }
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, maxDistance, interactionMask))
         {
