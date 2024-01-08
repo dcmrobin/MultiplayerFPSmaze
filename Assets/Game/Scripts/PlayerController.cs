@@ -79,12 +79,12 @@ public class PlayerController : MonoBehaviour
 
     bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, 5.1f);
+        return Physics.Raycast(transform.position, Vector3.down, 6f);
     }
 
     void HandleInteractions()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        /*if (Input.GetKeyDown(KeyCode.F))
         {
             if (!flashlight.activeSelf)
             {
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
             {
                 flashlight.SetActive(false);
             }
-        }
+        }*/
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, maxDistance, interactionMask))
         {

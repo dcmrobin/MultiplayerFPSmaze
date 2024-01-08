@@ -858,6 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb283eb004feb324f9d1db1a2753b7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rarity: 2
   wallPrefab: {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   segmentPrefabList:
   - {fileID: 5755648635834313607}
