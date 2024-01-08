@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5.0f;
     [Tooltip("How high can the player jump?")]
     public float jumpForce = 8.0f;
+    [Tooltip("The player's flashlight")]
+    public GameObject flashlight;
 
     [Header("Interaction variables")]
     [Tooltip("What layers can the player interact with?")]
@@ -82,6 +84,18 @@ public class PlayerController : MonoBehaviour
 
     void HandleInteractions()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (!flashlight.activeSelf)
+            {
+                flashlight.SetActive(true);
+            }
+            else
+            {
+                flashlight.SetActive(false);
+            }
+        }
+
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, maxDistance, interactionMask))
         {
             GameObject currentObject = hit.collider.gameObject;
