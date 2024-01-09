@@ -42,13 +42,20 @@ public class Segment : MonoBehaviour
 
         if (transform.Find("Light") != null)
         {
-            if (Vector3.Distance(transform.position, Camera.main.transform.position) >= 300)
+            if (Camera.main != null)
+            {
+                if (Vector3.Distance(transform.position, Camera.main.transform.position) >= 300)
+                {
+                    transform.Find("Light").gameObject.SetActive(false);
+                }
+                else if (Vector3.Distance(transform.position, Camera.main.transform.position) < 300)
+                {
+                    transform.Find("Light").gameObject.SetActive(true);
+                }
+            }
+            else//this is gonna get mixed up between the players
             {
                 transform.Find("Light").gameObject.SetActive(false);
-            }
-            else if (Vector3.Distance(transform.position, Camera.main.transform.position) < 300)
-            {
-                transform.Find("Light").gameObject.SetActive(true);
             }
 
             if (!transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled)
