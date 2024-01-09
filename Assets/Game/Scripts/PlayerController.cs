@@ -113,12 +113,14 @@ public class PlayerController : MonoBehaviour
                 isLookingAtMap = true;
                 mapCamera.SetActive(true);
                 transform.Find("Canvas").gameObject.SetActive(false);
+                Cursor.lockState = CursorLockMode.None;
             }
             else
             {
                 isLookingAtMap = false;
                 mapCamera.SetActive(false);
                 transform.Find("Canvas").gameObject.SetActive(true);
+                Cursor.lockState = CursorLockMode.Locked;
             }
         }
 

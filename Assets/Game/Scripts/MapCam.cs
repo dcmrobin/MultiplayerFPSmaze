@@ -12,6 +12,8 @@ public class MapCam : MonoBehaviour
     private void Update() {
         float h = Input.GetAxis("Horizontal");
 
+        //Cursor.lockState = CursorLockMode.None;
+
         if (GetComponent<Camera>().orthographicSize > 0)
         {
             GetComponent<Camera>().orthographicSize -= Mouse.current.scroll.ReadValue().normalized.y * 50;
