@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using Unity.Netcode;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
-    [Header("Player controls")]
+    [Header("Player Variables")]
     [Tooltip("How sensitive is the mouse look?")]
     public float mouseSensitivity = 2.0f;
     [Tooltip("How fast can the player move?")]
@@ -17,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public GameObject flashlight;
     [Tooltip("The map camera")]
     public GameObject mapCamera;
+    [Tooltip("The main camera")]
+    public GameObject mainCamera;
 
     [Header("Interaction variables")]
     [Tooltip("What layers can the player interact with?")]
@@ -27,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private float verticalRotation = 0f;
     private Rigidbody rb;
     private bool isLookingAtMap;
+    private GameObject[] playerCameras;
 
     RaycastHit hit;
 
@@ -40,16 +44,29 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!IsOwner) return;
+
         if (!isLookingAtMap)
         {
             HandleMouseLook();
             HandleJump();
         }
         HandleInteractions();
+
+        playerCameras = GameObject.FindGameObjectsWithTag("MainCamera");
+        for (int i = 0; i < playerCameras.Length; i++)
+        {
+            if (playerCameras[i] != mainCamera)
+            {
+                playerCameras[i].SetActive(false);
+            }
+        }
     }
 
     void FixedUpdate()
     {
+        if (!IsOwner) return;
+
         if (!isLookingAtMap)
         {
             HandlePlayerMovement();
