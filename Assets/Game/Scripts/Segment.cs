@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
+using Unity.Netcode.Components;
 using UnityEngine;
 
 public class Segment : MonoBehaviour
@@ -30,7 +32,12 @@ public class Segment : MonoBehaviour
             }
         }*/
 
-        GenerateSegment();
+        if (name != "Start")
+        {
+            GenerateSegment();
+        }
+
+        //Invoke("RemoveNetworkComponents", 2);
     }
 
     private void Update() {
@@ -89,7 +96,7 @@ public class Segment : MonoBehaviour
         }
     }
 
-    void GenerateSegment() {
+    public void GenerateSegment() {
         for (int j = 0; j < exits.Length; j++)
         {
             regen:
@@ -125,5 +132,23 @@ public class Segment : MonoBehaviour
         }
         
         timer = 0;
+    }
+
+    void RemoveNetworkComponents()
+    {
+        gameObject.GetComponent<NetworkObject>().enabled = false;
+        gameObject.GetComponent<NetworkTransform>().enabled = false;
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).GetComponent<NetworkObject>() != null)
+            {
+                transform.GetChild(i).GetComponent<NetworkObject>().enabled = false;
+            }
+            if (transform.GetChild(i).GetComponent<NetworkTransform>() != null)
+            {
+                transform.GetChild(i).GetComponent<NetworkTransform>().enabled = false;
+            }
+        }
     }
 }

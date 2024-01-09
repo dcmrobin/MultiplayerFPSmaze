@@ -318,23 +318,23 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+        <HintPath>D:\unity projects\DungeonExplore\Library\PackageCache\com.unity.services.wire@1.2.0\Plugins\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+        <HintPath>D:\unity projects\DungeonExplore\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
     <Reference Include="ReportGeneratorMerged">
         <HintPath>D:\unity projects\DungeonExplore\Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>D:\unity projects\DungeonExplore\Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Collections.LowLevel.ILSupport">
-        <HintPath>D:\unity projects\DungeonExplore\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-        <HintPath>D:\unity projects\DungeonExplore\Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>D:\unity projects\DungeonExplore\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="websocket-sharp">
-        <HintPath>D:\unity projects\DungeonExplore\Library\PackageCache\com.unity.services.wire@1.2.0\Plugins\websocket-sharp.dll</HintPath>
+    <Reference Include="Mono.Cecil">
+        <HintPath>D:\unity projects\DungeonExplore\Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -756,20 +756,20 @@
     <Reference Include="Unity.Services.Relay">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Services.Relay.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Multiplayer.Tools.NetStats">
-        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.NetStats.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Multiplayer.Tools.NetStats">
+        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.NetStats.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
@@ -795,11 +795,11 @@
     <Reference Include="Unity.Multiplayer.Samples.Utilities">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Samples.Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Multiplayer.Tools.NetworkProfiler.Editor">
-        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.NetworkProfiler.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Multiplayer.Tools.NetworkProfiler.Editor">
+        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.NetworkProfiler.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
@@ -807,11 +807,11 @@
     <Reference Include="Unity.Multiplayer.Tools.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Profiling.Core">
-        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Profiling.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Multiplayer.Tools.Common">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Profiling.Core">
+        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Profiling.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
@@ -843,11 +843,11 @@
     <Reference Include="Unity.VisualScripting.Shared.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Tutorials.Core">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Tutorials.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
@@ -864,11 +864,11 @@
     <Reference Include="Unity.Services.QoS">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Services.QoS.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Multiplayer.Tools.NetworkProfiler.Runtime">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Multiplayer.Tools.NetStatsMonitor.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.NetStatsMonitor.Editor.dll</HintPath>
@@ -879,14 +879,14 @@
     <Reference Include="Unity.Timeline">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Multiplayer.Tools.NetStatsMonitor.Implementation">
+        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.NetStatsMonitor.Implementation.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.InputSystem">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem.ForUI">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Multiplayer.Tools.NetStatsMonitor.Implementation">
-        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.NetStatsMonitor.Implementation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
@@ -912,17 +912,17 @@
     <Reference Include="Unity.Mathematics">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Multiplayer.Tools.MetricTypes">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Multiplayer.Tools.MetricTypes.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Networking.Editor">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Networking.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+        <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
         <HintPath>D:\unity projects\DungeonExplore\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
