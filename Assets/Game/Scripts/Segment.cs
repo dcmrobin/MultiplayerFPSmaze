@@ -24,20 +24,11 @@ public class Segment : MonoBehaviour
 
     private void Start() {
         flickerNum = Random.Range(0, 10);
-        /*if (Random.value > 0.6)
-        {
-            if (transform.Find("Light") != null)
-            {
-                transform.Find("Light").gameObject.SetActive(false);
-            }
-        }*/
 
         if (name != "Start")
         {
             GenerateSegment();
         }
-
-        //Invoke("RemoveNetworkComponents", 2);
     }
 
     private void Update() {
@@ -132,23 +123,5 @@ public class Segment : MonoBehaviour
         }
         
         timer = 0;
-    }
-
-    void RemoveNetworkComponents()
-    {
-        gameObject.GetComponent<NetworkObject>().enabled = false;
-        gameObject.GetComponent<NetworkTransform>().enabled = false;
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).GetComponent<NetworkObject>() != null)
-            {
-                transform.GetChild(i).GetComponent<NetworkObject>().enabled = false;
-            }
-            if (transform.GetChild(i).GetComponent<NetworkTransform>() != null)
-            {
-                transform.GetChild(i).GetComponent<NetworkTransform>().enabled = false;
-            }
-        }
     }
 }
