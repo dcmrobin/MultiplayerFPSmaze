@@ -40,17 +40,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\TestRelay.cs" />
-     <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\Common\BasicRigidBodyPush.cs" />
-     <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\ThirdPersonController\Scripts\ThirdPersonController.cs" />
-     <Compile Include="Assets\Scripts\LobbyController.cs" />
      <Compile Include="Assets\Game\Scripts\MapCam.cs" />
      <Compile Include="Assets\Game\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Game\Scripts\Segment.cs" />
      <Compile Include="Assets\Game\Scripts\SegmentOverlapCheck.cs" />
-     <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\FirstPersonController\FirstPersonController.cs" />
-     <Compile Include="Assets\HDRP demo\SampleSceneAssets\Controllers\Common\InputSystem\StarterAssetsInputs.cs" />
+     <Compile Include="Assets\Game\Scripts\LobbyController.cs" />
+     <Compile Include="Assets\Game\Scripts\TestRelay.cs" />
+     <Compile Include="Assets\Game\Scripts\UIManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
