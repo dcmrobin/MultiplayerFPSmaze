@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : NetworkBehaviour
 {
+    public string recievedString;
     [Header("Player Variables")]
     [Tooltip("How sensitive is the mouse look?")]
     public float mouseSensitivity = 2.0f;

@@ -70,6 +70,7 @@ public class Segment : MonoBehaviour
         if (startedGenerating && GameObject.Find("Start").GetComponent<Seed>().worldSize < 1)
         {
             finishedGenerating = true;
+            SendSeedClientRpc(GameObject.Find("Start").GetComponent<Seed>().seed);
         }
 
         if (finishedGenerating)
@@ -134,5 +135,11 @@ public class Segment : MonoBehaviour
         }
         
         timer = 0;
+    }
+
+    [ClientRpc]
+    public void SendSeedClientRpc(string seed)
+    {
+        //
     }
 }
