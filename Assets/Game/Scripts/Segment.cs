@@ -20,7 +20,8 @@ public class Segment : MonoBehaviour
     float interval;
 
     [HideInInspector] public bool isOverlapping;
-    bool giveUp;
+    bool startedGenerating;
+    bool finishedGenerating;
     int flickerNum;
 
     private void Start() {
@@ -66,14 +67,19 @@ public class Segment : MonoBehaviour
             }
         }
 
-        if (giveUp)
+        if (startedGenerating && GameObject.Find("Start").GetComponent<Seed>().worldSize < 1)
+        {
+            finishedGenerating = true;
+        }
+
+        if (finishedGenerating)
         {
             for (int i = 0; i < exits.Length; i++)
             {
                 if (exits[i].childCount == 0)
                 {
                     Instantiate(wallPrefab, exits[i]);
-                    giveUp = false;
+                    finishedGenerating = false;
                 }
             }
         }
@@ -89,27 +95,30 @@ public class Segment : MonoBehaviour
     }
 
     public void GenerateSegment() {
-        for (int j = 0; j < exits.Length; j++)
+        startedGenerating = true;
+        if (GameObject.Find("Start").GetComponent<Seed>().worldSize > -1)
         {
-            regen:
-                if (exits[j].childCount == 0)
-                {
-                    int randomNum = Random.Range(0, segmentPrefabList.Length);
-                    int randProb1 = Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
-                    int randProb2 = Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
-                    if (randProb1 == randProb2)
+            for (int j = 0; j < exits.Length; j++)
+            {
+                regen:
+                    if (exits[j].childCount == 0)
                     {
-                        GameObject.Find("Start").GetComponent<Seed>().seed += randomNum.ToString();
-                        GameObject newSegment = Instantiate(segmentPrefabList[randomNum], exits[j]);
+                        int randomNum = Random.Range(0, segmentPrefabList.Length);
+                        int randProb1 = Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
+                        int randProb2 = Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
+                        if (randProb1 == randProb2)
+                        {
+                            GameObject.Find("Start").GetComponent<Seed>().seed += randomNum.ToString();
+                            GameObject.Find("Start").GetComponent<Seed>().worldSize -= 1;
+                            GameObject newSegment = Instantiate(segmentPrefabList[randomNum], exits[j]);
+                        }
+                        else
+                        {
+                            goto regen;
+                        }
                     }
-                    else
-                    {
-                        goto regen;
-                    }
-                }
+            }
         }
-
-        giveUp = true;
     }
 
     void ToggleLight()

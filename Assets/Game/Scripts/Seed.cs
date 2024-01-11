@@ -21,7 +21,7 @@ public class Seed : NetworkBehaviour
     {
         if (worldSizeInputField.text != "")
         {
-            worldSize = System.Int32.Parse(worldSizeInputField.text);
+            worldSize = Mathf.Abs(System.Int32.Parse(worldSizeInputField.text));
         }
         else
         {
