@@ -7,6 +7,7 @@ using UnityEngine;
 public class Segment : MonoBehaviour
 {
     [Header("Segment variables")]
+    public bool isStart;
     public int rarity;
     public GameObject wallPrefab;
     public GameObject[] segmentPrefabList;
@@ -25,7 +26,7 @@ public class Segment : MonoBehaviour
     private void Start() {
         flickerNum = Random.Range(0, 10);
 
-        if (name != "Start")
+        if (!isStart)
         {
             GenerateSegment();
         }
