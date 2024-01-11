@@ -98,6 +98,7 @@ public class Segment : MonoBehaviour
                     int randProb2 = Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
                     if (randProb1 == randProb2)
                     {
+                        GameObject.Find("Start").GetComponent<Seed>().seed += randomNum.ToString();
                         GameObject newSegment = Instantiate(segmentPrefabList[randomNum], exits[j]);
                     }
                     else
