@@ -16,17 +16,10 @@ public class Segment : NetworkBehaviour
     public GameObject[] segmentPrefabList;
     public Transform[] exits;
 
-    [Header("Light-flicker variables")]
-    public float maxWait = 2;
-    public float maxFlicker = 0.2f;
-    float timer;
-    float interval;
-
     [HideInInspector] public bool isOverlapping;
     bool startedGenerating;
     bool finishedGenerating;
     int flickerNum;
-    int counter = 0;
 
     private void Awake() {
         NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
@@ -48,7 +41,6 @@ public class Segment : NetworkBehaviour
             Debug.Log("Client " + clientId + " connected!");
             PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject.gameObject.GetComponent<PlayerController>();
             connectedClient.recievedString.Value = GameObject.Find("Start").GetComponent<Seed>().seed;
-            //SEND SEED
         }
     }
 
@@ -102,15 +94,6 @@ public class Segment : NetworkBehaviour
                 }
             }
         }
-
-        if (transform.Find("Light") != null && flickerNum > 8)
-        {
-            timer += Time.deltaTime;
-            if (timer > interval)
-            {
-                ToggleLight();
-            }
-        }
     }
 
     public void GenerateSegment() {
@@ -146,24 +129,9 @@ public class Segment : NetworkBehaviour
         {
             if (exits[j].childCount == 0)
             {
-                GameObject newSegment = Instantiate(segmentPrefabList[int.Parse(seed[counter].ToString())], exits[j]);
-                counter += 1;
+                GameObject newSegment = Instantiate(segmentPrefabList[int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString())], exits[j]);
+                GameObject.Find("Start").GetComponent<Seed>().counter += 1;
             }
         }
-    }
-
-    void ToggleLight()
-    {
-        transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled = !transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled;
-        if (transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled)
-        {
-            interval = UnityEngine.Random.Range(0, maxWait);
-        }
-        else 
-        {
-            interval = UnityEngine.Random.Range(0, maxFlicker);
-        }
-        
-        timer = 0;
     }
 }

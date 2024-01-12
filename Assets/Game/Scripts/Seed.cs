@@ -9,6 +9,7 @@ public class Seed : NetworkBehaviour
     public string seed;
     public TMP_InputField worldSizeInputField;
     public int worldSize;
+    public int counter = 0;
     /*int index;
 
     public void Update()
