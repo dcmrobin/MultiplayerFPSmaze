@@ -4,7 +4,7 @@ using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
 
-public class Segment : MonoBehaviour
+public class Segment : NetworkBehaviour
 {
     [Header("Segment variables")]
     public bool isStart;
@@ -24,12 +24,25 @@ public class Segment : MonoBehaviour
     bool finishedGenerating;
     int flickerNum;
 
+    private void Awake() {
+        NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
+    }
+
     private void Start() {
         flickerNum = Random.Range(0, 10);
 
         if (!isStart)
         {
             GenerateSegment();
+        }
+    }
+
+    void OnClientConnected(ulong clientId)
+    {
+        if (NetworkManager.Singleton.IsServer)
+        {
+            Debug.Log("Client " + clientId + " connected!");
+            //SEND SEED
         }
     }
 
@@ -70,7 +83,6 @@ public class Segment : MonoBehaviour
         if (startedGenerating && GameObject.Find("Start").GetComponent<Seed>().worldSize < 1)
         {
             finishedGenerating = true;
-            SendSeedClientRpc(GameObject.Find("Start").GetComponent<Seed>().seed);
         }
 
         if (finishedGenerating)
@@ -135,11 +147,5 @@ public class Segment : MonoBehaviour
         }
         
         timer = 0;
-    }
-
-    [ClientRpc]
-    public void SendSeedClientRpc(string seed)
-    {
-        //
     }
 }
