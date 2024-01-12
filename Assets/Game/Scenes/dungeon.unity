@@ -1059,7 +1059,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5755648635834313607, guid: 622a74a8406a1a74e9ea7372d3708bc0, type: 3}
-      insertIndex: -1
+      insertIndex: 1
       addedObject: {fileID: 1427592612}
     - targetCorrespondingSourceObject: {fileID: 5755648635834313607, guid: 622a74a8406a1a74e9ea7372d3708bc0, type: 3}
       insertIndex: -1
@@ -1088,6 +1088,7 @@ MonoBehaviour:
   seed: 
   worldSizeInputField: {fileID: 1935912259}
   worldSize: 0
+  counter: 0
 --- !u!114 &1427592612
 MonoBehaviour:
   m_ObjectHideFlags: 0

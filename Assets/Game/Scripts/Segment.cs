@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using JetBrains.Annotations;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
@@ -23,13 +26,14 @@ public class Segment : NetworkBehaviour
     bool startedGenerating;
     bool finishedGenerating;
     int flickerNum;
+    int counter = 0;
 
     private void Awake() {
         NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
     }
 
     private void Start() {
-        flickerNum = Random.Range(0, 10);
+        flickerNum = UnityEngine.Random.Range(0, 10);
 
         if (!isStart)
         {
@@ -118,9 +122,9 @@ public class Segment : NetworkBehaviour
                 regen:
                     if (exits[j].childCount == 0)
                     {
-                        int randomNum = Random.Range(0, segmentPrefabList.Length);
-                        int randProb1 = Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
-                        int randProb2 = Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
+                        int randomNum = UnityEngine.Random.Range(0, segmentPrefabList.Length);
+                        int randProb1 = UnityEngine.Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
+                        int randProb2 = UnityEngine.Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
                         if (randProb1 == randProb2)
                         {
                             GameObject.Find("Start").GetComponent<Seed>().seed += randomNum.ToString();
@@ -136,16 +140,28 @@ public class Segment : NetworkBehaviour
         }
     }
 
+    public void LateGenerateSegment(string seed)
+    {
+        for (int j = 0; j < exits.Length; j++)
+        {
+            if (exits[j].childCount == 0)
+            {
+                GameObject newSegment = Instantiate(segmentPrefabList[int.Parse(seed[counter].ToString())], exits[j]);
+                counter += 1;
+            }
+        }
+    }
+
     void ToggleLight()
     {
         transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled = !transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled;
         if (transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled)
         {
-            interval = Random.Range(0, maxWait);
+            interval = UnityEngine.Random.Range(0, maxWait);
         }
         else 
         {
-            interval = Random.Range(0, maxFlicker);
+            interval = UnityEngine.Random.Range(0, maxFlicker);
         }
         
         timer = 0;

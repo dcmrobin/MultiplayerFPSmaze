@@ -42,6 +42,10 @@ public class PlayerController : NetworkBehaviour
         Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        if (GameObject.Find("Start").GetComponent<Segment>().exits[0].childCount == 0)
+        {
+            GameObject.Find("Start").GetComponent<Segment>().LateGenerateSegment(recievedString.Value.ToString());
+        }
     }
 
     void Update()
