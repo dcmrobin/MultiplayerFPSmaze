@@ -39,9 +39,11 @@ public class Segment : NetworkBehaviour
 
     void OnClientConnected(ulong clientId)
     {
-        if (NetworkManager.Singleton.IsServer)
+        if (IsServer)
         {
             Debug.Log("Client " + clientId + " connected!");
+            PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject.gameObject.GetComponent<PlayerController>();
+            connectedClient.recievedString.Value = GameObject.Find("Start").GetComponent<Seed>().seed;
             //SEND SEED
         }
     }

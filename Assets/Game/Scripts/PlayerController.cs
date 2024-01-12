@@ -4,10 +4,11 @@ using Unity.Mathematics;
 using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.InputSystem;
+using Unity.Collections;
 
 public class PlayerController : NetworkBehaviour
 {
-    public string recievedString;
+    public NetworkVariable<FixedString128Bytes> recievedString = new NetworkVariable<FixedString128Bytes>();
     [Header("Player Variables")]
     [Tooltip("How sensitive is the mouse look?")]
     public float mouseSensitivity = 2.0f;
