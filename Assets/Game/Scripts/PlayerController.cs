@@ -44,6 +44,7 @@ public class PlayerController : NetworkBehaviour
         rb.freezeRotation = true;
         if (GameObject.Find("Start").GetComponent<Segment>().exits[0].childCount == 0)
         {
+            GameObject.Find("Start").GetComponent<Segment>().keepGenerating = true;
             GameObject.Find("Start").GetComponent<Segment>().LateGenerateSegment(recievedString.Value.ToString());
         }
     }

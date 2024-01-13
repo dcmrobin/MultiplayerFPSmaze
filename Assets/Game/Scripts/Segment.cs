@@ -17,6 +17,7 @@ public class Segment : NetworkBehaviour
     public Transform[] exits;
 
     [HideInInspector] public bool isOverlapping;
+    [HideInInspector] public bool keepGenerating;
     bool startedGenerating;
     bool finishedGenerating;
     int flickerNum;
@@ -31,6 +32,10 @@ public class Segment : NetworkBehaviour
         if (!isStart)
         {
             GenerateSegment();
+            if (GameObject.Find("Start").GetComponent<Segment>().keepGenerating)
+            {
+                LateGenerateSegment(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().recievedString.Value.ToString());
+            }
         }
     }
 
