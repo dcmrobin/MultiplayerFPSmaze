@@ -20,15 +20,13 @@ public class Segment : NetworkBehaviour
     [HideInInspector] public bool keepGenerating;
     bool startedGenerating;
     bool finishedGenerating;
-    int flickerNum;
+    //public int segmentSeedNum;
 
     private void Awake() {
         NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
     }
 
     private void Start() {
-        flickerNum = UnityEngine.Random.Range(0, 10);
-
         if (!isStart)
         {
             GenerateSegment();
@@ -118,6 +116,7 @@ public class Segment : NetworkBehaviour
                             GameObject.Find("Start").GetComponent<Seed>().seed += randomNum.ToString();
                             GameObject.Find("Start").GetComponent<Seed>().worldSize -= 1;
                             GameObject newSegment = Instantiate(segmentPrefabList[randomNum], exits[j]);
+                            //newSegment.GetComponent<Segment>().segmentSeedNum = randomNum;
                         }
                         else
                         {
@@ -135,6 +134,7 @@ public class Segment : NetworkBehaviour
             if (exits[j].childCount == 0)
             {
                 GameObject newSegment = Instantiate(segmentPrefabList[int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString())], exits[j]);
+                //newSegment.GetComponent<Segment>().segmentSeedNum = int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString());
                 GameObject.Find("Start").GetComponent<Seed>().counter += 1;
             }
         }
