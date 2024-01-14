@@ -142,8 +142,9 @@ public class Segment : NetworkBehaviour
                     //newSegment.GetComponent<Segment>().segmentSeedNum = int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString());
                     GameObject.Find("Start").GetComponent<Seed>().counter += 1;
                 }
-                catch (System.IndexOutOfRangeException e)
+                catch (IndexOutOfRangeException e)
                 {
+                    Instantiate(wallPrefab, exits[j]);
                     Debug.Log("Guess what? " + e + " Yep, that's right.");
                 }
             }
