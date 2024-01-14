@@ -817,6 +817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2386120109933165284}
+  - component: {fileID: 1195894514433000586}
   - component: {fileID: 832594479925707500}
   m_Layer: 0
   m_Name: Corridor
@@ -846,6 +847,26 @@ Transform:
   - {fileID: 6234654344385401332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1195894514433000586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755648635834313607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 3705640429
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!114 &832594479925707500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,6 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb283eb004feb324f9d1db1a2753b7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStart: 0
   rarity: 2
   wallPrefab: {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   segmentPrefabList:
@@ -870,9 +892,8 @@ MonoBehaviour:
   - {fileID: 5755648635834313607, guid: da0442ce92e6fdc49a5ff4afbbbdebf9, type: 3}
   exits:
   - {fileID: 6683392878036038936}
-  maxWait: 2
-  maxFlicker: 0.2
   isOverlapping: 0
+  keepGenerating: 0
 --- !u!1 &6487088049023008424
 GameObject:
   m_ObjectHideFlags: 0
