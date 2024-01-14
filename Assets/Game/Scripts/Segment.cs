@@ -136,9 +136,16 @@ public class Segment : NetworkBehaviour
         {
             if (exits[j].childCount == 0)
             {
-                GameObject newSegment = Instantiate(segmentPrefabList[int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString())], exits[j]);
-                //newSegment.GetComponent<Segment>().segmentSeedNum = int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString());
-                GameObject.Find("Start").GetComponent<Seed>().counter += 1;
+                try
+                {
+                    GameObject newSegment = Instantiate(segmentPrefabList[int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString())], exits[j]);
+                    //newSegment.GetComponent<Segment>().segmentSeedNum = int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString());
+                    GameObject.Find("Start").GetComponent<Seed>().counter += 1;
+                }
+                catch (System.IndexOutOfRangeException e)
+                {
+                    Debug.Log("Guess what? " + e + " Yep, that's right.");
+                }
             }
         }
     }
