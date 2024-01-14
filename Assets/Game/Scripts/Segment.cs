@@ -29,7 +29,10 @@ public class Segment : NetworkBehaviour
     private void Start() {
         if (!isStart)
         {
-            GenerateSegment();
+            if (!GameObject.Find("Start").GetComponent<Segment>().keepGenerating)
+            {
+                GenerateSegment();
+            }
             if (GameObject.Find("Start").GetComponent<Segment>().keepGenerating)
             {
                 LateGenerateSegment(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().recievedString.Value.ToString());
