@@ -144,7 +144,8 @@ public class Segment : NetworkBehaviour
                 }
                 catch (IndexOutOfRangeException e)
                 {
-                    Instantiate(wallPrefab, exits[j]);
+                    GameObject test = Instantiate(wallPrefab, exits[j]);// WHY ISN'T THIS GENERATING
+                    test.name = "AAAAAAAAAAAAAAAAAAA";
                     Debug.Log("Guess what? " + e + " Yep, that's right.");
                 }
             }

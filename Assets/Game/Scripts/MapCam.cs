@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class MapCam : MonoBehaviour
 {
     public GameObject playerMarker;
+    public GameObject guyMarkerPrefab;
 
     private void Update() {
         float h = Input.GetAxis("Horizontal");
