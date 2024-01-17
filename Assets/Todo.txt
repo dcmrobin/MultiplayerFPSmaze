@@ -1,2 +1,0 @@
-add the player being able to see other players on the map via markers. players will already have an inactive
-red marker, but the player viewing the map will activate these markers locally.
