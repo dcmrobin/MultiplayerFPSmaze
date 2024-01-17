@@ -20,8 +20,12 @@ public class PlayerController : NetworkBehaviour
     public GameObject flashlight;
     [Tooltip("The map camera")]
     public GameObject mapCamera;
+
     [Tooltip("The main camera")]
     public GameObject mainCamera;
+
+    [Tooltip("Layermask for shooting")]
+    public LayerMask playermask;
 
     [Header("Interaction variables")]
     [Tooltip("What layers can the player interact with?")]
@@ -35,6 +39,7 @@ public class PlayerController : NetworkBehaviour
     private GameObject[] playerCameras;
 
     RaycastHit hit;
+    RaycastHit bulletHit;
 
     void Start()
     {
@@ -57,6 +62,7 @@ public class PlayerController : NetworkBehaviour
         {
             HandleMouseLook();
             HandleJump();
+            HandleGun();
         }
         HandleInteractions();
 
@@ -161,6 +167,17 @@ public class PlayerController : NetworkBehaviour
                 {
                     currentObject.transform.parent.localRotation = Quaternion.Euler(0, 0, 0);
                 }
+            }
+        }
+    }
+
+    public void HandleGun()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            if (Physics.Raycast(mainCamera.transform.Find("Gun").Find("Muzzle").position, mainCamera.transform.Find("Gun").Find("Muzzle").forward, out hit, Mathf.Infinity, playermask))
+            {
+                //take damage
             }
         }
     }
