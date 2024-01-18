@@ -67,7 +67,10 @@ public class PlayerController : NetworkBehaviour
         //if (IsServer)
         //{
             PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject.gameObject.GetComponent<PlayerController>();
-            Destroy(connectedClient.transform.Find("Canvas"));//WHY ISN'T THIS WORKINGGG
+            if (connectedClient.gameObject != gameObject)
+            {
+                connectedClient.transform.Find("Canvas").gameObject.SetActive(false);
+            }
         //}
     }
 
