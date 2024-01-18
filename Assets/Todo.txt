@@ -1,3 +1,5 @@
 add damage, and vents that lead to other vents maybe
 
+the other players need to be able to see each other's markers on the map
+
 (oh and also maybe add an easter egg where there's an insanely small chance that a portal will spawn instead of a door and teleport the player to somewhere cool)
