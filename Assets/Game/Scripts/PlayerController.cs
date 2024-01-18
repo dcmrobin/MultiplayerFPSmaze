@@ -8,16 +8,20 @@ using Unity.Collections;
 
 public class PlayerController : NetworkBehaviour
 {
-    public NetworkVariable<FixedString128Bytes> recievedString = new NetworkVariable<FixedString128Bytes>();
+    public NetworkVariable<FixedString4096Bytes> recievedString = new NetworkVariable<FixedString4096Bytes>();
     [Header("Player Variables")]
     [Tooltip("How sensitive is the mouse look?")]
     public float mouseSensitivity = 2.0f;
+
     [Tooltip("How fast can the player move?")]
-    public float moveSpeed = 5.0f;
+    private float moveSpeed = 17;
+
     [Tooltip("How high can the player jump?")]
     public float jumpForce = 8.0f;
+
     [Tooltip("The player's flashlight")]
     public GameObject flashlight;
+
     [Tooltip("The map camera")]
     public GameObject mapCamera;
 
@@ -63,6 +67,15 @@ public class PlayerController : NetworkBehaviour
             HandleMouseLook();
             HandleJump();
             HandleGun();
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                moveSpeed = 27;
+            }
+            else if (!Input.GetKey(KeyCode.LeftShift))
+            {
+                moveSpeed = 17;
+            }
         }
         HandleInteractions();
 
