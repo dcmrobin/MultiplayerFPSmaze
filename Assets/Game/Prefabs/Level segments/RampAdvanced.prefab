@@ -1345,6 +1345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2386120109933165284}
+  - component: {fileID: 1588980245997344660}
   - component: {fileID: 832594479925707500}
   m_Layer: 0
   m_Name: RampAdvanced
@@ -1377,6 +1378,26 @@ Transform:
   - {fileID: 6234654344385401332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1588980245997344660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755648635834313607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 719493882
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!114 &832594479925707500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,19 +1410,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb283eb004feb324f9d1db1a2753b7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStart: 0
   rarity: 6
   wallPrefab: {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   segmentPrefabList:
   - {fileID: 5755648635834313607, guid: 1b093448b3dc3c4499a3297991de4289, type: 3}
-  - {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   - {fileID: 5755648635834313607, guid: 5a46c06723ce7be4cbac0feb2af0a3b5, type: 3}
   - {fileID: 4534119535684800561, guid: eef08cbf451ab894180d7c01e471007e, type: 3}
   exits:
   - {fileID: 6683392878036038936}
   - {fileID: 4076137185006446283}
-  maxWait: 1
-  maxFlicker: 0.2
   isOverlapping: 0
+  keepGenerating: 0
 --- !u!1 &5838828640110120486
 GameObject:
   m_ObjectHideFlags: 0

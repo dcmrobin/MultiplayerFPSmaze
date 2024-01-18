@@ -1071,6 +1071,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2386120109933165284}
+  - component: {fileID: 2583155045727078605}
   - component: {fileID: 7568398675266174251}
   m_Layer: 0
   m_Name: Start
@@ -1102,6 +1103,26 @@ Transform:
   - {fileID: 7601533724363916335}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2583155045727078605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755648635834313607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 3962100664
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!114 &7568398675266174251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,16 +1140,14 @@ MonoBehaviour:
   wallPrefab: {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   segmentPrefabList:
   - {fileID: 5755648635834313607, guid: 1b093448b3dc3c4499a3297991de4289, type: 3}
-  - {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   - {fileID: 4534119535684800561, guid: eef08cbf451ab894180d7c01e471007e, type: 3}
   - {fileID: 5755648635834313607, guid: da0442ce92e6fdc49a5ff4afbbbdebf9, type: 3}
   exits:
   - {fileID: 438222811814353065}
   - {fileID: 1662483818437511114}
   - {fileID: 2159540721122540851}
-  maxWait: 2
-  maxFlicker: 0.2
   isOverlapping: 0
+  keepGenerating: 0
 --- !u!1 &6684881355647198846
 GameObject:
   m_ObjectHideFlags: 0

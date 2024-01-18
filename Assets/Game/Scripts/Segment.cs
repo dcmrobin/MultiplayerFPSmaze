@@ -95,7 +95,8 @@ public class Segment : NetworkBehaviour
             {
                 if (exits[i].childCount == 0)
                 {
-                    Instantiate(wallPrefab, exits[i]);
+                    GameObject wall = Instantiate(wallPrefab, exits[i]);
+                    wall.name = "sadWall";
                     finishedGenerating = false;
                 }
             }
