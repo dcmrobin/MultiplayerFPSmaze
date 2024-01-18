@@ -5,6 +5,7 @@ using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.InputSystem;
 using Unity.Collections;
+using TMPro;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -18,6 +19,18 @@ public class PlayerController : NetworkBehaviour
 
     [Tooltip("How high can the player jump?")]
     public float jumpForce = 8.0f;
+
+    [Tooltip("The max health of the player. (this won't change in-game)")]
+    public int maxHealth = 100;
+
+    [Tooltip("The current health of the player. (this will change in-game)")]
+    public int currentHealth;
+
+    [Tooltip("The player's UI health number")]
+    public TMP_Text UIhealthNum;
+
+    [Tooltip("The damage of the player's gun")]
+    public int gunDamage = 2;
 
     [Tooltip("The player's flashlight")]
     public GameObject flashlight;
@@ -45,8 +58,22 @@ public class PlayerController : NetworkBehaviour
     RaycastHit hit;
     RaycastHit bulletHit;
 
+    private void Awake() {
+        NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
+    }
+
+    void OnClientConnected(ulong clientId)
+    {
+        //if (IsServer)
+        //{
+            PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject.gameObject.GetComponent<PlayerController>();
+            Destroy(connectedClient.transform.Find("Canvas"));//WHY ISN'T THIS WORKINGGG
+        //}
+    }
+
     void Start()
     {
+        currentHealth = maxHealth;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
@@ -76,6 +103,8 @@ public class PlayerController : NetworkBehaviour
             {
                 moveSpeed = 17;
             }
+
+            UIhealthNum.text = currentHealth.ToString();
         }
         HandleInteractions();
 
@@ -190,8 +219,14 @@ public class PlayerController : NetworkBehaviour
         {
             if (Physics.Raycast(mainCamera.transform.Find("Gun").Find("Muzzle").position, mainCamera.transform.Find("Gun").Find("Muzzle").forward, out hit, Mathf.Infinity, playermask))
             {
-                //take damage
+                hit.collider.GetComponent<PlayerController>().TakeDamageServerRpc(gunDamage);
             }
         }
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TakeDamageServerRpc(int amount)
+    {
+        currentHealth -= amount;
     }
 }
