@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 550308537266941352, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+      propertyPath: m_text
+      value: Join with code
+      objectReference: {fileID: 0}
     - target: {fileID: 762992354525267122, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -440,6 +444,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5892500975466237118, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+      propertyPath: m_text
+      value: Move around with WASD, jump with Space, interact with Mouse click, and
+        view the map with Tab. Right click to shoot other players.
+      objectReference: {fileID: 0}
     - target: {fileID: 5988345839772466584, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -452,10 +461,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7365234449252891036, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+      propertyPath: m_text
+      value: Host
+      objectReference: {fileID: 0}
     - target: {fileID: 7827692110722628146, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 810442951}
+    - target: {fileID: 8054916296608180119, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+      propertyPath: m_text
+      value: Quick join
+      objectReference: {fileID: 0}
     - target: {fileID: 8596322352041589726, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2

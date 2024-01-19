@@ -223,7 +223,11 @@ public class PlayerController : NetworkBehaviour
         {
             if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, Mathf.Infinity, playermask))
             {
-                hit.collider.GetComponent<PlayerController>().TakeDamageServerRpc(gunDamage);
+                if (IsClient)
+                {
+                    hit.collider.GetComponent<PlayerController>().TakeDamageServerRpc(gunDamage);
+                }
+                hit.collider.GetComponent<PlayerController>().TakeDamageClientRpc(gunDamage);
             }
         }
     }
@@ -234,13 +238,9 @@ public class PlayerController : NetworkBehaviour
         currentHealth -= amount;
     }
 
-    //[ServerRpc(RequireOwnership = false)]
-    //public void FixUIServerRpc(ulong id)
-    //{
-    //    PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[id].PlayerObject.gameObject.GetComponent<PlayerController>();
-    //    if (connectedClient.gameObject != gameObject)
-    //    {
-    //        connectedClient.transform.Find("Canvas").gameObject.SetActive(false);
-    //    }
-    //}
+    [ClientRpc]
+    public void TakeDamageClientRpc(int amount)
+    {
+        currentHealth -= amount;
+    }
 }
