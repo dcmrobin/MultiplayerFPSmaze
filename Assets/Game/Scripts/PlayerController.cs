@@ -31,7 +31,7 @@ public class PlayerController : NetworkBehaviour
     public TMP_Text UIhealthNum;
 
     [Tooltip("The damage of the player's gun")]
-    public int gunDamage = 2;
+    public int gunDamage = 1;
 
     [Tooltip("The player's flashlight")]
     public GameObject flashlight;
