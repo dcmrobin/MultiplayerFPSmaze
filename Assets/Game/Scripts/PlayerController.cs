@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using Unity.Collections;
 using TMPro;
 using Unity.Netcode.Components;
+using System.Globalization;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -206,17 +207,24 @@ public class PlayerController : NetworkBehaviour
             GameObject currentObject = hit.collider.gameObject;
             if (Input.GetMouseButtonDown(0))
             {
-                if (currentObject.name == "Door" && currentObject.transform.parent.localRotation != Quaternion.Euler(0, 90, 0))
+                if (currentObject.name == "Door")
                 {
-                    //currentObject.transform.parent.localRotation = Quaternion.Euler(0, 90, 0);
-                    currentObject.transform.parent.GetComponent<Door>().ToggleDoorServerRpc(90);
-                    //currentObject.transform.parent.GetComponent<Door>().ToggleDoorClientRpc(90);
+                    if (currentObject.transform.parent.localRotation != Quaternion.Euler(0, 90, 0))
+                    {
+                        //currentObject.transform.parent.localRotation = Quaternion.Euler(0, 90, 0);
+                        currentObject.transform.parent.GetComponent<Door>().ToggleDoorServerRpc(90);
+                        //currentObject.transform.parent.GetComponent<Door>().ToggleDoorClientRpc(90);
+                    }
+                    else
+                    {
+                        //currentObject.transform.parent.localRotation = Quaternion.Euler(0, 0, 0);
+                        currentObject.transform.parent.GetComponent<Door>().ToggleDoorServerRpc(0);
+                        //currentObject.transform.parent.GetComponent<Door>().ToggleDoorClientRpc(0);
+                    }
                 }
-                else
+                else if (currentObject.name == "Vent")
                 {
-                    //currentObject.transform.parent.localRotation = Quaternion.Euler(0, 0, 0);
-                    currentObject.transform.parent.GetComponent<Door>().ToggleDoorServerRpc(0);
-                    //currentObject.transform.parent.GetComponent<Door>().ToggleDoorClientRpc(0);
+                    transform.position = new Vector3(currentObject.GetComponent<Vent>().closestVent.parent.position.x, currentObject.GetComponent<Vent>().closestVent.parent.position.y, currentObject.GetComponent<Vent>().closestVent.parent.position.z);
                 }
             }
         }
