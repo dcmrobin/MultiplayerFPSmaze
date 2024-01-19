@@ -66,11 +66,11 @@ public class PlayerController : NetworkBehaviour
     {
         //if (IsServer)
         //{
-            PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject.gameObject.GetComponent<PlayerController>();
-            if (connectedClient.gameObject != gameObject)
-            {
-                connectedClient.transform.Find("Canvas").gameObject.SetActive(false);
-            }
+            //PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject.gameObject.GetComponent<PlayerController>();
+            //if (connectedClient.gameObject != gameObject)
+            //{
+            //    connectedClient.transform.Find("Canvas").gameObject.SetActive(false);
+            //}
         //}
     }
 
@@ -220,7 +220,7 @@ public class PlayerController : NetworkBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            if (Physics.Raycast(mainCamera.transform.Find("Gun").Find("Muzzle").position, mainCamera.transform.Find("Gun").Find("Muzzle").forward, out hit, Mathf.Infinity, playermask))
+            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, Mathf.Infinity, playermask))
             {
                 hit.collider.GetComponent<PlayerController>().TakeDamageServerRpc(gunDamage);
             }
@@ -232,4 +232,14 @@ public class PlayerController : NetworkBehaviour
     {
         currentHealth -= amount;
     }
+
+    //[ServerRpc(RequireOwnership = false)]
+    //public void FixUIServerRpc(ulong id)
+    //{
+    //    PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[id].PlayerObject.gameObject.GetComponent<PlayerController>();
+    //    if (connectedClient.gameObject != gameObject)
+    //    {
+    //        connectedClient.transform.Find("Canvas").gameObject.SetActive(false);
+    //    }
+    //}
 }
