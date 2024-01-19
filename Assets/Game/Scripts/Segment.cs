@@ -125,6 +125,10 @@ public class Segment : NetworkBehaviour
                             GameObject.Find("Start").GetComponent<Seed>().seed += randomNum.ToString();
                             GameObject.Find("Start").GetComponent<Seed>().worldSize -= 1;
                             GameObject newSegment = Instantiate(segmentPrefabList[randomNum], exits[j]);
+                            if (Convert.ToBoolean(randomNum) && transform.Find("VentTarget") != null)
+                            {
+                                Destroy(transform.Find("VentTarget").gameObject);
+                            }
                             //newSegment.GetComponent<Segment>().segmentSeedNum = randomNum;
                         }
                         else

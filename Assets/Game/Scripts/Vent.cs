@@ -37,10 +37,10 @@ public class Vent : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
-            else
-            {
-                enabled = false;
-            }
+            //else
+            //{
+            //    enabled = false;
+            //}
         }
     }
 }
