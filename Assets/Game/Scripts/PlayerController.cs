@@ -6,6 +6,7 @@ using Unity.Netcode;
 using UnityEngine.InputSystem;
 using Unity.Collections;
 using TMPro;
+using Unity.Netcode.Components;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -207,11 +208,15 @@ public class PlayerController : NetworkBehaviour
             {
                 if (currentObject.name == "Door" && currentObject.transform.parent.localRotation != Quaternion.Euler(0, 90, 0))
                 {
-                    currentObject.transform.parent.localRotation = Quaternion.Euler(0, 90, 0);
+                    //currentObject.transform.parent.localRotation = Quaternion.Euler(0, 90, 0);
+                    currentObject.transform.parent.GetComponent<Door>().ToggleDoorServerRpc(90);
+                    //currentObject.transform.parent.GetComponent<Door>().ToggleDoorClientRpc(90);
                 }
                 else
                 {
-                    currentObject.transform.parent.localRotation = Quaternion.Euler(0, 0, 0);
+                    //currentObject.transform.parent.localRotation = Quaternion.Euler(0, 0, 0);
+                    currentObject.transform.parent.GetComponent<Door>().ToggleDoorServerRpc(0);
+                    //currentObject.transform.parent.GetComponent<Door>().ToggleDoorClientRpc(0);
                 }
             }
         }
@@ -221,6 +226,7 @@ public class PlayerController : NetworkBehaviour
     {
         if (Input.GetMouseButton(1))
         {
+            mainCamera.transform.Find("Gun").Find("Muzzle").Find("Flash").GetComponent<ParticleSystem>().Play();
             if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, Mathf.Infinity, playermask))
             {
                 if (IsClient)
