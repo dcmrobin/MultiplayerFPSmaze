@@ -117,6 +117,7 @@ public class PlayerController : NetworkBehaviour
             if (playerCameras[i] != mainCamera)
             {
                 playerCameras[i].SetActive(false);
+                playerCameras[i].transform.parent.Find("Canvas").gameObject.SetActive(false);
             }
         }
     }
