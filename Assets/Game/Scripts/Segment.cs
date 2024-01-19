@@ -21,6 +21,7 @@ public class Segment : NetworkBehaviour
     [HideInInspector] public bool keepGenerating;
     bool startedGenerating;
     bool finishedGenerating;
+    [HideInInspector] public bool backupTime;
     //public int segmentSeedNum;
 
     private void Awake() {
@@ -106,6 +107,7 @@ public class Segment : NetworkBehaviour
                 }
             }
             finishedGenerating = false;
+            backupTime = true;
         }
     }
 
