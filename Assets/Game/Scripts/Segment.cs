@@ -172,6 +172,10 @@ public class Segment : NetworkBehaviour
                     {
                         GameObject.FindGameObjectsWithTag("Vent")[i].GetComponent<Vent>().hasWorldGenerated = true;
                     }
+                    for (int i = 0; i < FindObjectsOfType<Segment>().Length; i++)
+                    {
+                        FindObjectsOfType<Segment>()[i].backupTime = true;
+                    }
                 }
             }
         }

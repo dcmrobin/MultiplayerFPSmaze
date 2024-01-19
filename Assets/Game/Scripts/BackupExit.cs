@@ -17,4 +17,14 @@ public class BackupExit : MonoBehaviour
             }
         }
     }
+
+    public void GenerateWall()
+    {
+        if (transform.childCount == 0)
+        {
+            GameObject wall = Instantiate(wallPrefab, transform);
+            wall.name = "backupWall";
+            enabled = false;
+        }
+    }
 }
