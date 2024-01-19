@@ -86,20 +86,25 @@ public class Segment : NetworkBehaviour
 
         if (startedGenerating && GameObject.Find("Start").GetComponent<Seed>().worldSize < 1)
         {
+            startedGenerating = false;
             finishedGenerating = true;
         }
 
         if (finishedGenerating)
         {
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("Vent").Length; i++)
+            {
+                GameObject.FindGameObjectsWithTag("Vent")[i].GetComponent<Vent>().hasWorldGenerated = true;
+            }
             for (int i = 0; i < exits.Length; i++)
             {
                 if (exits[i].childCount == 0)
                 {
                     GameObject wall = Instantiate(wallPrefab, exits[i]);
                     wall.name = "sadWall";
-                    finishedGenerating = false;
                 }
             }
+            finishedGenerating = false;
         }
     }
 
