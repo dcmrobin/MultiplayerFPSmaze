@@ -149,6 +149,10 @@ public class Segment : NetworkBehaviour
                 try
                 {
                     GameObject newSegment = Instantiate(segmentPrefabList[int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString())], exits[j]);
+                    if (Convert.ToBoolean(int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString())) && transform.Find("VentTarget") != null)
+                    {
+                        Destroy(transform.Find("VentTarget").gameObject);
+                    }
                     //newSegment.GetComponent<Segment>().segmentSeedNum = int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString());
                     GameObject.Find("Start").GetComponent<Seed>().counter += 1;
                 }
