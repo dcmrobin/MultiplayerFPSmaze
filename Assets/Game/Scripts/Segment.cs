@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using JetBrains.Annotations;
+using Unity.Multiplayer.Tools.NetStatsMonitor;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
@@ -161,6 +162,14 @@ public class Segment : NetworkBehaviour
                     GameObject test = Instantiate(wallPrefab, exits[j]);// WHY ISN'T THIS GENERATING
                     test.name = "AAAAAAAAAAAAAAAAAAA";
                     Debug.Log("Guess what? " + e + " Yep, that's right.");
+                }
+
+                if (GameObject.Find("Start").GetComponent<Seed>().counter >= seed.Length)
+                {
+                    for (int i = 0; i < GameObject.FindGameObjectsWithTag("Vent").Length; i++)
+                    {
+                        GameObject.FindGameObjectsWithTag("Vent")[i].GetComponent<Vent>().hasWorldGenerated = true;
+                    }
                 }
             }
         }

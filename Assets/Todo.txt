@@ -5,5 +5,14 @@ the other players need to be able to see each other's markers on the map
 add things like hazards around the levels and/or enemies
 
 
-
 (oh and also maybe add an easter egg where there's an insanely small chance that a portal will spawn instead of a door and teleport the player to somewhere cool)
+
+
+
+
+bugs:
+doors aren't syncing probably due to none of the segments being able to networkobject.spawn for some reason
+
+some walls aren't being generated
+
+player has to press quick join lobby twice because of lag issues
