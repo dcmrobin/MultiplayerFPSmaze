@@ -56,6 +56,7 @@ public class PlayerController : NetworkBehaviour
     private Rigidbody rb;
     private bool isLookingAtMap;
     private GameObject[] playerCameras;
+    public GameObject doorPrefab;
 
     RaycastHit hit;
     RaycastHit bulletHit;
@@ -120,6 +121,17 @@ public class PlayerController : NetworkBehaviour
             {
                 playerCameras[i].SetActive(false);
                 playerCameras[i].transform.parent.Find("Canvas").gameObject.SetActive(false);
+            }
+        }
+
+        if (IsServer && GameObject.Find("Start").GetComponent<Segment>().backupTime)
+        {
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("DoorRoot").Length; i++)
+            {
+                if (GameObject.FindGameObjectsWithTag("DoorRoot")[i].transform.childCount == 0)
+                {
+                    Instantiate(doorPrefab, GameObject.FindGameObjectsWithTag("DoorRoot")[i].transform);
+                }
             }
         }
     }
@@ -235,6 +247,7 @@ public class PlayerController : NetworkBehaviour
         if (Input.GetMouseButton(1))
         {
             mainCamera.transform.Find("Gun").Find("Muzzle").Find("Flash").GetComponent<ParticleSystem>().Play();
+            //YEAH AND MAKE A LITTLE SPARK THING APPEAR AT HIT.POINT
             if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, Mathf.Infinity, playermask))
             {
                 if (IsClient)

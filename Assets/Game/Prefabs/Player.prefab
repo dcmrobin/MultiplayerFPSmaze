@@ -11616,6 +11616,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   maxDistance: 10
+  doorPrefab: {fileID: 5780612232420380814, guid: 61b20b97e57dafa4cb73513af5366ffe, type: 3}
 --- !u!54 &6515290620338221976
 Rigidbody:
   m_ObjectHideFlags: 0

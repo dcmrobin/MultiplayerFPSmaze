@@ -12,5 +12,6 @@ add things like hazards around the levels and/or enemies
 
 bugs:
 doors aren't syncing probably due to none of the segments being able to networkobject.spawn for some reason
+but maybe spawning the doors seperately might fix this.
 
 player has to press quick join lobby twice because of lag issues
