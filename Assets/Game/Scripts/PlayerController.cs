@@ -133,12 +133,12 @@ public class PlayerController : NetworkBehaviour
                     GameObject door = Instantiate(doorPrefab, GameObject.FindGameObjectsWithTag("DoorRoot")[i].transform);
                     door.GetComponent<NetworkObject>().Spawn();
                     //door.transform.SetParent(GameObject.FindGameObjectsWithTag("DoorRoot")[i].transform);
-                    door.GetComponent<Door>().SetParentServerRpc(GameObject.FindGameObjectsWithTag("DoorRoot")[i].GetComponent<DoorParent>());
+                    door.GetComponent<Door>().SetParentClientRpc(GameObject.FindGameObjectsWithTag("DoorRoot")[i].GetComponent<DoorParent>());
                 }
             }
             GameObject.Find("Start").GetComponent<Segment>().backupTime = false;
         }
-        else if (!IsServer && GameObject.Find("Start").GetComponent<Segment>().backupTime)
+        /*else if (!IsServer && GameObject.Find("Start").GetComponent<Segment>().backupTime)
         {
             for (int j = 0; j < GameObject.FindGameObjectsWithTag("Door").Length; j++)
             {
@@ -151,7 +151,7 @@ public class PlayerController : NetworkBehaviour
                 }
             }
             GameObject.Find("Start").GetComponent<Segment>().backupTime = false;
-        }
+        }*/
     }
 
     void FixedUpdate()
