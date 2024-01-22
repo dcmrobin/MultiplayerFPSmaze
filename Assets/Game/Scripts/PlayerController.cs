@@ -6,6 +6,7 @@ using Unity.Netcode;
 using UnityEngine.InputSystem;
 using Unity.Collections;
 using TMPro;
+using UnityEngine.UI;
 using Unity.Netcode.Components;
 using System.Globalization;
 
@@ -49,8 +50,12 @@ public class PlayerController : NetworkBehaviour
     [Header("Interaction variables")]
     [Tooltip("What layers can the player interact with?")]
     public LayerMask interactionMask;
+
     [Tooltip("How far can the player be away from the thing they're trying to interact with?")]
     public float maxDistance = 10.0f;
+
+    [Tooltip("The player's crosshair image")]
+    public Image crosshair;
 
     private float verticalRotation = 0f;
     private Rigidbody rb;
@@ -213,6 +218,7 @@ public class PlayerController : NetworkBehaviour
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, maxDistance, interactionMask))
         {
+            crosshair.color = Color.yellow;
             GameObject currentObject = hit.collider.gameObject;
             if (Input.GetMouseButtonDown(0))
             {
@@ -236,6 +242,10 @@ public class PlayerController : NetworkBehaviour
                     transform.position = new Vector3(currentObject.GetComponent<Vent>().closestVent.parent.position.x, currentObject.GetComponent<Vent>().closestVent.parent.position.y, currentObject.GetComponent<Vent>().closestVent.parent.position.z);
                 }
             }
+        }
+        else
+        {
+            crosshair.color = Color.white;
         }
     }
 
