@@ -21,10 +21,4 @@ public class Door : NetworkBehaviour
 
         transform.Rotate(0, rotation, 0);
     }
-
-    //[ClientRpc]
-    //public void ToggleDoorClientRpc(float rotation)
-    //{
-    //    transform.localRotation = Quaternion.Euler(0, rotation, 0);
-    //}
 }

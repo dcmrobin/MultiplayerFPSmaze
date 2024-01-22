@@ -49,7 +49,6 @@
      <Compile Include="Assets\Game\Scripts\LobbyController.cs" />
      <Compile Include="Assets\Game\Scripts\TestRelay.cs" />
      <Compile Include="Assets\Game\Scripts\UIManager.cs" />
-     <Compile Include="Assets\Game\Scripts\DoorParent.cs" />
      <Compile Include="Assets\Game\Scripts\Seed.cs" />
      <Compile Include="Assets\Game\Scripts\Door.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

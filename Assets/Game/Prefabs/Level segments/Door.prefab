@@ -44,7 +44,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4605244381769665258}
   - component: {fileID: 2900138935043837448}
-  - component: {fileID: 4970580484601993878}
   m_Layer: 0
   m_Name: DoorRoot
   m_TagString: DoorRoot
@@ -87,19 +86,6 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &4970580484601993878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3101499389360511380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7b1fc1b95f66c246a8119f19b300a86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorsParent: {fileID: 4605244381769665258}
 --- !u!1 &4420520143094783646
 GameObject:
   m_ObjectHideFlags: 0
