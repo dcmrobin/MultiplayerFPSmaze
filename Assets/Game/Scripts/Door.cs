@@ -11,8 +11,8 @@ public class Door : NetworkBehaviour
         transform.localRotation = Quaternion.Euler(0, rotation, 0);
     }
 
-    [ClientRpc]
-    public void SetParentClientRpc(NetworkBehaviourReference parent)
+    [ServerRpc(RequireOwnership = false)]
+    public void SetParentServerRpc(NetworkBehaviourReference parent)
     {
         if (parent.TryGet<DoorParent>(out DoorParent dp))
         {
