@@ -67,14 +67,7 @@ public class PlayerController : NetworkBehaviour
 
     void OnClientConnected(ulong clientId)
     {
-        //if (IsServer)
-        //{
-            //PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject.gameObject.GetComponent<PlayerController>();
-            //if (connectedClient.gameObject != gameObject)
-            //{
-            //    connectedClient.transform.Find("Canvas").gameObject.SetActive(false);
-            //}
-        //}
+        //
     }
 
     void Start()
@@ -133,7 +126,7 @@ public class PlayerController : NetworkBehaviour
                     GameObject door = Instantiate(doorPrefab, GameObject.FindGameObjectsWithTag("DoorRoot")[i].transform);
                     door.GetComponent<NetworkObject>().Spawn();
                     //door.transform.SetParent(GameObject.FindGameObjectsWithTag("DoorRoot")[i].transform);
-                    door.GetComponent<Door>().SetParentServerRpc(GameObject.FindGameObjectsWithTag("DoorRoot")[i].GetComponent<DoorParent>());
+                    //door.GetComponent<Door>().SetParentServerRpc(GameObject.FindGameObjectsWithTag("DoorRoot")[i].GetComponent<DoorParent>());
                 }
             }
             GameObject.Find("Start").GetComponent<Segment>().backupTime = false;
@@ -225,16 +218,16 @@ public class PlayerController : NetworkBehaviour
             {
                 if (currentObject.name == "Door")
                 {
-                    if (currentObject.transform.parent.localRotation != Quaternion.Euler(0, 90, 0))
+                    if (!currentObject.transform.parent.GetComponent<Door>().doorOpen.Value)
                     {
                         //currentObject.transform.parent.localRotation = Quaternion.Euler(0, 90, 0);
                         currentObject.transform.parent.GetComponent<Door>().ToggleDoorServerRpc(90);
                         //currentObject.transform.parent.GetComponent<Door>().ToggleDoorClientRpc(90);
                     }
-                    if(currentObject.transform.parent.localRotation != Quaternion.Euler(0, 0, 0))
+                    else if (currentObject.transform.parent.GetComponent<Door>().doorOpen.Value)
                     {
                         //currentObject.transform.parent.localRotation = Quaternion.Euler(0, 0, 0);
-                        currentObject.transform.parent.GetComponent<Door>().ToggleDoorServerRpc(0);
+                        currentObject.transform.parent.GetComponent<Door>().ToggleDoorServerRpc(-90);
                         //currentObject.transform.parent.GetComponent<Door>().ToggleDoorClientRpc(0);
                     }
                 }

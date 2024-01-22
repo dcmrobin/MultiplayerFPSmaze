@@ -5,19 +5,21 @@ using UnityEngine;
 
 public class Door : NetworkBehaviour
 {
+    public NetworkVariable<bool> doorOpen = new NetworkVariable<bool>();
+
     [ServerRpc(RequireOwnership = false)]
     public void ToggleDoorServerRpc(float rotation)
     {
-        transform.localRotation = Quaternion.Euler(0, rotation, 0);
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void SetParentServerRpc(NetworkBehaviourReference parent)
-    {
-        if (parent.TryGet<DoorParent>(out DoorParent dp))
+        if (!doorOpen.Value)
         {
-            GetComponent<NetworkObject>().TrySetParent(dp.gameObject);
+            doorOpen.Value = true;
         }
+        else if (doorOpen.Value)
+        {
+            doorOpen.Value = false;
+        }
+
+        transform.Rotate(0, rotation, 0);
     }
 
     //[ClientRpc]
