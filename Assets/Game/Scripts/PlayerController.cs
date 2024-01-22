@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using Unity.Netcode;
-using UnityEngine.InputSystem;
 using Unity.Collections;
 using TMPro;
 using UnityEngine.UI;
-using Unity.Netcode.Components;
-using System.Globalization;
-using UnityEditor.EditorTools;
 
 public class PlayerController : NetworkBehaviour
 {
