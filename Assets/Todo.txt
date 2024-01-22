@@ -1,5 +1,3 @@
-vents that lead to other vents maybe
-
 the other players need to be able to see each other's markers on the map
 
 add things like hazards around the levels and/or enemies

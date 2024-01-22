@@ -11617,6 +11617,10 @@ MonoBehaviour:
     m_Bits: 64
   maxDistance: 10
   crosshair: {fileID: 6601890472629594218}
+  impactParticleSystem: {fileID: 19800004, guid: 46b11701406d9914ab2cd55cf474ec1a, type: 3}
+  everythingMask:
+    serializedVersion: 2
+    m_Bits: 891
   doorPrefab: {fileID: 5780612232420380814, guid: 61b20b97e57dafa4cb73513af5366ffe, type: 3}
 --- !u!54 &6515290620338221976
 Rigidbody:

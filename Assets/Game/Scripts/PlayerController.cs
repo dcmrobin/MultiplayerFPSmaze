@@ -9,6 +9,7 @@ using TMPro;
 using UnityEngine.UI;
 using Unity.Netcode.Components;
 using System.Globalization;
+using UnityEditor.EditorTools;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -56,6 +57,12 @@ public class PlayerController : NetworkBehaviour
 
     [Tooltip("The player's crosshair image")]
     public Image crosshair;
+
+    [Tooltip("Gun impact fx")]
+    public ParticleSystem impactParticleSystem;
+
+    [Tooltip("Everything except the overlapcolliders")]
+    public LayerMask everythingMask;
 
     private float verticalRotation = 0f;
     private Rigidbody rb;
@@ -254,14 +261,20 @@ public class PlayerController : NetworkBehaviour
         if (Input.GetMouseButton(1))
         {
             mainCamera.transform.Find("Gun").Find("Muzzle").Find("Flash").GetComponent<ParticleSystem>().Play();
-            //YEAH AND MAKE A LITTLE SPARK THING APPEAR AT HIT.POINT
-            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, Mathf.Infinity, playermask))
+            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, Mathf.Infinity, everythingMask))
             {
-                if (IsClient)
+                ParticleSystem impactFX = Instantiate(impactParticleSystem, hit.point, transform.rotation);
+                impactFX.Play();
+                Destroy(impactFX, .5f);
+
+                if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, Mathf.Infinity, playermask))
                 {
-                    hit.collider.GetComponent<PlayerController>().TakeDamageServerRpc(gunDamage);
+                    if (IsClient)
+                    {
+                        hit.collider.GetComponent<PlayerController>().TakeDamageServerRpc(gunDamage);
+                    }
+                    hit.collider.GetComponent<PlayerController>().TakeDamageClientRpc(gunDamage);
                 }
-                hit.collider.GetComponent<PlayerController>().TakeDamageClientRpc(gunDamage);
             }
         }
     }
