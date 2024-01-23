@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class MapCam : MonoBehaviour
 {
     public GameObject playerMarker;
-    public GameObject startMarkerPrefab;
+    public GameObject startMarker;
 
     private void Update() {
         float h = Input.GetAxis("Horizontal");
@@ -59,6 +59,6 @@ public class MapCam : MonoBehaviour
 
         targetStartScreenPosition.x = Mathf.Clamp(targetStartScreenPosition.x, screenBounds.x, screenBounds.xMax);
         targetStartScreenPosition.y = Mathf.Clamp(targetStartScreenPosition.y, screenBounds.y, screenBounds.yMax);
-        startMarkerPrefab.transform.position = new Vector3(targetStartScreenPosition.x, targetStartScreenPosition.y, 0);
+        startMarker.transform.position = new Vector3(targetStartScreenPosition.x, targetStartScreenPosition.y, 0);
     }
 }
