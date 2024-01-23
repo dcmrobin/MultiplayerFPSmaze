@@ -10,6 +10,7 @@ public class MapCam : MonoBehaviour
     public GameObject playerMarker;
     public GameObject startMarker;
     public GameObject othMarkerPrefab;
+    public GameObject myMarker;
 
     private void Update() {
         float h = Input.GetAxis("Horizontal");
@@ -62,15 +63,19 @@ public class MapCam : MonoBehaviour
         targetStartScreenPosition.y = Mathf.Clamp(targetStartScreenPosition.y, screenBounds.y, screenBounds.yMax);
         startMarker.transform.position = new Vector3(targetStartScreenPosition.x, targetStartScreenPosition.y, 0);
 
-        for (int i = 0; i < GameObject.FindGameObjectsWithTag("OthMarker").Length; i++)
+        for (int j = 0; j < GameObject.FindGameObjectsWithTag("Player").Length; j++)
         {
-            for (int j = 0; j < GameObject.FindGameObjectsWithTag("Player").Length; j++)
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("OthMarker").Length; i++)
             {
-                Vector3 othMarkerTargetPos = GetComponent<Camera>().WorldToScreenPoint(GameObject.FindGameObjectsWithTag("Player")[j].transform.position);
-
-                othMarkerTargetPos.x = Mathf.Clamp(othMarkerTargetPos.x, screenBounds.x, screenBounds.xMax);
-                othMarkerTargetPos.y = Mathf.Clamp(othMarkerTargetPos.y, screenBounds.y, screenBounds.yMax);
-                GameObject.FindGameObjectsWithTag("OthMarker")[i].transform.position = new Vector3(othMarkerTargetPos.x, othMarkerTargetPos.y, 0);
+                if (GameObject.FindGameObjectsWithTag("Player")[j].GetComponent<PlayerController>().mapCamera.GetComponentInChildren<MapCam>().myMarker == null)
+                {
+                    GameObject.FindGameObjectsWithTag("Player")[j].GetComponent<PlayerController>().mapCamera.GetComponentInChildren<MapCam>().myMarker = GameObject.FindGameObjectsWithTag("OthMarker")[i];
+                    Vector3 othMarkerTargetPos = GetComponent<Camera>().WorldToScreenPoint(GameObject.FindGameObjectsWithTag("Player")[j].transform.position);
+    
+                    othMarkerTargetPos.x = Mathf.Clamp(othMarkerTargetPos.x, screenBounds.x, screenBounds.xMax);
+                    othMarkerTargetPos.y = Mathf.Clamp(othMarkerTargetPos.y, screenBounds.y, screenBounds.yMax);
+                    GameObject.FindGameObjectsWithTag("OthMarker")[i].transform.position = new Vector3(othMarkerTargetPos.x, othMarkerTargetPos.y, 0);
+                }
             }
         }
     }
