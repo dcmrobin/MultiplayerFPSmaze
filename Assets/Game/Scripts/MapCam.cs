@@ -10,7 +10,6 @@ public class MapCam : MonoBehaviour
     public GameObject playerMarker;
     public GameObject startMarker;
     public GameObject othMarkerPrefab;
-    public GameObject myMarker;
 
     private void Update() {
         float h = Input.GetAxis("Horizontal");
@@ -62,27 +61,15 @@ public class MapCam : MonoBehaviour
         targetStartScreenPosition.x = Mathf.Clamp(targetStartScreenPosition.x, screenBounds.x, screenBounds.xMax);
         targetStartScreenPosition.y = Mathf.Clamp(targetStartScreenPosition.y, screenBounds.y, screenBounds.yMax);
         startMarker.transform.position = new Vector3(targetStartScreenPosition.x, targetStartScreenPosition.y, 0);
-
-        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Player").Length; i++)
-        {
-            if (GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerController>().mapCamera.GetComponentInChildren<MapCam>().myMarker != null)
-            {
-                Vector3 othMarkerTargetPos = GetComponent<Camera>().WorldToScreenPoint(GameObject.FindGameObjectsWithTag("Player")[i].transform.position);
-    
-                othMarkerTargetPos.x = Mathf.Clamp(othMarkerTargetPos.x, screenBounds.x, screenBounds.xMax);
-                othMarkerTargetPos.y = Mathf.Clamp(othMarkerTargetPos.y, screenBounds.y, screenBounds.yMax);
-                GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerController>().mapCamera.GetComponentInChildren<MapCam>().myMarker.transform.position = new Vector3(othMarkerTargetPos.x, othMarkerTargetPos.y, 0);
-            }
-        }
     }
 
     public void ScanForPlayers()
     {
         for (int i = 0; i < GameObject.FindGameObjectsWithTag("Player").Length; i++)
         {
-            GameObject marker = Instantiate(othMarkerPrefab, transform);
+            GameObject marker = Instantiate(othMarkerPrefab, transform.Find("Canvas"));
             marker.name = "othMarker_" + i;
-            GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerController>().mapCamera.GetComponentInChildren<MapCam>().myMarker = marker;
+            marker.GetComponent<OthMarker>().target = GameObject.FindGameObjectsWithTag("Player")[i].transform;
         }
     }
 
