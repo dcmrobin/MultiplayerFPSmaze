@@ -9,7 +9,7 @@ public class OthMarker : MonoBehaviour
     private void Update() {
         if (target != null)
         {
-            Vector3 othMarkerTargetPos = target.GetComponent<PlayerController>().mapCamera.GetComponentInChildren<Camera>().WorldToScreenPoint(target.position);
+            Vector3 othMarkerTargetPos = transform.parent.parent.parent.parent.GetComponent<PlayerController>().mapCamera.GetComponentInChildren<Camera>().WorldToScreenPoint(target.position);
             float padding = 10f;
             Rect screenBounds = new Rect(padding, padding, Screen.width - 2 * padding, Screen.height - 2 * padding);
         
