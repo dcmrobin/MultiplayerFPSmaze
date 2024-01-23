@@ -207,15 +207,19 @@ public class PlayerController : NetworkBehaviour
             {
                 isLookingAtMap = true;
                 mapCamera.SetActive(true);
+                mapCamera.GetComponentInChildren<MapCam>().ScanForPlayers();
                 transform.Find("Canvas").gameObject.SetActive(false);
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             else
             {
                 isLookingAtMap = false;
+                mapCamera.GetComponentInChildren<MapCam>().DiscardOthPlayerMarkers();
                 mapCamera.SetActive(false);
                 transform.Find("Canvas").gameObject.SetActive(true);
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         }
 

@@ -9,6 +9,7 @@ public class MapCam : MonoBehaviour
 {
     public GameObject playerMarker;
     public GameObject startMarker;
+    public GameObject othMarkerPrefab;
 
     private void Update() {
         float h = Input.GetAxis("Horizontal");
@@ -60,5 +61,33 @@ public class MapCam : MonoBehaviour
         targetStartScreenPosition.x = Mathf.Clamp(targetStartScreenPosition.x, screenBounds.x, screenBounds.xMax);
         targetStartScreenPosition.y = Mathf.Clamp(targetStartScreenPosition.y, screenBounds.y, screenBounds.yMax);
         startMarker.transform.position = new Vector3(targetStartScreenPosition.x, targetStartScreenPosition.y, 0);
+
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("OthMarker").Length; i++)
+        {
+            for (int j = 0; j < GameObject.FindGameObjectsWithTag("Player").Length; j++)
+            {
+                Vector3 othMarkerTargetPos = GetComponent<Camera>().WorldToScreenPoint(GameObject.FindGameObjectsWithTag("Player")[j].transform.position);
+
+                othMarkerTargetPos.x = Mathf.Clamp(othMarkerTargetPos.x, screenBounds.x, screenBounds.xMax);
+                othMarkerTargetPos.y = Mathf.Clamp(othMarkerTargetPos.y, screenBounds.y, screenBounds.yMax);
+                GameObject.FindGameObjectsWithTag("OthMarker")[i].transform.position = new Vector3(othMarkerTargetPos.x, othMarkerTargetPos.y, 0);
+            }
+        }
+    }
+
+    public void ScanForPlayers()
+    {
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Player").Length; i++)
+        {
+            Instantiate(othMarkerPrefab, transform);
+        }
+    }
+
+    public void DiscardOthPlayerMarkers()
+    {
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("OthMarker").Length; i++)
+        {
+            Destroy(GameObject.FindGameObjectsWithTag("OthMarker")[i]);
+        }
     }
 }
