@@ -7,6 +7,7 @@ using Unity.Netcode;
 public class Seed : NetworkBehaviour
 {
     public string seed;
+    public string ventSeed;
     public TMP_InputField worldSizeInputField;
     public int worldSize;
     public int counter = 0;

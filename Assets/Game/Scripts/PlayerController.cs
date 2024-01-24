@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class PlayerController : NetworkBehaviour
 {
     public NetworkVariable<FixedString4096Bytes> recievedString = new NetworkVariable<FixedString4096Bytes>();
+    public NetworkVariable<FixedString4096Bytes> recievedVentString = new NetworkVariable<FixedString4096Bytes>();
     [Header("Player Variables")]
     [Tooltip("How sensitive is the mouse look?")]
     public float mouseSensitivity = 2.0f;
@@ -88,7 +89,7 @@ public class PlayerController : NetworkBehaviour
         if (GameObject.Find("Start").GetComponent<Segment>().exits[0].childCount == 0)
         {
             GameObject.Find("Start").GetComponent<Segment>().keepGenerating = true;
-            GameObject.Find("Start").GetComponent<Segment>().LateGenerateSegment(recievedString.Value.ToString());
+            GameObject.Find("Start").GetComponent<Segment>().LateGenerateSegment(recievedString.Value.ToString(), recievedVentString.Value.ToString());
         }
     }
 

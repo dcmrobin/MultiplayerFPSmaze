@@ -37,7 +37,7 @@ public class Segment : NetworkBehaviour
             }
             if (GameObject.Find("Start").GetComponent<Segment>().keepGenerating)
             {
-                LateGenerateSegment(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().recievedString.Value.ToString());
+                LateGenerateSegment(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().recievedString.Value.ToString(), GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().recievedVentString.Value.ToString());
             }
         }
     }
@@ -49,6 +49,7 @@ public class Segment : NetworkBehaviour
             Debug.Log("Client " + clientId + " connected!");
             PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject.gameObject.GetComponent<PlayerController>();
             connectedClient.recievedString.Value = GameObject.Find("Start").GetComponent<Seed>().seed;
+            connectedClient.recievedVentString.Value = GameObject.Find("Start").GetComponent<Seed>().ventSeed;
         }
     }
 
@@ -123,12 +124,15 @@ public class Segment : NetworkBehaviour
                         int randomNum = UnityEngine.Random.Range(0, segmentPrefabList.Length);
                         int randProb1 = UnityEngine.Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
                         int randProb2 = UnityEngine.Random.Range(0, segmentPrefabList[randomNum].GetComponent<Segment>().rarity);
+
+                        int randomVentNum = UnityEngine.Random.Range(0, 3);
                         if (randProb1 == randProb2)
                         {
                             GameObject.Find("Start").GetComponent<Seed>().seed += randomNum.ToString();
+                            GameObject.Find("Start").GetComponent<Seed>().ventSeed += randomVentNum.ToString();
                             GameObject.Find("Start").GetComponent<Seed>().worldSize -= 1;
                             GameObject newSegment = Instantiate(segmentPrefabList[randomNum], exits[j]);
-                            if (Convert.ToBoolean(randomNum) && transform.Find("VentTarget") != null)
+                            if (Convert.ToBoolean(randomVentNum) && transform.Find("VentTarget") != null)
                             {
                                 Destroy(transform.Find("VentTarget").gameObject);
                             }
@@ -143,7 +147,7 @@ public class Segment : NetworkBehaviour
         }
     }
 
-    public void LateGenerateSegment(string seed)
+    public void LateGenerateSegment(string seed, string ventSeed)
     {
         for (int j = 0; j < exits.Length; j++)
         {
@@ -152,7 +156,7 @@ public class Segment : NetworkBehaviour
                 try
                 {
                     GameObject newSegment = Instantiate(segmentPrefabList[int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString())], exits[j]);
-                    if (Convert.ToBoolean(int.Parse(seed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString())) && transform.Find("VentTarget") != null)
+                    if (Convert.ToBoolean(int.Parse(ventSeed[GameObject.Find("Start").GetComponent<Seed>().counter].ToString())) && transform.Find("VentTarget") != null)
                     {
                         Destroy(transform.Find("VentTarget").gameObject);
                     }
