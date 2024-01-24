@@ -85,6 +85,15 @@ public class Segment : NetworkBehaviour
             {
                 transform.Find("Light").Find("Bulb").gameObject.SetActive(true);
             }
+
+            if (UnityEngine.Random.value > .999)
+            {
+                transform.Find("Light").gameObject.SetActive(false);
+                if (UnityEngine.Random.value > .3)
+                {
+                    transform.Find("Light").gameObject.SetActive(true);
+                }
+            }
         }
 
         if (startedGenerating && GameObject.Find("Start").GetComponent<Seed>().worldSize < 1)
