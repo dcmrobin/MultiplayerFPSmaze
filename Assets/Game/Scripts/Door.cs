@@ -14,6 +14,20 @@ public class Door : NetworkBehaviour
         }
     }
 
+    private void Update() {
+        if (UnityEngine.Random.value > .9995)
+        {
+            if (!doorOpen.Value)
+            {
+                ToggleDoorServerRpc(90);
+            }
+            else
+            {
+                ToggleDoorServerRpc(-90);
+            }
+        }
+    }
+
     [ServerRpc(RequireOwnership = false)]
     public void ToggleDoorServerRpc(float rotation)
     {

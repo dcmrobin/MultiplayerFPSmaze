@@ -56,7 +56,7 @@ public class PlayerController : NetworkBehaviour
     public Image crosshair;
 
     [Tooltip("Gun impact fx")]
-    public ParticleSystem impactParticleSystem;
+    public GameObject impactParticleSystemPrefab;
 
     [Tooltip("Everything except the overlapcolliders")]
     public LayerMask everythingMask;
@@ -264,8 +264,8 @@ public class PlayerController : NetworkBehaviour
             mainCamera.transform.Find("Gun").Find("Muzzle").Find("Flash").GetComponent<ParticleSystem>().Play();
             if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, Mathf.Infinity, everythingMask))
             {
-                ParticleSystem impactFX = Instantiate(impactParticleSystem, hit.point, transform.rotation);
-                impactFX.Play();
+                GameObject impactFX = Instantiate(impactParticleSystemPrefab, hit.point, transform.rotation);
+                impactFX.GetComponent<ParticleSystem>().Play();
                 Destroy(impactFX, .5f);
 
                 if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, Mathf.Infinity, playermask))
