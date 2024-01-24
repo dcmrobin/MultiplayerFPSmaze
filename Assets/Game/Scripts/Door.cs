@@ -7,6 +7,13 @@ public class Door : NetworkBehaviour
 {
     public NetworkVariable<bool> doorOpen = new NetworkVariable<bool>();
 
+    private void Start() {
+        if (Random.value > .992)
+        {
+            ToggleDoorServerRpc(90);
+        }
+    }
+
     [ServerRpc(RequireOwnership = false)]
     public void ToggleDoorServerRpc(float rotation)
     {
