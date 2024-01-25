@@ -3257,7 +3257,7 @@ GameObject:
   - component: {fileID: 973231585342936433}
   - component: {fileID: 7693598774883527822}
   - component: {fileID: 3179483326428121124}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: LiftFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
