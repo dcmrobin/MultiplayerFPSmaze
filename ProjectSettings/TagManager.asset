@@ -9,6 +9,7 @@ TagManager:
   - Vent
   - DoorRoot
   - OthMarker
+  - Button
   layers:
   - Default
   - TransparentFX

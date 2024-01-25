@@ -42,7 +42,9 @@
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\BackupExit.cs" />
      <Compile Include="Assets\Game\Scripts\Vent.cs" />
+     <Compile Include="Assets\Game\Scripts\InteractButton.cs" />
      <Compile Include="Assets\Game\Scripts\MapCam.cs" />
+     <Compile Include="Assets\Game\Scripts\Lift.cs" />
      <Compile Include="Assets\Game\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Game\Scripts\OthMarker.cs" />
      <Compile Include="Assets\Game\Scripts\Segment.cs" />

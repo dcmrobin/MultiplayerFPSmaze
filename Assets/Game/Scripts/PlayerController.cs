@@ -230,7 +230,7 @@ public class PlayerController : NetworkBehaviour
             GameObject currentObject = hit.collider.gameObject;
             if (Input.GetMouseButtonDown(0))
             {
-                if (currentObject.name == "Door")
+                if (currentObject.CompareTag("Door"))
                 {
                     if (!currentObject.transform.parent.GetComponent<Door>().doorOpen.Value)
                     {
@@ -245,9 +245,13 @@ public class PlayerController : NetworkBehaviour
                         //currentObject.transform.parent.GetComponent<Door>().ToggleDoorClientRpc(0);
                     }
                 }
-                else if (currentObject.name == "Vent")
+                else if (currentObject.CompareTag("Vent"))
                 {
                     transform.position = new Vector3(currentObject.GetComponent<Vent>().closestVent.parent.position.x, currentObject.GetComponent<Vent>().closestVent.parent.position.y, currentObject.GetComponent<Vent>().closestVent.parent.position.z);
+                }
+                else if (currentObject.CompareTag("Button"))
+                {
+                    currentObject.GetComponent<InteractButton>().Interact();
                 }
             }
         }
