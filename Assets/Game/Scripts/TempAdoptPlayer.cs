@@ -11,7 +11,7 @@ public class TempAdoptPlayer : NetworkBehaviour
         {
             //other.transform.SetParent(transform);
             adoptedPlayer = other.gameObject;
-            SetParentServerRpc(GetComponent<TempAdoptPlayer>(), false);
+            SetParentServerRpc(GetComponent<TempAdoptPlayer>());
         }
     }
 
@@ -25,7 +25,7 @@ public class TempAdoptPlayer : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void SetParentServerRpc(NetworkBehaviourReference parent, bool isNull)
+    public void SetParentServerRpc(NetworkBehaviourReference parent)
     {
         if (parent.TryGet<TempAdoptPlayer>(out TempAdoptPlayer dp))
         {

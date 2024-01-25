@@ -134,8 +134,6 @@ public class PlayerController : NetworkBehaviour
                 {
                     GameObject door = Instantiate(doorPrefab, GameObject.FindGameObjectsWithTag("DoorRoot")[i].transform);
                     door.GetComponent<NetworkObject>().Spawn();
-                    //door.transform.SetParent(GameObject.FindGameObjectsWithTag("DoorRoot")[i].transform);
-                    //door.GetComponent<Door>().SetParentServerRpc(GameObject.FindGameObjectsWithTag("DoorRoot")[i].GetComponent<DoorParent>());
                 }
             }
             GameObject.Find("Start").GetComponent<Segment>().backupTime = false;
@@ -220,7 +218,6 @@ public class PlayerController : NetworkBehaviour
                 mapCamera.SetActive(false);
                 transform.Find("Canvas").gameObject.SetActive(true);
                 Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
             }
         }
 

@@ -16052,6 +16052,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 891
   doorPrefab: {fileID: 5780612232420380814, guid: 61b20b97e57dafa4cb73513af5366ffe, type: 3}
+  liftFloorPrefab: {fileID: 6463643029111169067, guid: 28bf3c6e64f77d94dbbe5dea36e33d44, type: 3}
 --- !u!54 &6515290620338221976
 Rigidbody:
   m_ObjectHideFlags: 0
