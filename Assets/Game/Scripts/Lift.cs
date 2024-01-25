@@ -15,38 +15,33 @@ public class Lift : NetworkBehaviour
     {
         if (!hasDescended.Value)
         {
-            ascending = false;
-            descending = true;
             hasDescended.Value = true;
-            //can't go past -39.5 y value
         }
         else if (hasDescended.Value)
         {
-            descending = false;
-            ascending = true;
             hasDescended.Value = false;
-            //can't go past 0.5 y value
         }
     }
 
     private void Update() {
         if (descending && liftGround.localPosition.y > -39.5)
         {
-            liftGround.Translate(-liftGround.up);
+            liftGround.localPosition = Vector3.MoveTowards(liftGround.localPosition, new Vector3(0, -39.5f, 30), 1);
         }
         else if (ascending && liftGround.localPosition.y < 0.5)
         {
-            liftGround.Translate(liftGround.up);
+            liftGround.localPosition = Vector3.MoveTowards(liftGround.localPosition, new Vector3(0, 0.5f, 30), 1);
         }
 
-        if (ascending && liftGround.localPosition.y > 0.5)
+        if (hasDescended.Value)
         {
-            liftGround.localPosition = new Vector3(0, 0.5f, 30);
+            ascending = false;
+            descending = true;
         }
-
-        if (ascending && liftGround.localPosition.y < -39.5)
+        else if (!hasDescended.Value)
         {
-            liftGround.localPosition = new Vector3(0, -39.5f, 30);
+            descending = false;
+            ascending = true;
         }
     }
 }
