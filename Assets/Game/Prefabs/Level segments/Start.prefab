@@ -1184,6 +1184,7 @@ MonoBehaviour:
   - {fileID: 5755648635834313607, guid: 1b093448b3dc3c4499a3297991de4289, type: 3}
   - {fileID: 4534119535684800561, guid: eef08cbf451ab894180d7c01e471007e, type: 3}
   - {fileID: 5755648635834313607, guid: da0442ce92e6fdc49a5ff4afbbbdebf9, type: 3}
+  - {fileID: 5755648635834313607, guid: be533cc9689ff6e4784a62a335edd62c, type: 3}
   exits:
   - {fileID: 438222811814353065}
   - {fileID: 1662483818437511114}

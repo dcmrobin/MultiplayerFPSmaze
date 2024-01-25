@@ -1419,6 +1419,7 @@ MonoBehaviour:
   - {fileID: 5755648635834313607, guid: 5a46c06723ce7be4cbac0feb2af0a3b5, type: 3}
   - {fileID: 4534119535684800561, guid: eef08cbf451ab894180d7c01e471007e, type: 3}
   - {fileID: 5755648635834313607, guid: a5fce8f241b3ccc4abee428b98cb4835, type: 3}
+  - {fileID: 5755648635834313607, guid: be533cc9689ff6e4784a62a335edd62c, type: 3}
   exits:
   - {fileID: 6683392878036038936}
   - {fileID: 4076137185006446283}
