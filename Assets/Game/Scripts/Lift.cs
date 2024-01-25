@@ -7,8 +7,8 @@ public class Lift : NetworkBehaviour
 {
     public Transform liftGround;
     public NetworkVariable<bool> hasDescended = new NetworkVariable<bool>();
-    bool descending;
-    bool ascending;
+    public bool descending;
+    public bool ascending;
 
     [ServerRpc(RequireOwnership = false)]
     public void ActivateLiftServerRpc()
@@ -30,13 +30,23 @@ public class Lift : NetworkBehaviour
     }
 
     private void Update() {
-        if (descending && liftGround.position.y > -39.5)
+        if (descending && liftGround.localPosition.y > -39.5)
         {
             liftGround.Translate(-liftGround.up);
         }
-        else if (ascending && liftGround.position.y < 0.5)
+        else if (ascending && liftGround.localPosition.y < 0.5)
         {
             liftGround.Translate(liftGround.up);
+        }
+
+        if (ascending && liftGround.localPosition.y > 0.5)
+        {
+            liftGround.localPosition = new Vector3(0, 0.5f, 30);
+        }
+
+        if (ascending && liftGround.localPosition.y < -39.5)
+        {
+            liftGround.localPosition = new Vector3(0, -39.5f, 30);
         }
     }
 }
