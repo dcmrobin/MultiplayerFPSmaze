@@ -25,6 +25,11 @@ public class Lift : NetworkBehaviour
     }
 
     private void Update() {
+        if (!IsSpawned)
+        {
+            return;
+        }
+
         if (transform.Find("LiftFloor") == null)
         {
             GetGroundServerRpc();
