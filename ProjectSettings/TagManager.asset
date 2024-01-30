@@ -11,6 +11,7 @@ TagManager:
   - OthMarker
   - Button
   - Lift
+  - LiftFloor
   layers:
   - Default
   - TransparentFX

@@ -30,9 +30,13 @@ public class Lift : NetworkBehaviour
             return;
         }
 
-        if (transform.Find("LiftFloor") == null)
+        if (liftGround == null)
         {
-            GetGroundServerRpc();
+            if (IsServer)
+            {
+                GetGroundServerRpc();
+            }
+            GetGround();
         }
         else
         {
@@ -54,6 +58,18 @@ public class Lift : NetworkBehaviour
             {
                 descending = false;
                 ascending = true;
+            }
+        }
+    }
+
+    public void GetGround()
+    {
+        Collider[] colliders = Physics.OverlapBox(GetComponent<BoxCollider>().center, GetComponent<BoxCollider>().size/2, Quaternion.identity);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].CompareTag("LiftGround"))
+            {
+                liftGround = colliders[i].transform;
             }
         }
     }
