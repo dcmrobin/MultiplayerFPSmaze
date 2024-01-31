@@ -23,7 +23,7 @@ TagManager:
   - OverlapCheckCollider
   - PostProcessing
   - Not in Reflection
-  - 
+  - LiftFloor
   - 
   - 
   - 

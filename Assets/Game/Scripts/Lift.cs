@@ -10,7 +10,6 @@ public class Lift : NetworkBehaviour
     public bool descending;
     public bool ascending;
     public GameObject liftFloorPrefab;
-    Collider[] colliders;
 
     [ServerRpc(RequireOwnership = false)]
     public void ActivateLiftServerRpc()
@@ -65,7 +64,7 @@ public class Lift : NetworkBehaviour
 
     public void GetGround()
     {
-        colliders = Physics.OverlapBox(GetComponent<BoxCollider>().center, GetComponent<BoxCollider>().bounds.extents/2, Quaternion.identity);
+        Collider[] colliders = Physics.OverlapBox(transform.Find("OverlapBox").position, transform.Find("OverlapBox").localScale, Quaternion.identity);
         foreach (Collider col in colliders)
         {
             if (col.CompareTag("LiftFloor"))

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5663517481487765425}
   - component: {fileID: 3016392014415885902}
   - component: {fileID: 595098896751766299}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: LiftFloor
   m_TagString: LiftFloor
   m_Icon: {fileID: 0}
