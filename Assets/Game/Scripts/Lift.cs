@@ -10,6 +10,7 @@ public class Lift : NetworkBehaviour
     public bool descending;
     public bool ascending;
     public GameObject liftFloorPrefab;
+    public GameObject parentPrefab;
 
     [ServerRpc(RequireOwnership = false)]
     public void ActivateLiftServerRpc()
@@ -73,9 +74,11 @@ public class Lift : NetworkBehaviour
     public void GetGroundServerRpc()
     {
         GameObject liftFloor = Instantiate(liftFloorPrefab, transform);
+        GameObject parent = Instantiate(parentPrefab, transform);
+        parent.GetComponent<NetworkObject>().Spawn();
         liftFloor.name = "LiftFloor";
         liftFloor.GetComponent<NetworkObject>().Spawn();
-        liftFloor.GetComponent<NetworkObject>().TrySetParent(transform);
+        liftFloor.GetComponent<NetworkObject>().TrySetParent(parent.transform);
         liftGround = liftFloor.transform;
     }
 }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7637260680232027075}
   - component: {fileID: 7027229308172185946}
-  - component: {fileID: 1158629526605046313}
   m_Layer: 0
   m_Name: Lift
   m_TagString: Lift
@@ -57,31 +56,7 @@ MonoBehaviour:
   descending: 0
   ascending: 0
   liftFloorPrefab: {fileID: 6463643029111169067, guid: 28bf3c6e64f77d94dbbe5dea36e33d44, type: 3}
-  colliders: []
-  liftFloorMask:
-    serializedVersion: 2
-    m_Bits: 1024
---- !u!114 &1158629526605046313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366734309268448151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 518476141
-  InScenePlacedSourceGlobalObjectIdHash: 0
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
+  parentPrefab: {fileID: 3202674075228542167, guid: 52010d71b440ec1488b75fc0b0fa3301, type: 3}
 --- !u!1 &529396387667117032
 GameObject:
   m_ObjectHideFlags: 0

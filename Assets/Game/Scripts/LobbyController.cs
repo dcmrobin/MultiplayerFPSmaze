@@ -338,6 +338,10 @@ public class LobbyController : MonoBehaviour
 
     public async void StartGame()
     {
+        if (GameObject.Find("EventSystemTemp") != null)
+        {
+            Destroy(GameObject.Find("EventSystemTemp"));
+        }
         //if (IsLobbyHost())
         //{
             try
