@@ -11,6 +11,7 @@ public class InteractButton : NetworkBehaviour
     {
        if (onPress == Action.ActivateLift)
        {
+            Debug.Log("A button has been pressed");
             transform.parent.GetComponent<Lift>().ActivateLiftServerRpc();
        }
     }
