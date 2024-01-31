@@ -25,11 +25,6 @@ public class Lift : NetworkBehaviour
     }
 
     private void Update() {
-        if (!IsSpawned)
-        {
-            return;
-        }
-
         if (liftGround == null)
         {
             if (IsServer)
