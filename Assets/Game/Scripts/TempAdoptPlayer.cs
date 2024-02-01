@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TempAdoptPlayer : NetworkBehaviour
 {
+    public NetworkVariable<bool> hasDescended = new NetworkVariable<bool>();
     GameObject adoptedPlayer;
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player"))
@@ -37,5 +38,18 @@ public class TempAdoptPlayer : NetworkBehaviour
     public void RemoveParentServerRpc()
     {
         adoptedPlayer.GetComponent<NetworkObject>().TryRemoveParent();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void ActivateLiftServerRpc()
+    {
+        if (!hasDescended.Value)
+        {
+            hasDescended.Value = true;
+        }
+        else if (hasDescended.Value)
+        {
+            hasDescended.Value = false;
+        }
     }
 }

@@ -6,24 +6,10 @@ using Unity.Netcode;
 public class Lift : NetworkBehaviour
 {
     public Transform liftGround;
-    public NetworkVariable<bool> hasDescended = new NetworkVariable<bool>();
     public bool descending;
     public bool ascending;
     public GameObject liftFloorPrefab;
     public GameObject parentPrefab;
-
-    [ServerRpc(RequireOwnership = false)]
-    public void ActivateLiftServerRpc()
-    {
-        if (!hasDescended.Value)
-        {
-            hasDescended.Value = true;
-        }
-        else if (hasDescended.Value)
-        {
-            hasDescended.Value = false;
-        }
-    }
 
     private void Update() {
         if (liftGround == null)
@@ -45,12 +31,12 @@ public class Lift : NetworkBehaviour
                 liftGround.localPosition = Vector3.MoveTowards(liftGround.localPosition, new Vector3(0, 0.5f, 30), 1);
             }
 
-            if (hasDescended.Value)
+            if (liftGround.GetComponent<TempAdoptPlayer>().hasDescended.Value)
             {
                 ascending = false;
                 descending = true;
             }
-            else if (!hasDescended.Value)
+            else if (!liftGround.GetComponent<TempAdoptPlayer>().hasDescended.Value)
             {
                 descending = false;
                 ascending = true;
