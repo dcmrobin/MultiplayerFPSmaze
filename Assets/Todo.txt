@@ -13,4 +13,4 @@ bugs:
 
 player has to press quick join lobby twice because of lag issues
 
-the lift isn't working on the client's side when the client presses the button
+the lift isn't working on the client's side when the client presses the button, because a non-spawned networkobject can't call an rpc. the button tries, but is not a networkobject.
