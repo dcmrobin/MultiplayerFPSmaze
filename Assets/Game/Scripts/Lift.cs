@@ -59,7 +59,8 @@ public class Lift : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void GetGroundServerRpc()
     {
-        GameObject liftFloor = Instantiate(liftFloorPrefab, transform);
+        GameObject liftFloor = null;
+        liftFloor = Instantiate(liftFloorPrefab, transform);
         GameObject parent = Instantiate(parentPrefab, transform);
         parent.GetComponent<NetworkObject>().Spawn();
         liftFloor.name = "LiftFloor";

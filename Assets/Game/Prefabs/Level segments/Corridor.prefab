@@ -893,6 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GlobalObjectIdHash: 2811407480
+  InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -924,6 +925,7 @@ MonoBehaviour:
   - {fileID: 5755648635834313607, guid: da0442ce92e6fdc49a5ff4afbbbdebf9, type: 3}
   - {fileID: 5755648635834313607, guid: a5fce8f241b3ccc4abee428b98cb4835, type: 3}
   - {fileID: 5755648635834313607, guid: be533cc9689ff6e4784a62a335edd62c, type: 3}
+  - {fileID: 5755648635834313607, guid: 5c51f27de1361dc41a151b51205a1c7f, type: 3}
   exits:
   - {fileID: 6683392878036038936}
   isOverlapping: 0
