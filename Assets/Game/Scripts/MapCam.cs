@@ -10,6 +10,8 @@ public class MapCam : MonoBehaviour
     public GameObject playerMarker;
     public GameObject startMarker;
     public GameObject othMarkerPrefab;
+    public GameObject ventMarkerPrefab;
+    bool showingVentMarkers;
 
     private void Update() {
         float h = Input.GetAxis("Horizontal");
@@ -78,6 +80,28 @@ public class MapCam : MonoBehaviour
         for (int i = 0; i < GameObject.FindGameObjectsWithTag("OthMarker").Length; i++)
         {
             Destroy(GameObject.FindGameObjectsWithTag("OthMarker")[i]);
+        }
+    }
+
+    public void ToggleVentMarkers()
+    {
+        if (!showingVentMarkers)
+        {
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("Vent").Length; i++)
+            {
+                GameObject marker = Instantiate(ventMarkerPrefab, transform.Find("Canvas"));
+                marker.name = "ventMarker_" + i;
+                marker.GetComponent<OthMarker>().target = GameObject.FindGameObjectsWithTag("Vent")[i].transform;
+            }
+            showingVentMarkers = true;
+        }
+        else
+        {
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("VentMarker").Length; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("VentMarker")[i]);
+            }
+            showingVentMarkers = false;
         }
     }
 }

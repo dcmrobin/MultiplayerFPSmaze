@@ -1,6 +1,4 @@
-the other players need to be able to see each other's markers on the map
-
-add things like hazards around the levels and/or enemies
+maybe add things like hazards around the levels and/or enemies
 
 when you glitch out of the map, you get transported to a backrooms level or something... make loads of backrooms stuff
 

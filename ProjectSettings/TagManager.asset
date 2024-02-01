@@ -12,6 +12,7 @@ TagManager:
   - Button
   - Lift
   - LiftFloor
+  - VentMarker
   layers:
   - Default
   - TransparentFX
