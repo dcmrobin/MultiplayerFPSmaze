@@ -5,6 +5,7 @@ using Unity.Netcode;
 
 public class Lift : NetworkBehaviour
 {
+    public bool isLiftUp;
     public Transform liftGround;
     public bool descending;
     public bool ascending;
@@ -67,5 +68,10 @@ public class Lift : NetworkBehaviour
         liftFloor.GetComponent<NetworkObject>().Spawn();
         liftFloor.GetComponent<NetworkObject>().TrySetParent(parent.transform);
         liftGround = liftFloor.transform;
+
+        if (isLiftUp)
+        {
+            liftGround.GetComponent<TempAdoptPlayer>().SetPos();
+        }
     }
 }

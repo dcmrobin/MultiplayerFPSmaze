@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5b9c0d58b94cc498acec1060f1ebbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLiftUp: 0
   liftGround: {fileID: 0}
   descending: 0
   ascending: 0
@@ -2456,7 +2457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStart: 0
-  rarity: 7
+  rarity: 8
   wallPrefab: {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   segmentPrefabList:
   - {fileID: 5755648635834313607, guid: 1b093448b3dc3c4499a3297991de4289, type: 3}

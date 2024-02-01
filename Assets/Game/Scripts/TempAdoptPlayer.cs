@@ -7,6 +7,7 @@ public class TempAdoptPlayer : NetworkBehaviour
 {
     public NetworkVariable<bool> hasDescended = new NetworkVariable<bool>();
     GameObject adoptedPlayer;
+
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player"))
         {
@@ -23,6 +24,11 @@ public class TempAdoptPlayer : NetworkBehaviour
             RemoveParentServerRpc();
             adoptedPlayer = null;
         }
+    }
+
+    public void SetPos()
+    {
+        ActivateLiftServerRpc();
     }
 
     [ServerRpc(RequireOwnership = false)]
