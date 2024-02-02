@@ -4,6 +4,8 @@ add notes around the map that once you press them they go away and then a file g
     lore idea:
         the maze you're in was at the start the backrooms but was remodeled into a fun place for people to go to have a sort of laser tag battle and the dead ends you encounter are actually just walls to seperate you from the rest of the backrooms.
 
+this game needs sound
+
 
 bugs:
 

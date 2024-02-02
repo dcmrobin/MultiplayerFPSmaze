@@ -6,6 +6,7 @@ using Unity.Netcode;
 using Unity.Collections;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Rendering.HighDefinition;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -64,6 +65,7 @@ public class PlayerController : NetworkBehaviour
     private float verticalRotation = 0f;
     private Rigidbody rb;
     private bool isLookingAtMap;
+    public bool isReading;
     private GameObject[] playerCameras;
     public GameObject doorPrefab;
 
@@ -97,24 +99,32 @@ public class PlayerController : NetworkBehaviour
     {
         if (!IsOwner) return;
 
-        if (!isLookingAtMap)
+        if (!isReading)
         {
-            HandleMouseLook();
-            HandleJump();
-            HandleGun();
-
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (!isLookingAtMap)
             {
-                moveSpeed = 27;
+                HandleMouseLook();
+                HandleJump();
+                HandleGun();
+    
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    moveSpeed = 27;
+                }
+                else if (!Input.GetKey(KeyCode.LeftShift))
+                {
+                    moveSpeed = 17;
+                }
+    
+                UIhealthNum.text = currentHealth.ToString();
             }
-            else if (!Input.GetKey(KeyCode.LeftShift))
-            {
-                moveSpeed = 17;
-            }
-
-            UIhealthNum.text = currentHealth.ToString();
+            HandleInteractions();
         }
-        HandleInteractions();
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
 
         playerCameras = GameObject.FindGameObjectsWithTag("MainCamera");
         for (int i = 0; i < playerCameras.Length; i++)
@@ -138,6 +148,12 @@ public class PlayerController : NetworkBehaviour
             }
             GameObject.Find("Start").GetComponent<Segment>().backupTime = false;
         }
+
+        if (GameObject.Find("ingameTextCanvas").activeSelf)
+        {
+            isReading = true;
+            GameObject.Find("ingameTextCanvas").transform.Find("TextPanel").Find("Text").GetComponent<TMP_Text>().text = "LORE";
+        }
     }
 
     void FixedUpdate()
@@ -146,7 +162,10 @@ public class PlayerController : NetworkBehaviour
 
         if (!isLookingAtMap)
         {
-            HandlePlayerMovement();
+            if (!isReading)
+            {
+                HandlePlayerMovement();
+            }
         }
     }
 

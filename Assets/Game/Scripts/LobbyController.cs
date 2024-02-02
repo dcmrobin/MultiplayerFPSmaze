@@ -389,4 +389,14 @@ public class LobbyController : MonoBehaviour
             return false;
         }
     }
+
+    public void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Player").Length; i++)
+        {
+            GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerController>().isReading = false;
+        }
+    }
 }
