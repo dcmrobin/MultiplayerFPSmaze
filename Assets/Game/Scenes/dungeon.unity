@@ -525,6 +525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6599478538499143638, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6983903602328368592, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
       propertyPath: m_Name
       value: EventSystemTemp
@@ -1214,7 +1218,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00077057, y: 21.502014}
-  m_SizeDelta: {x: 404, y: 414.58}
+  m_SizeDelta: {x: 383.153, y: 387.479}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1031417615
 MonoBehaviour:
@@ -1236,7 +1240,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[null]'
+  m_text: 'Welcome! Thank you for signing up for the testing of our all-new harmless
+    firearms! They may look mean but they don''t actually hurt anything.
+
+    Anyway,
+    here''s a little intro: this place is actually a refurbished section of the [REDACTED],
+    and those dead ends you''ll encounter were put there in order to separate you
+    from the rest of the (as far as we can tell, infinite) space of the [REDACTED].
+    Ignore the random openings and closings of the doors, that''s justs something
+    we couldn''t fix. We apologize for the flickering lights, we couldn''t figure
+    out what was doing that, since during the refurbishment we replaced those horrible
+    fluorescent lights. Seems like this place has an infinite source of energy as
+    well as space.
+
+    Just in case you somehow get lost, we''ve provided you with
+    a handheld map device, and we''ve also got a safeguard for when you inevitably
+    get the the lift to go down when you are underneath it. People these days.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1263,15 +1282,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
