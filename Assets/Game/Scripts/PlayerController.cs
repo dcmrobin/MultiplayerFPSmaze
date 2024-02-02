@@ -152,7 +152,7 @@ public class PlayerController : NetworkBehaviour
         if (GameObject.Find("ingameTextCanvas").activeSelf)
         {
             isReading = true;
-            GameObject.Find("ingameTextCanvas").transform.Find("TextPanel").Find("Text").GetComponent<TMP_Text>().text = "LORE";
+            GameObject.Find("ingameTextCanvas").transform.Find("TextPanel").Find("Text").GetComponent<TMP_Text>().text = "Welcome! Thank you for signing up for the testing of our all-new harmless firearms! They may look mean but they don't actually hurt anything.\nAnyway, here's a little intro: this place is actually a refurbished section of the [REDACTED], and those dead ends you'll encounter were put there in order to separate you from the rest of the (as far as we can tell, infinite) space of the [REDACTED]. Ignore the random openings and closings of the doors, that's justs something we couldn't fix. We apologize for the flickering lights, we couldn't figure out what was doing that, since during the refurbishment we replaced those horrible fluorescent lights. Seems like this place has an infinite source of energy as well as space.\nJust in case you somehow get lost, we've provided you with a handheld map device, and we've also got a safeguard for when you inevitably get the the lift to go down when you are underneath it. People these days.\n\nAnyway, have a great time!";
         }
     }
 
@@ -297,6 +297,12 @@ public class PlayerController : NetworkBehaviour
                     hit.collider.GetComponent<PlayerController>().TakeDamageClientRpc(gunDamage);
                 }
             }
+        }
+
+        if (currentHealth <= 0)
+        {
+            transform.position = new Vector3(0, 0, 0);
+            currentHealth = maxHealth;
         }
     }
 

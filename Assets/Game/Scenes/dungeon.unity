@@ -1240,26 +1240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome! Thank you for signing up for the testing of our all-new harmless
-    firearms! They may look mean but they don''t actually hurt anything.
-
-    Anyway,
-    here''s a little intro: this place is actually a refurbished section of the [REDACTED],
-    and those dead ends you''ll encounter were put there in order to separate you
-    from the rest of the (as far as we can tell, infinite) space of the [REDACTED].
-    Ignore the random openings and closings of the doors, that''s justs something
-    we couldn''t fix. We apologize for the flickering lights, we couldn''t figure
-    out what was doing that, since during the refurbishment we replaced those horrible
-    fluorescent lights. Seems like this place has an infinite source of energy as
-    well as space.
-
-    Just in case you somehow get lost, we''ve provided you with
-    a handheld map device, and we''ve also got a safeguard for when you inevitably
-    get the the lift to go down when you are underneath it. People these days.
-
-
-    Anyway,
-    have a great time!'
+  m_text: '[null]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2770,10 +2751,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table
       objectReference: {fileID: 0}
-    - target: {fileID: 6675925721956605715, guid: e34be85870545aa49a091a2aacc42327, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 825225c788ddf5f4f883e5c85017fde2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
