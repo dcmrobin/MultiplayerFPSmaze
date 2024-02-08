@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/dungeon.unity
     guid: f24a153a8834ffd449707d79babb0988
+  - enabled: 1
+    path: Assets/New World/Scenes/Transported.unity
+    guid: a217c4137373c7c4192465a4b11e168c
   m_configObjects: {}

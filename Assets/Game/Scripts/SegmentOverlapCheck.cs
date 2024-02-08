@@ -9,7 +9,7 @@ public class SegmentOverlapCheck : NetworkBehaviour
 
     private void Start() {
         Collider[] overlappingColliders = Physics.OverlapBox(transform.position, GetComponent<BoxCollider>().bounds.extents, Quaternion.identity, overlapLayermask);
-        if (overlappingColliders.Length > 1)
+        if (overlappingColliders.Length > 1 || transform.parent.position.y < -400)
         {
             transform.parent.GetComponent<Segment>().isOverlapping = true;
         }

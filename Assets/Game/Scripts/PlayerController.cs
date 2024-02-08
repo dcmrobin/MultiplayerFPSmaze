@@ -6,6 +6,7 @@ using Unity.Netcode;
 using Unity.Collections;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.HighDefinition;
 
 public class PlayerController : NetworkBehaviour
@@ -71,6 +72,7 @@ public class PlayerController : NetworkBehaviour
 
     RaycastHit hit;
     RaycastHit bulletHit;
+    public int nextScene;
 
     private void Awake() {
         NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
@@ -98,6 +100,13 @@ public class PlayerController : NetworkBehaviour
     void Update()
     {
         if (!IsOwner) return;
+
+        if (transform.position.y < -500)
+        {
+            NetworkManager.Singleton.Shutdown();
+            SceneManager.LoadScene(nextScene);
+            Destroy(gameObject);
+        }
 
         if (!isReading)
         {
