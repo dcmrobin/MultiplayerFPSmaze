@@ -914,7 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStart: 0
-  rarity: 2
+  rarity: 1
   wallPrefab: {fileID: 4534119535684800561, guid: 717ee722cb835414a8fd0a71041bea1c, type: 3}
   segmentPrefabList:
   - {fileID: 5755648635834313607}
