@@ -185,7 +185,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.8879524, b: 0.6745283, a: 1}
   m_Intensity: 2097152
-  m_Range: 30
+  m_Range: 40
   m_SpotAngle: 179
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -892,7 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 789272455
+  GlobalObjectIdHash: 2811407480
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1

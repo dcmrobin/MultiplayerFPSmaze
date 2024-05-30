@@ -205,7 +205,7 @@ MonoBehaviour:
       AODirectionCount: 010000000200000002000000
       ContactShadowSampleCount: 04000000080000000c000000
       SSRMaxRaySteps: 0c0000001800000030000000
-      SSGIRaySteps: 200000004000000080000000
+      SSGIRaySteps: 000000000000000000000000
       SSGIDenoise: 010101
       SSGIHalfResDenoise: 010000
       SSGIDenoiserRadius:
