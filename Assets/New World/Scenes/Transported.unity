@@ -319,6 +319,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &236071023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6683392878036038936, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
+  m_PrefabInstance: {fileID: 1075657297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &425593386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -960,6 +965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RampDown
       objectReference: {fileID: 0}
+    - target: {fileID: 6623210055317973693, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 832594479925707500, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
     m_RemovedGameObjects: []
@@ -969,11 +978,6 @@ PrefabInstance:
       addedObject: {fileID: 2097321569}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
---- !u!4 &1075657298 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6683392878036038936, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
-  m_PrefabInstance: {fileID: 1075657297}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1282884520
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1282884521
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1494,7 +1498,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1075657298}
+    m_TransformParent: {fileID: 236071023}
     m_Modifications:
     - target: {fileID: 2386120109933165284, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1551,6 +1555,10 @@ PrefabInstance:
     - target: {fileID: 5755648635834313607, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
       propertyPath: m_Name
       value: RampDown (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623210055317973693, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 832594479925707500, guid: 3fd092bafd5df084ab0fcd965fe27a61, type: 3}
