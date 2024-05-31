@@ -14,6 +14,9 @@ public class PlayerController : NetworkBehaviour
     public NetworkVariable<FixedString4096Bytes> recievedString = new NetworkVariable<FixedString4096Bytes>();
     public NetworkVariable<FixedString4096Bytes> recievedVentString = new NetworkVariable<FixedString4096Bytes>();
     [Header("Player Variables")]
+    [Tooltip("Pause menu object")]
+    public GameObject pauseMenu;
+
     [Tooltip("How sensitive is the mouse look?")]
     public float mouseSensitivity = 2.0f;
 
@@ -97,6 +100,20 @@ public class PlayerController : NetworkBehaviour
         }
     }
 
+    public void Exit(bool disconnecting)
+    {
+        if (disconnecting)
+        {
+            NetworkManager.Singleton.Shutdown();
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            NetworkManager.Singleton.Shutdown();
+            Application.Quit();
+        }
+    }
+
     void Update()
     {
         if (!IsOwner) return;
@@ -111,7 +128,7 @@ public class PlayerController : NetworkBehaviour
 
         if (!isReading)
         {
-            if (!isLookingAtMap)
+            if (!isLookingAtMap && !pauseMenu.activeSelf)
             {
                 HandleMouseLook();
                 HandleJump();
@@ -162,7 +179,13 @@ public class PlayerController : NetworkBehaviour
         if (GameObject.Find("ingameTextCanvas") != null && GameObject.Find("ingameTextCanvas").activeSelf)
         {
             isReading = true;
-            GameObject.Find("ingameTextCanvas").transform.Find("TextPanel").Find("Text").GetComponent<TMP_Text>().text = "Welcome! Thank you for signing up for the testing of our all-new harmless firearms! They may look mean but they don't actually hurt anything.\nAnyway, here's a little intro: this place is actually a refurbished section of the [REDACTED], and those dead ends you'll encounter were put there in order to separate you from the rest of the (as far as we can tell, infinite) space of the [REDACTED]. Ignore the random openings and closings of the doors, that's justs something we couldn't fix. We apologize for the flickering lights, we couldn't figure out what was doing that, since during the refurbishment we replaced those horrible fluorescent lights. Seems like this place has an infinite source of energy as well as space.\nJust in case you somehow get lost, we've provided you with a handheld map device, and we've also got a safeguard for when you inevitably get the the lift to go down when you are underneath it. People these days.\n\nAnyway, have a great time!";
+            GameObject.Find("ingameTextCanvas").transform.Find("TextPanel").Find("Text").GetComponent<TMP_Text>().text = "Welcome! Thank you for signing up for the testing of our all-new harmless firearms! They may look mean but they don't actually hurt anything.\nAnyway, here's a little intro: this place is actually a refurbished section of the [REDACTED], and those dead ends you'll encounter were put there in order to separate you from the rest of the (as far as we can tell, infinite) space of the [REDACTED]. Ignore the random openings and closings of the doors, that's justs something we couldn't fix. We apologize for the flickering lights, we couldn't figure out what was doing that, since during the refurbishment we replaced those horrible fluorescent lights. Seems like this place has an infinite source of energy as well as space.\nJust in case you somehow get lost, we've provided you with a handheld map device, and we've also got a safeguard for when you inevitably get the the lift to go down when you are underneath it. People these days.\n\n\nAnyway, have a great time!\n\n                          - CETC Co.";
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+            Cursor.lockState = pauseMenu.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
         }
     }
 
@@ -170,12 +193,9 @@ public class PlayerController : NetworkBehaviour
     {
         if (!IsOwner) return;
 
-        if (!isLookingAtMap)
+        if (!isLookingAtMap && !isReading && !pauseMenu.activeSelf)
         {
-            if (!isReading)
-            {
-                HandlePlayerMovement();
-            }
+            HandlePlayerMovement();
         }
     }
 
@@ -286,6 +306,8 @@ public class PlayerController : NetworkBehaviour
             crosshair.color = Color.white;
         }
     }
+
+    public void LockCursor(){Cursor.lockState = CursorLockMode.Locked;}
 
     public void HandleGun()
     {

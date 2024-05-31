@@ -22,6 +22,7 @@ public class Segment : NetworkBehaviour
     public bool startedGenerating;
     public bool finishedGenerating;
     [HideInInspector] public bool backupTime;
+    [HideInInspector] public bool hasGeneratedGlitchedCorridor;
     //public int segmentSeedNum;
 
     private void Awake() {
@@ -141,9 +142,13 @@ public class Segment : NetworkBehaviour
                         {
                             if (segmentPrefabList[randomNum].name == "GlitchedCorridor")
                             {
-                                if (GameObject.Find("GlitchedCorridor") != null || GameObject.Find("Start").GetComponent<Seed>().worldSize < 30)
+                                if (GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor || GameObject.Find("Start").GetComponent<Seed>().worldSize < 20)
                                 {
-                                    goto regen;// There can only be a max of one glitched corridor per map and it will only spawn far out in the map
+                                    goto regen;// The glitched corridor will spawn far out in map
+                                }
+                                else
+                                {
+                                    GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor = true;
                                 }
                             }
                             GameObject.Find("Start").GetComponent<Seed>().seed += randomNum.ToString();

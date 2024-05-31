@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -1362,6 +1362,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69569c1539c077e45b930f8d016e8b62, type: 3}
+--- !u!1 &251119534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7029514620733838475, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+  m_PrefabInstance: {fileID: 155459507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &541725383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 783638808326390504, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+  m_PrefabInstance: {fileID: 155459507}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &590606782 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3787280222873981014, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
@@ -2490,6 +2500,12 @@ MonoBehaviour:
   worldSizeInputField: {fileID: 1935912259}
   worldSize: 0
   counter: 0
+  thingsToActivateOnDisconnect:
+  - {fileID: 1547966945}
+  - {fileID: 1630163209}
+  - {fileID: 197992134}
+  - {fileID: 541725383}
+  - {fileID: 251119534}
 --- !u!114 &1427592612
 MonoBehaviour:
   m_ObjectHideFlags: 0
