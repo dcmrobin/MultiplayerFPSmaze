@@ -1,5 +1,3 @@
-when you glitch out of the map, you get transported to a backrooms level or something... make loads of backrooms stuff
-
 add notes around the map that once you press them they go away and then a file gets added to your computer that is a bit of lore
     lore idea:
         the maze you're in was at the start the backrooms but was remodeled into a fun place for people to go to have a sort of laser tag battle and the dead ends you encounter are actually just walls to seperate you from the rest of the backrooms.
@@ -12,3 +10,5 @@ bugs:
 player has to press quick join lobby twice because of lag issues
 
 players can't ride the lift upwards together... but there's a failsafe so don't worry about it
+
+when a segment overlaps, it deletes itself but still decreases the worldsize number. this is leading to worlds that are smaller than the worldsize.

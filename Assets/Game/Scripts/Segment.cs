@@ -19,8 +19,8 @@ public class Segment : NetworkBehaviour
 
     [HideInInspector] public bool isOverlapping;
     [HideInInspector] public bool keepGenerating;
-    bool startedGenerating;
-    bool finishedGenerating;
+    public bool startedGenerating;
+    public bool finishedGenerating;
     [HideInInspector] public bool backupTime;
     //public int segmentSeedNum;
 
@@ -56,6 +56,8 @@ public class Segment : NetworkBehaviour
     private void Update() {
         if (isOverlapping)
         {
+            isOverlapping = false;
+            //GameObject.Find("Start").GetComponent<Seed>().worldSize += 1; // this line of code bro
             Destroy(gameObject);
         }
 
@@ -72,7 +74,7 @@ public class Segment : NetworkBehaviour
                     transform.Find("Light").gameObject.SetActive(true);
                 }
             }
-            else//this is gonna get mixed up between the players
+            else
             {
                 transform.Find("Light").gameObject.SetActive(false);
             }
@@ -137,15 +139,22 @@ public class Segment : NetworkBehaviour
                         int randomVentNum = UnityEngine.Random.Range(0, 3);
                         if (randProb1 == randProb2)
                         {
+                            if (segmentPrefabList[randomNum].name == "GlitchedCorridor")
+                            {
+                                if (GameObject.Find("GlitchedCorridor") != null || GameObject.Find("Start").GetComponent<Seed>().worldSize < 30)
+                                {
+                                    goto regen;// There can only be a max of one glitched corridor per map and it will only spawn far out in the map
+                                }
+                            }
                             GameObject.Find("Start").GetComponent<Seed>().seed += randomNum.ToString();
                             GameObject.Find("Start").GetComponent<Seed>().ventSeed += randomVentNum.ToString();
                             GameObject.Find("Start").GetComponent<Seed>().worldSize -= 1;
                             GameObject newSegment = Instantiate(segmentPrefabList[randomNum], exits[j]);
+                            newSegment.name = segmentPrefabList[randomNum].name;
                             if (Convert.ToBoolean(randomVentNum) && transform.Find("VentTarget") != null)
                             {
                                 Destroy(transform.Find("VentTarget").gameObject);
                             }
-                            //newSegment.GetComponent<Segment>().segmentSeedNum = randomNum;
                         }
                         else
                         {
