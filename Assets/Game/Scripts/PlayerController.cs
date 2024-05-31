@@ -105,14 +105,49 @@ public class PlayerController : NetworkBehaviour
     {
         if (disconnecting)
         {
+            ReturnToMenuServerRpc();
+            if (IsHost)
+            {
+                Debug.Log("Host is leaving");
+                ReturnToMenuServerRpc();
+            }
+            else
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                Debug.Log("A client is leaving");
+                SceneManager.LoadScene(0);
+                AuthenticationService.Instance.SignOut();
+                NetworkManager.Singleton.Shutdown();
+            }
+        }
+        else
+        {
+            ReturnToMenuServerRpc();
+            NetworkManager.Singleton.Shutdown();
+            Application.Quit();
+        }
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void ReturnToMenuServerRpc()
+    {
+        Debug.Log("Ending game");
+        if (IsHost)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             NetworkManager.Singleton.SceneManager.LoadScene("dungeon", LoadSceneMode.Single);
             AuthenticationService.Instance.SignOut();
             NetworkManager.Singleton.Shutdown();
         }
         else
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene(0);
+            AuthenticationService.Instance.SignOut();
             NetworkManager.Singleton.Shutdown();
-            Application.Quit();
         }
     }
 
@@ -151,8 +186,8 @@ public class PlayerController : NetworkBehaviour
         }
         else
         {
-            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         playerCameras = GameObject.FindGameObjectsWithTag("MainCamera");
@@ -188,6 +223,7 @@ public class PlayerController : NetworkBehaviour
         {
             pauseMenu.SetActive(!pauseMenu.activeSelf);
             Cursor.lockState = pauseMenu.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.visible = pauseMenu.activeSelf;
         }
     }
 
@@ -259,8 +295,8 @@ public class PlayerController : NetworkBehaviour
                 mapCamera.SetActive(true);
                 mapCamera.GetComponentInChildren<MapCam>().ScanForPlayers();
                 transform.Find("Canvas").gameObject.SetActive(false);
-                Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
             else
             {
@@ -268,6 +304,7 @@ public class PlayerController : NetworkBehaviour
                 mapCamera.GetComponentInChildren<MapCam>().DiscardOthPlayerMarkers();
                 mapCamera.SetActive(false);
                 transform.Find("Canvas").gameObject.SetActive(true);
+                Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
             }
         }
