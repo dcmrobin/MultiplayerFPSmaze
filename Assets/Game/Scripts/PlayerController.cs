@@ -8,6 +8,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.HighDefinition;
+using Unity.Services.Authentication;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -104,8 +105,9 @@ public class PlayerController : NetworkBehaviour
     {
         if (disconnecting)
         {
+            NetworkManager.Singleton.SceneManager.LoadScene("dungeon", LoadSceneMode.Single);
+            AuthenticationService.Instance.SignOut();
             NetworkManager.Singleton.Shutdown();
-            SceneManager.LoadScene(0);
         }
         else
         {
