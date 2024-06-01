@@ -133,21 +133,21 @@ public class PlayerController : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void ReturnToMenuServerRpc()
     {
-        if (IsClient && !IsHost)//this not triggering
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            Debug.Log("A client is leaving because the game is ending");
-            SceneManager.LoadScene(0);
-            AuthenticationService.Instance.SignOut();
-            NetworkManager.Singleton.Shutdown();
-        }
-        else if (IsHost)
+        if (IsHost)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             Debug.Log("Host is leaving and ending the game in the process");
             NetworkManager.Singleton.SceneManager.LoadScene("dungeon", LoadSceneMode.Single);
+            AuthenticationService.Instance.SignOut();
+            NetworkManager.Singleton.Shutdown();
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Debug.Log("A client is leaving because the game is ending");
+            SceneManager.LoadScene(0);
             AuthenticationService.Instance.SignOut();
             NetworkManager.Singleton.Shutdown();
         }
