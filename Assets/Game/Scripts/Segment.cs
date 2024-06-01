@@ -172,11 +172,15 @@ public class Segment : NetworkBehaviour
                                 {
                                     goto regen;
                                 }
-                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && GameObject.Find("Start").GetComponent<Seed>().worldSize > 40)
+                                else if (System.Int32.Parse(GameObject.Find("Start").GetComponent<Seed>().worldSizeInputField.text) < 300)
                                 {
                                     goto regen;
                                 }
-                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && GameObject.Find("Start").GetComponent<Seed>().worldSize < 40)
+                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && Vector3.Distance(GameObject.Find("Start").transform.position, transform.position) < 220)
+                                {
+                                    goto regen;
+                                }
+                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && Vector3.Distance(GameObject.Find("Start").transform.position, transform.position) >= 220)
                                 {
                                     GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor = true;
                                 }
