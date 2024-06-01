@@ -28,11 +28,15 @@ public class LobbyController : MonoBehaviour
     private string playerName;
     public const string KEY_START_GAME = "Start";
     public event EventHandler<EventArgs> OnGameStarted;
+    public bool showDebugMessages;
     private async void Start() {
         await UnityServices.InitializeAsync();
 
         AuthenticationService.Instance.SignedIn += () => {
-            Debug.Log("Signed in " + AuthenticationService.Instance.PlayerId);
+            if (showDebugMessages)
+            {
+                Debug.Log("Signed in " + AuthenticationService.Instance.PlayerId);
+            }
         };
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
@@ -98,7 +102,10 @@ public class LobbyController : MonoBehaviour
                         }
                         catch (LobbyServiceException e)
                         {
-                            Debug.Log(e);
+                            if (showDebugMessages)
+                            {
+                                Debug.Log(e);
+                            }
                         }
                     //}
 
@@ -131,12 +138,18 @@ public class LobbyController : MonoBehaviour
             UpdatePlayerName(nicknameInputField.text);
 
             PrintPlayers(joinedLobby);
-            Debug.Log("Created Lobby! " + lobby.Name + " " + lobby.MaxPlayers + " " + lobby.Id + " " + lobby.LobbyCode);
+            if (showDebugMessages)
+            {
+                Debug.Log("Created Lobby! " + lobby.Name + " " + lobby.MaxPlayers + " " + lobby.Id + " " + lobby.LobbyCode);
+            }
             codeText.text = lobby.LobbyCode;
             clientcodeText.text = lobby.LobbyCode;
             RefreshLobby();
         } catch (LobbyServiceException e) {
-            Debug.Log(e);
+            if (showDebugMessages)
+            {
+                Debug.Log(e);
+            }
         }
     }
 
@@ -154,16 +167,25 @@ public class LobbyController : MonoBehaviour
             };
             QueryResponse queryResponse = await Lobbies.Instance.QueryLobbiesAsync(queryLobbiesOptions);
     
-            Debug.Log("Lobbies found: " + queryResponse.Results.Count);
-            numOfLobbies = queryResponse.Results.Count;
-            foreach (Lobby lobby in queryResponse.Results)
+            if (showDebugMessages)
             {
-                Debug.Log(lobby.Name + " " + lobby.MaxPlayers);
+                Debug.Log("Lobbies found: " + queryResponse.Results.Count);
+            }
+            numOfLobbies = queryResponse.Results.Count;
+            if (showDebugMessages)
+            {
+                foreach (Lobby lobby in queryResponse.Results)
+                {
+                    Debug.Log(lobby.Name + " " + lobby.MaxPlayers);
+                }
             }
         }
         catch (LobbyServiceException e)
         {
-            Debug.Log(e);
+            if (showDebugMessages)
+            {
+                Debug.Log(e);
+            }
         }
     }
 
@@ -177,7 +199,10 @@ public class LobbyController : MonoBehaviour
             Lobby lobby = await Lobbies.Instance.JoinLobbyByCodeAsync(lobbyCodeInputField.text, joinLobbyByCodeOptions);
             joinedLobby = lobby;
 
-            Debug.Log("Joined Lobby with code " + lobbyCodeInputField.text);
+            if (showDebugMessages)
+            {
+                Debug.Log("Joined Lobby with code " + lobbyCodeInputField.text);
+            }
 
             UpdatePlayerName(nicknameInputField.text);
 
@@ -186,7 +211,10 @@ public class LobbyController : MonoBehaviour
         }
         catch (LobbyServiceException e)
         {
-            Debug.Log(e);
+            if (showDebugMessages)
+            {
+                Debug.Log(e);
+            }
         }
     }
 
@@ -209,7 +237,10 @@ public class LobbyController : MonoBehaviour
             }
             catch (LobbyServiceException e)
             {
-                Debug.Log(e);
+                if (showDebugMessages)
+                {
+                    Debug.Log(e);
+                }
             }
         }
     }
@@ -231,7 +262,10 @@ public class LobbyController : MonoBehaviour
 
     private void PrintPlayers(Lobby lobby)
     {
-        Debug.Log("Players in Lobby " + lobby.Name);
+        if (showDebugMessages)
+        {
+            Debug.Log("Players in Lobby " + lobby.Name);
+        }
         for (int i = 0; i < playerListContent.transform.childCount; i++)
         {
             Destroy(playerListContent.transform.GetChild(i).gameObject);
@@ -254,7 +288,10 @@ public class LobbyController : MonoBehaviour
             clientplayerElement.GetComponent<TMP_Text>().color = Color.black;
             clientplayerElement.GetComponent<TMP_Text>().enableWordWrapping = false;
 
-            Debug.Log(player.Id + " " + player.Data["PlayerName"].Value);
+            if (showDebugMessages)
+            {
+                Debug.Log(player.Id + " " + player.Data["PlayerName"].Value);
+            }
         }
     }
 
@@ -278,7 +315,10 @@ public class LobbyController : MonoBehaviour
         }
         catch (LobbyServiceException e)
         {
-            Debug.Log(e);
+            if (showDebugMessages)
+            {
+                Debug.Log(e);
+            }
         }
     }
 
@@ -290,7 +330,10 @@ public class LobbyController : MonoBehaviour
         }
         catch (LobbyServiceException e)
         {
-            Debug.Log(e);
+            if (showDebugMessages)
+            {
+                Debug.Log(e);
+            }
         }
     }
 
@@ -302,7 +345,10 @@ public class LobbyController : MonoBehaviour
         }
         catch (LobbyServiceException e)
         {
-            Debug.Log(e);
+            if (showDebugMessages)
+            {
+                Debug.Log(e);
+            }
         }
     }
 
@@ -320,7 +366,10 @@ public class LobbyController : MonoBehaviour
         }
         catch (LobbyServiceException e)
         {
-            Debug.Log(e);
+            if (showDebugMessages)
+            {
+                Debug.Log(e);
+            }
         }
     }
 
@@ -332,7 +381,10 @@ public class LobbyController : MonoBehaviour
         }
         catch (LobbyServiceException e)
         {
-            Debug.Log(e);
+            if (showDebugMessages)
+            {
+                Debug.Log(e);
+            }
         }
     }
 
@@ -346,7 +398,10 @@ public class LobbyController : MonoBehaviour
         //{
             try
             {
-                Debug.Log("StartGame");
+                if (showDebugMessages)
+                {
+                    Debug.Log("StartGame");
+                }
 
                 string relayCode = await TestRelay.Instance.CreateRelay();
 
@@ -360,7 +415,10 @@ public class LobbyController : MonoBehaviour
             }
             catch (LobbyServiceException e)
             {
-                Debug.Log(e);
+                if (showDebugMessages)
+                {
+                    Debug.Log(e);
+                }
             }
         //}
     }

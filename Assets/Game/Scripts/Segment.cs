@@ -47,7 +47,7 @@ public class Segment : NetworkBehaviour
     {
         if (IsServer)
         {
-            Debug.Log("Client " + clientId + " connected!");
+            //Debug.Log("Client " + clientId + " connected!");
             PlayerController connectedClient = NetworkManager.Singleton.ConnectedClients[clientId].PlayerObject.gameObject.GetComponent<PlayerController>();
             connectedClient.recievedString.Value = GameObject.Find("Start").GetComponent<Seed>().seed;
             connectedClient.recievedVentString.Value = GameObject.Find("Start").GetComponent<Seed>().ventSeed;
@@ -146,11 +146,11 @@ public class Segment : NetworkBehaviour
                                 {
                                     goto regen;
                                 }
-                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && GameObject.Find("Start").GetComponent<Seed>().worldSize > 20)
+                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && GameObject.Find("Start").GetComponent<Seed>().worldSize > 40)
                                 {
                                     goto regen;
                                 }
-                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && GameObject.Find("Start").GetComponent<Seed>().worldSize < 20)
+                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && GameObject.Find("Start").GetComponent<Seed>().worldSize < 40)
                                 {
                                     GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor = true;
                                 }

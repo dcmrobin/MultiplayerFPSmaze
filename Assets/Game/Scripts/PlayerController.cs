@@ -105,17 +105,15 @@ public class PlayerController : NetworkBehaviour
     {
         if (disconnecting)
         {
-            ReturnToMenuServerRpc();
             if (IsHost)
             {
-                Debug.Log("Host is leaving");
                 ReturnToMenuServerRpc();
             }
-            else
+            else if (IsClient && !IsHost)
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-                Debug.Log("A client is leaving");
+                Debug.Log("Only a client is leaving");
                 SceneManager.LoadScene(0);
                 AuthenticationService.Instance.SignOut();
                 NetworkManager.Singleton.Shutdown();
@@ -123,7 +121,10 @@ public class PlayerController : NetworkBehaviour
         }
         else
         {
-            ReturnToMenuServerRpc();
+            if (IsHost)
+            {
+                ReturnToMenuServerRpc();
+            }
             NetworkManager.Singleton.Shutdown();
             Application.Quit();
         }
@@ -132,20 +133,21 @@ public class PlayerController : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void ReturnToMenuServerRpc()
     {
-        Debug.Log("Ending game");
-        if (IsHost)
+        if (IsClient && !IsHost)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            NetworkManager.Singleton.SceneManager.LoadScene("dungeon", LoadSceneMode.Single);
+            Debug.Log("A client is leaving because the game is ending");
+            SceneManager.LoadScene(0);
             AuthenticationService.Instance.SignOut();
             NetworkManager.Singleton.Shutdown();
         }
-        else
+        else if (IsHost)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(0);
+            Debug.Log("Host is leaving and ending the game in the process");
+            NetworkManager.Singleton.SceneManager.LoadScene("dungeon", LoadSceneMode.Single);
             AuthenticationService.Instance.SignOut();
             NetworkManager.Singleton.Shutdown();
         }

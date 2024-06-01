@@ -37,7 +37,7 @@ public class TestRelay : MonoBehaviour
 
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
-            Debug.Log(joinCode);
+            //Debug.Log(joinCode);
 
             RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
 
@@ -49,7 +49,7 @@ public class TestRelay : MonoBehaviour
         }
         catch (RelayServiceException e)
         {
-            Debug.Log(e);
+            //Debug.Log(e);
             return null;
         }
     }
@@ -58,7 +58,7 @@ public class TestRelay : MonoBehaviour
     {
         try
         {
-            Debug.Log("Joining relay with " + joinCode);
+            //Debug.Log("Joining relay with " + joinCode);
             JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
             RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
@@ -74,7 +74,7 @@ public class TestRelay : MonoBehaviour
         }
         catch (RelayServiceException e)
         {
-            Debug.Log(e);
+            //Debug.Log(e);
         }
     }
 }
