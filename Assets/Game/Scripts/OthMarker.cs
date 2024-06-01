@@ -18,7 +18,7 @@ public class OthMarker : NetworkBehaviour
             othMarkerTargetPos.y = Mathf.Clamp(othMarkerTargetPos.y, screenBounds.y, screenBounds.yMax);
             transform.position = new Vector3(othMarkerTargetPos.x, othMarkerTargetPos.y, 0);
 
-            if (target == transform.parent.parent.parent.parent)
+            if (target == transform.parent.parent.parent.parent || target == null)
             {
                 Destroy(gameObject);
             }

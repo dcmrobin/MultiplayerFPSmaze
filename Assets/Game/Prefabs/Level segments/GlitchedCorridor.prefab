@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4245555987
+  GlobalObjectIdHash: 1732631990
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -873,9 +873,13 @@ MonoBehaviour:
   - {fileID: 5755648635834313607, guid: 5c51f27de1361dc41a151b51205a1c7f, type: 3}
   exits:
   - {fileID: 6683392878036038936}
+  ghostPrefab: {fileID: 1562927279468266387, guid: f52722d6ff0578a44b163769b7aceb80, type: 3}
   isOverlapping: 0
   keepGenerating: 0
+  startedGenerating: 0
+  finishedGenerating: 0
   backupTime: 0
+  hasGeneratedGlitchedCorridor: 0
 --- !u!1 &6487088049023008424
 GameObject:
   m_ObjectHideFlags: 0

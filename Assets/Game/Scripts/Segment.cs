@@ -17,11 +17,12 @@ public class Segment : NetworkBehaviour
     public GameObject wallPrefab;
     public GameObject[] segmentPrefabList;
     public Transform[] exits;
+    public GameObject ghostPrefab;
 
     [HideInInspector] public bool isOverlapping;
     [HideInInspector] public bool keepGenerating;
-    public bool startedGenerating;
-    public bool finishedGenerating;
+    [HideInInspector] public bool startedGenerating;
+    [HideInInspector] public bool finishedGenerating;
     [HideInInspector] public bool backupTime;
     [HideInInspector] public bool hasGeneratedGlitchedCorridor;
     private bool playersHaveSpawned;
@@ -70,6 +71,13 @@ public class Segment : NetworkBehaviour
     }
 
     private void Update() {
+        if (name == "GlitchedCorridor")
+        {
+            if (UnityEngine.Random.value > 0.9999)
+            {
+                Instantiate(ghostPrefab, transform.position + UnityEngine.Random.insideUnitSphere, Quaternion.identity);
+            }
+        }
         if (playersHaveSpawned)
         {
             ReloadScene();
@@ -172,15 +180,15 @@ public class Segment : NetworkBehaviour
                                 {
                                     goto regen;
                                 }
-                                else if (System.Int32.Parse(GameObject.Find("Start").GetComponent<Seed>().worldSizeInputField.text) < 300)
+                                else if (System.Int32.Parse(GameObject.Find("Start").GetComponent<Seed>().worldSizeInputField.text) < 400)
                                 {
                                     goto regen;
                                 }
-                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && Vector3.Distance(GameObject.Find("Start").transform.position, transform.position) < 220)
+                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && Vector3.Distance(GameObject.Find("Start").transform.position, transform.position) < 320)
                                 {
                                     goto regen;
                                 }
-                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && Vector3.Distance(GameObject.Find("Start").transform.position, transform.position) >= 220)
+                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && Vector3.Distance(GameObject.Find("Start").transform.position, transform.position) >= 320)
                                 {
                                     GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor = true;
                                 }

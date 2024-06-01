@@ -43,6 +43,7 @@
      <Compile Include="Assets\Game\Scripts\BackupExit.cs" />
      <Compile Include="Assets\Game\Scripts\Vent.cs" />
      <Compile Include="Assets\Game\Scripts\InteractButton.cs" />
+     <Compile Include="Assets\Game\Scripts\GhostScript.cs" />
      <Compile Include="Assets\Game\Scripts\MapCam.cs" />
      <Compile Include="Assets\Game\Scripts\Lift.cs" />
      <Compile Include="Assets\New World\Scripts\BasicPlayerController.cs" />
