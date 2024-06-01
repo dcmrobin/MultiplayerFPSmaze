@@ -133,7 +133,7 @@ public class PlayerController : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void ReturnToMenuServerRpc()
     {
-        if (IsClient && !IsHost)
+        if (IsClient && !IsHost)//this not triggering
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
