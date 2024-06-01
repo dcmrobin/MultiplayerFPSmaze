@@ -7,6 +7,7 @@ using Unity.Multiplayer.Tools.NetStatsMonitor;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Segment : NetworkBehaviour
 {
@@ -23,6 +24,7 @@ public class Segment : NetworkBehaviour
     public bool finishedGenerating;
     [HideInInspector] public bool backupTime;
     [HideInInspector] public bool hasGeneratedGlitchedCorridor;
+    private bool playersHaveSpawned;
     //public int segmentSeedNum;
 
     private void Awake() {
@@ -54,7 +56,31 @@ public class Segment : NetworkBehaviour
         }
     }
 
+    void ReloadScene()
+    {
+        if (isStart)
+        {
+            if (GameObject.FindGameObjectWithTag("Player") == null)
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                SceneManager.LoadScene(0);
+            }
+        }
+    }
+
     private void Update() {
+        if (playersHaveSpawned)
+        {
+            ReloadScene();
+        }
+        if (isStart && !playersHaveSpawned)
+        {
+            if (GameObject.FindGameObjectWithTag("Player") != null)
+            {
+                playersHaveSpawned = true;
+            }
+        }
         if (isOverlapping)
         {
             isOverlapping = false;

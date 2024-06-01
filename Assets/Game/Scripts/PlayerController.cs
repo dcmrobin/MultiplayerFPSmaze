@@ -107,13 +107,16 @@ public class PlayerController : NetworkBehaviour
         {
             if (IsHost)
             {
-                ReturnToMenuServerRpc();
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                NetworkManager.Singleton.SceneManager.LoadScene("dungeon", LoadSceneMode.Single);
+                AuthenticationService.Instance.SignOut();
+                NetworkManager.Singleton.Shutdown();
             }
             else if (IsClient && !IsHost)
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-                Debug.Log("Only a client is leaving");
                 SceneManager.LoadScene(0);
                 AuthenticationService.Instance.SignOut();
                 NetworkManager.Singleton.Shutdown();
@@ -121,35 +124,9 @@ public class PlayerController : NetworkBehaviour
         }
         else
         {
-            if (IsHost)
-            {
-                ReturnToMenuServerRpc();
-            }
+            AuthenticationService.Instance.SignOut();
             NetworkManager.Singleton.Shutdown();
             Application.Quit();
-        }
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void ReturnToMenuServerRpc()
-    {
-        if (IsHost)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            Debug.Log("Host is leaving and ending the game in the process");
-            NetworkManager.Singleton.SceneManager.LoadScene("dungeon", LoadSceneMode.Single);
-            AuthenticationService.Instance.SignOut();
-            NetworkManager.Singleton.Shutdown();
-        }
-        else
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            Debug.Log("A client is leaving because the game is ending");
-            SceneManager.LoadScene(0);
-            AuthenticationService.Instance.SignOut();
-            NetworkManager.Singleton.Shutdown();
         }
     }
 
