@@ -142,11 +142,15 @@ public class Segment : NetworkBehaviour
                         {
                             if (segmentPrefabList[randomNum].name == "GlitchedCorridor")
                             {
-                                if (GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor || GameObject.Find("Start").GetComponent<Seed>().worldSize < 20)
+                                if (GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor)
                                 {
-                                    goto regen;// The glitched corridor will spawn far out in map
+                                    goto regen;
                                 }
-                                else
+                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && GameObject.Find("Start").GetComponent<Seed>().worldSize > 20)
+                                {
+                                    goto regen;
+                                }
+                                else if (!GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor && GameObject.Find("Start").GetComponent<Seed>().worldSize < 20)
                                 {
                                     GameObject.Find("Start").GetComponent<Segment>().hasGeneratedGlitchedCorridor = true;
                                 }
