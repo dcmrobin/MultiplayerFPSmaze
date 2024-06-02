@@ -54,6 +54,7 @@
      <Compile Include="Assets\Game\Scripts\LobbyController.cs" />
      <Compile Include="Assets\Game\Scripts\TestRelay.cs" />
      <Compile Include="Assets\Game\Scripts\UIManager.cs" />
+     <Compile Include="Assets\New World\Scripts\ToggleWithinRange.cs" />
      <Compile Include="Assets\Game\Scripts\TempAdoptPlayer.cs" />
      <Compile Include="Assets\Game\Scripts\Seed.cs" />
      <Compile Include="Assets\Game\Scripts\Door.cs" />
