@@ -30,6 +30,8 @@ public class LobbyController : MonoBehaviour
     public event EventHandler<EventArgs> OnGameStarted;
     public bool showDebugMessages;
     private async void Start() {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         await UnityServices.InitializeAsync();
 
         AuthenticationService.Instance.SignedIn += () => {
