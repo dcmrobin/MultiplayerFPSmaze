@@ -8,6 +8,7 @@ using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Services.Authentication;
 
 public class Segment : NetworkBehaviour
 {
@@ -66,6 +67,8 @@ public class Segment : NetworkBehaviour
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene(0);
+                AuthenticationService.Instance.SignOut();
+                NetworkManager.Singleton.Shutdown();
             }
         }
     }

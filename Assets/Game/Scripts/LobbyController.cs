@@ -47,6 +47,11 @@ public class LobbyController : MonoBehaviour
         Debug.Log(playerName);*/
     }
 
+    public void ExitApplication()
+    {
+        Application.Quit();
+    }
+
     private void Update() {
         if (lobbyCodeInputField.gameObject != null && lobbyCodeInputField.GetComponentInParent<Button>() != null && lobbyCodeInputField != null)
         {

@@ -598,6 +598,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a41fde8bfec871a4ba2602cb0d5af1f7, type: 3}
+    - target: {fileID: 1278904950764677414, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810442951}
     - target: {fileID: 1328842329131437443, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
       propertyPath: m_fontSize
       value: 10
@@ -941,6 +945,14 @@ PrefabInstance:
     - target: {fileID: 5702410333058084665, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812548589181705964, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812548589181705964, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -75.8
       objectReference: {fileID: 0}
     - target: {fileID: 5892500975466237118, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
       propertyPath: m_text
@@ -1362,16 +1374,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69569c1539c077e45b930f8d016e8b62, type: 3}
---- !u!1 &251119534 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7029514620733838475, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
-  m_PrefabInstance: {fileID: 155459507}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &541725383 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 783638808326390504, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
-  m_PrefabInstance: {fileID: 155459507}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &590606782 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3787280222873981014, guid: 235b5c445e5174a4a8518781ebde49f7, type: 3}
@@ -2500,12 +2502,6 @@ MonoBehaviour:
   worldSizeInputField: {fileID: 1935912259}
   worldSize: 0
   counter: 0
-  thingsToActivateOnDisconnect:
-  - {fileID: 1547966945}
-  - {fileID: 1630163209}
-  - {fileID: 197992134}
-  - {fileID: 541725383}
-  - {fileID: 251119534}
 --- !u!114 &1427592612
 MonoBehaviour:
   m_ObjectHideFlags: 0
