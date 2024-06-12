@@ -33,10 +33,12 @@ public class Door : NetworkBehaviour
     {
         if (!doorOpen.Value)
         {
+            transform.GetChild(0).GetComponent<AudioSource>().Play();
             doorOpen.Value = true;
         }
         else if (doorOpen.Value)
         {
+            GetComponent<AudioSource>().Play();
             doorOpen.Value = false;
         }
 

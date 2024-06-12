@@ -10,14 +10,15 @@ public class InteractButton : NetworkBehaviour
     public GameObject thingToShow;
     public void Interact()
     {
-       if (onPress == Action.ActivateLift)
-       {
-            Debug.Log("A button has been pressed");
-            transform.parent.GetComponent<Lift>().liftGround.GetComponent<TempAdoptPlayer>().ActivateLiftServerRpc();
-       }
-       else if (onPress == Action.ShowSomething)
-       {
-            thingToShow.SetActive(true);
-       }
+          GetComponent<AudioSource>().Play();
+          if (onPress == Action.ActivateLift)
+          {
+               transform.parent.GetComponent<AudioSource>().Play();
+               transform.parent.GetComponent<Lift>().liftGround.GetComponent<TempAdoptPlayer>().ActivateLiftServerRpc();
+          }
+          else if (onPress == Action.ShowSomething)
+          {
+               thingToShow.SetActive(true);
+          }
     }
 }
