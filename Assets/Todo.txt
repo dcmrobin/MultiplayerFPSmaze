@@ -6,6 +6,8 @@ this game needs sound
 
 Curiosity Enlightened The Cat (CETC) Co. is a bit sketchy
 
+have multiple weapons maybe? Instead of having a gun at first, you have to find a weapon in the maze itself and pick it up. Then when it runs out of ammo, you have to get a new one.
+
 
 bugs:
 
