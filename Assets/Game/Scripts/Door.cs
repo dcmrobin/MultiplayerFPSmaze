@@ -15,7 +15,7 @@ public class Door : NetworkBehaviour
     //}
 
     private void Update() {
-        if (UnityEngine.Random.value > .99991 && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 70)
+        if (UnityEngine.Random.value > .99999 && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 70)
         {
             if (!doorOpen.Value)
             {
