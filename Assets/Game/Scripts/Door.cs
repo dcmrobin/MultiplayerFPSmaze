@@ -7,15 +7,15 @@ public class Door : NetworkBehaviour
 {
     public NetworkVariable<bool> doorOpen = new NetworkVariable<bool>();
 
-    private void Start() {
-        if (Random.value > .992 && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 70)
-        {
-            ToggleDoorServerRpc(90);
-        }
-    }
+    //private void Start() {
+    //    if (Random.value > .992 && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 70)
+    //    {
+    //        ToggleDoorServerRpc(90);
+    //    }
+    //}
 
     private void Update() {
-        if (UnityEngine.Random.value > .9995 && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 70)
+        if (UnityEngine.Random.value > .99991 && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 70)
         {
             if (!doorOpen.Value)
             {

@@ -311,7 +311,10 @@ public class PlayerController : NetworkBehaviour
                 }
                 else if (currentObject.CompareTag("Vent"))
                 {
+                    currentObject.GetComponent<AudioSource>().Play();
                     transform.position = new Vector3(currentObject.GetComponent<Vent>().closestVent.parent.position.x, currentObject.GetComponent<Vent>().closestVent.parent.position.y, currentObject.GetComponent<Vent>().closestVent.parent.position.z);
+                    currentObject.GetComponent<Vent>().closestVent.GetComponent<AudioSource>().Play();
+                    transform.Rotate(new Vector3(0, 180, 0));
                 }
                 else if (currentObject.CompareTag("Button"))
                 {

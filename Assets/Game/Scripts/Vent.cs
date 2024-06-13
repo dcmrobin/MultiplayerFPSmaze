@@ -43,5 +43,10 @@ public class Vent : NetworkBehaviour
             //    enabled = false;
             //}
         }
+
+        if (Random.value > .99995 && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 70)
+        {
+            GetComponent<AudioSource>().Play();
+        }
     }
 }

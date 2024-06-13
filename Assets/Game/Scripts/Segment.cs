@@ -120,6 +120,7 @@ public class Segment : NetworkBehaviour
             if (!transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled)
             {
                 transform.Find("Light").Find("Bulb").gameObject.SetActive(false);
+                transform.Find("Light").Find("Bulb").GetComponent<AudioSource>().Play();
             }
             else if (transform.Find("Light").Find("Bulb").GetComponent<Light>().enabled)
             {
@@ -129,6 +130,7 @@ public class Segment : NetworkBehaviour
             if (UnityEngine.Random.value > .999)
             {
                 transform.Find("Light").gameObject.SetActive(false);
+                transform.Find("Light").Find("Bulb").GetComponent<AudioSource>().Play();
                 if (UnityEngine.Random.value > .3)
                 {
                     transform.Find("Light").gameObject.SetActive(true);

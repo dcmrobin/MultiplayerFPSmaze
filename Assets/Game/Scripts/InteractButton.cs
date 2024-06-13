@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class InteractButton : NetworkBehaviour
 {
     public enum Action{ActivateLift, ShowSomething}
