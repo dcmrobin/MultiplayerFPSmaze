@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/New World/Scenes/Transported.unity
     guid: a217c4137373c7c4192465a4b11e168c
+  - enabled: 1
+    path: Assets/New World/Scenes/Backrooms.unity
+    guid: 805331924524afd49adb63872ae53ebb
   m_configObjects: {}
