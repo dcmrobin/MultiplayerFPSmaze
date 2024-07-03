@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 152003532862357861, guid: 0ba5ebb0fa097994b80a0b004b929d93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 152003532862357861, guid: 0ba5ebb0fa097994b80a0b004b929d93, type: 3}
       propertyPath: m_LocalPosition.z
@@ -245,6 +245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segmentPrefab: {fileID: 748948159325446673, guid: fad7d49d8bc33b845a5b7bfc394651c3, type: 3}
+  renderDistance: 15
+  chunkSize: {x: 20, y: 3, z: 20}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
