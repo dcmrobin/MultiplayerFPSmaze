@@ -49,6 +49,7 @@
      <Compile Include="Assets\Game\Scripts\Lift.cs" />
      <Compile Include="Assets\New World\Scripts\BasicPlayerController.cs" />
      <Compile Include="Assets\New World\Scripts\LoadSceneOnTrigger.cs" />
+     <Compile Include="Assets\New World\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Game\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Game\Scripts\OthMarker.cs" />
      <Compile Include="Assets\Game\Scripts\Segment.cs" />

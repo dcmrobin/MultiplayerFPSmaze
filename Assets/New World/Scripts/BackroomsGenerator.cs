@@ -7,9 +7,11 @@ public class BackroomsGenerator : MonoBehaviour
     public GameObject segmentPrefab;
     public int renderDistance = 3; // Number of chunks to render around the player
     public Vector3 chunkSize = new Vector3(10, 3, 10); // Size of each chunk
+    public ObjectPool objectPool;
 
     private Transform playerTransform;
-    private Dictionary<Vector3, GameObject> chunks = new Dictionary<Vector3, GameObject>();
+    private Dictionary<Vector3, GameObject> activeChunks = new Dictionary<Vector3, GameObject>();
+    private HashSet<Vector3> allChunks = new HashSet<Vector3>();
 
     private void Start()
     {
@@ -23,6 +25,7 @@ public class BackroomsGenerator : MonoBehaviour
         {
             Vector3 playerChunkPosition = GetChunkPosition(playerTransform.position);
 
+            // Activate necessary chunks
             for (int x = -renderDistance; x <= renderDistance; x++)
             {
                 for (int z = -renderDistance; z <= renderDistance; z++)
@@ -33,36 +36,33 @@ public class BackroomsGenerator : MonoBehaviour
                         playerChunkPosition.z + z * chunkSize.z
                     );
 
-                    if (!chunks.ContainsKey(chunkPosition))
+                    if (!activeChunks.ContainsKey(chunkPosition))
                     {
-                        GameObject newChunk = Instantiate(segmentPrefab, chunkPosition, Quaternion.identity);
+                        GameObject newChunk = objectPool.GetObject(chunkPosition, Quaternion.identity);
                         RandomlyDeactivateWalls(newChunk);
-                        chunks[chunkPosition] = newChunk;
-                    }
-                    else
-                    {
-                        chunks[chunkPosition].SetActive(true);
+                        activeChunks[chunkPosition] = newChunk;
+                        allChunks.Add(chunkPosition);
                     }
                 }
             }
 
+            // Deactivate chunks out of range
             List<Vector3> chunksToDeactivate = new List<Vector3>();
-
-            foreach (var chunk in chunks)
+            foreach (var chunk in activeChunks)
             {
                 if (Vector3.Distance(playerTransform.position, chunk.Key) > renderDistance * chunkSize.x)
                 {
-                    chunk.Value.SetActive(false);
+                    objectPool.ReturnObject(chunk.Value);
                     chunksToDeactivate.Add(chunk.Key);
                 }
             }
 
             foreach (var chunkPos in chunksToDeactivate)
             {
-                chunks.Remove(chunkPos);
+                activeChunks.Remove(chunkPos);
             }
 
-            yield return new WaitForSeconds(1); // Adjust the update rate as needed
+            yield return new WaitForSeconds(0.5f); // Adjust the update rate as needed
         }
     }
 
