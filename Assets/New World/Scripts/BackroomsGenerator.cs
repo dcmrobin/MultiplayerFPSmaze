@@ -32,7 +32,7 @@ public class BackroomsGenerator : MonoBehaviour
                 {
                     Vector3 chunkPosition = new Vector3(
                         playerChunkPosition.x + x * chunkSize.x,
-                        0,
+                        transform.position.y,
                         playerChunkPosition.z + z * chunkSize.z
                     );
 
