@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackroomsGenerator : MonoBehaviour
+public class BackroomsChunkManager : MonoBehaviour
 {
     public GameObject segmentPrefab;
     public int renderDistance = 3; // Number of chunks to render around the player
@@ -80,9 +80,9 @@ public class BackroomsGenerator : MonoBehaviour
         int numWalls = walls.childCount;
         for (int i = 0; i < numWalls; i++)
         {
-            if (Random.value > .3) // Higher chance to deactivate each wall
+            if (Random.value < .3) // Higher chance to deactivate each wall
             {
-                walls.GetChild(i).gameObject.SetActive(false);
+                walls.GetChild(i).gameObject.SetActive(true);
             }
         }
         if (Random.value > 0.7)

@@ -42,7 +42,6 @@
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\BackupExit.cs" />
      <Compile Include="Assets\Game\Scripts\Vent.cs" />
-     <Compile Include="Assets\New World\Scripts\BackroomsGenerator.cs" />
      <Compile Include="Assets\Game\Scripts\InteractButton.cs" />
      <Compile Include="Assets\Game\Scripts\GhostScript.cs" />
      <Compile Include="Assets\Game\Scripts\MapCam.cs" />
@@ -56,6 +55,7 @@
      <Compile Include="Assets\New World\Scripts\OptimizeLight.cs" />
      <Compile Include="Assets\Game\Scripts\SegmentOverlapCheck.cs" />
      <Compile Include="Assets\Game\Scripts\LobbyController.cs" />
+     <Compile Include="Assets\New World\Scripts\BackroomsChunkManager.cs" />
      <Compile Include="Assets\Game\Scripts\TestRelay.cs" />
      <Compile Include="Assets\Game\Scripts\UIManager.cs" />
      <Compile Include="Assets\New World\Scripts\ToggleWithinRange.cs" />

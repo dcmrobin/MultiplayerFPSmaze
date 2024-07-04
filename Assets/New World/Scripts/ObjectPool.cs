@@ -48,8 +48,8 @@ public class ObjectPool : MonoBehaviour
         int numWalls = walls.childCount;
         for (int i = 0; i < numWalls; i++)
         {
-            walls.GetChild(i).gameObject.SetActive(true);
-            walls.GetChild(i).gameObject.SetActive(true);
+            walls.GetChild(i).gameObject.SetActive(false);
         }
+        walls.parent.Find("Ceiling").GetChild(0).gameObject.SetActive(true);
     }
 }
