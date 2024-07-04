@@ -20,13 +20,13 @@ public class OptimizeLight : MonoBehaviour
             GetComponentInChildren<Light>().enabled = true;
         }
 
-        if (Vector3.Distance(transform.position, player.position) > 30)
+        /*if (Vector3.Distance(transform.position, player.position) > 30)
         {
             GetComponentInChildren<AudioSource>().enabled = false;
         }
         else
         {
             GetComponentInChildren<AudioSource>().enabled = true;
-        }
+        }*/
     }
 }
