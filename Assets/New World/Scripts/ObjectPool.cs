@@ -49,6 +49,7 @@ public class ObjectPool : MonoBehaviour
         for (int i = 0; i < numWalls; i++)
         {
             walls.GetChild(i).gameObject.SetActive(true);
+            walls.GetChild(i).gameObject.SetActive(true);
         }
     }
 }

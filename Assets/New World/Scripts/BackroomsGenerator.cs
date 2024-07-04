@@ -85,5 +85,9 @@ public class BackroomsGenerator : MonoBehaviour
                 walls.GetChild(i).gameObject.SetActive(false);
             }
         }
+        if (Random.value > 0.7)
+        {
+            walls.parent.Find("Ceiling").GetChild(0).gameObject.SetActive(false);
+        }
     }
 }

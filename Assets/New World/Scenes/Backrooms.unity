@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 131.01756, g: 162.3268, b: 214.85182, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -170,6 +170,10 @@ PrefabInstance:
     - target: {fileID: 152003532862357861, guid: 0ba5ebb0fa097994b80a0b004b929d93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589148264521786043, guid: 0ba5ebb0fa097994b80a0b004b929d93, type: 3}
+      propertyPath: antialiasing
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3192439572622722458, guid: 0ba5ebb0fa097994b80a0b004b929d93, type: 3}
       propertyPath: m_LocalRotation.w
@@ -360,6 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032400011}
   - component: {fileID: 2032400012}
+  - component: {fileID: 2032400013}
   m_Layer: 0
   m_Name: WorldGenerator
   m_TagString: Untagged
@@ -398,6 +403,23 @@ MonoBehaviour:
   renderDistance: 17
   chunkSize: {x: 20, y: 3, z: 20}
   objectPool: {fileID: 624341825}
+--- !u!114 &2032400013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032400010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 65ae469557b4bbb409df45ea9e3aa591, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
