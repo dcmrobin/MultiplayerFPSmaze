@@ -85,7 +85,7 @@ public class BackroomsChunkManager : MonoBehaviour
                 walls.GetChild(i).gameObject.SetActive(true);
             }
         }
-        if (Random.value > 0.7)
+        if (Random.value > 0.6)
         {
             walls.parent.Find("Ceiling").GetChild(0).gameObject.SetActive(false);
         }
