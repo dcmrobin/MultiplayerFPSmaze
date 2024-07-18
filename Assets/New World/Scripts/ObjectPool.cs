@@ -51,5 +51,6 @@ public class ObjectPool : MonoBehaviour
             walls.GetChild(i).gameObject.SetActive(false);
         }
         walls.parent.Find("Ceiling").GetChild(0).gameObject.SetActive(true);
+        walls.parent.Find("Floor").GetComponent<BoxCollider>().isTrigger = false;
     }
 }

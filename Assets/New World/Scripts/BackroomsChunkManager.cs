@@ -87,5 +87,10 @@ public class BackroomsChunkManager : MonoBehaviour
         {
             walls.parent.Find("Ceiling").GetChild(0).gameObject.SetActive(false);
         }
+
+        if (Random.value > 0.993)
+        {
+            walls.parent.Find("Floor").GetComponent<BoxCollider>().isTrigger = true;
+        }
     }
 }
