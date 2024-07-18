@@ -77,15 +77,13 @@ public class BackroomsChunkManager : MonoBehaviour
     private void RandomlyDeactivateWalls(GameObject chunk)
     {
         Transform walls = chunk.transform.Find("Walls");
-        int numWalls = walls.childCount;
-        for (int i = 0; i < numWalls; i++)
+        int randWall = Random.Range(0, 3);
+        if (Random.value > 0.3)
         {
-            if (Random.value < .3) // Higher chance to deactivate each wall
-            {
-                walls.GetChild(i).gameObject.SetActive(true);
-            }
+            walls.GetChild(randWall).gameObject.SetActive(true);
         }
-        if (Random.value > 0.6)
+
+        if (Random.value > 0.6)// Chance to spawn without a light
         {
             walls.parent.Find("Ceiling").GetChild(0).gameObject.SetActive(false);
         }
