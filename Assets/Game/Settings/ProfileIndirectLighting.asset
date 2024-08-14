@@ -320,7 +320,7 @@ MonoBehaviour:
   active: 1
   indirectDiffuseLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 10
   indirectDiffuseLightingLayers:
     m_OverrideState: 1
     m_Value: 255
